@@ -1,0 +1,165 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          151.21,
+          -33.86
+        ]
+      },
+      "properties": {
+        "city": "Sydney",
+        "state_or_territory": "NSW",
+        "station_name": "SYDNEY (OBSERVATORY HILL)",
+        "station_number": "066062",
+        "balanced_score": 88.14,
+        "balanced_rank": 1,
+        "population_2025": 5638830,
+        "population_growth_pct_2024_25": 1.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.97,
+          -37.81
+        ]
+      },
+      "properties": {
+        "city": "Melbourne",
+        "state_or_territory": "VIC",
+        "station_name": "MELBOURNE REGIONAL OFFICE",
+        "station_number": "086071",
+        "balanced_score": 82.91,
+        "balanced_rank": 5,
+        "population_2025": 5435590,
+        "population_growth_pct_2024_25": 2.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          153.03,
+          -27.47
+        ]
+      },
+      "properties": {
+        "city": "Brisbane",
+        "state_or_territory": "QLD",
+        "station_name": "BRISBANE REGIONAL OFFICE",
+        "station_number": "040214",
+        "balanced_score": 87.25,
+        "balanced_rank": 2,
+        "population_2025": 2833524,
+        "population_growth_pct_2024_25": 2.1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          115.87,
+          -31.92
+        ]
+      },
+      "properties": {
+        "city": "Perth",
+        "state_or_territory": "WA",
+        "station_name": "PERTH METRO",
+        "station_number": "009225",
+        "balanced_score": 84.57,
+        "balanced_rank": 4,
+        "population_2025": 2452765,
+        "population_growth_pct_2024_25": 2.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          138.58,
+          -34.93
+        ]
+      },
+      "properties": {
+        "city": "Adelaide",
+        "state_or_territory": "SA",
+        "station_name": "ADELAIDE (WEST TERRACE / NGAYIRDAPIRA)",
+        "station_number": "023000",
+        "balanced_score": 85.4,
+        "balanced_rank": 3,
+        "population_2025": 1491015,
+        "population_growth_pct_2024_25": 1.3
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          147.33,
+          -42.89
+        ]
+      },
+      "properties": {
+        "city": "Hobart",
+        "state_or_territory": "TAS",
+        "station_name": "HOBART (ELLERSLIE ROAD)",
+        "station_number": "094029",
+        "balanced_score": 78.67,
+        "balanced_rank": 6,
+        "population_2025": 255250,
+        "population_growth_pct_2024_25": 0.2
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          130.89,
+          -12.42
+        ]
+      },
+      "properties": {
+        "city": "Darwin",
+        "state_or_territory": "NT",
+        "station_name": "DARWIN AIRPORT",
+        "station_number": "014015",
+        "balanced_score": 63.15,
+        "balanced_rank": 8,
+        "population_2025": 159284,
+        "population_growth_pct_2024_25": 1.7
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          149.2,
+          -35.3
+        ]
+      },
+      "properties": {
+        "city": "Canberra",
+        "state_or_territory": "ACT",
+        "station_name": "CANBERRA AIRPORT COMPARISON",
+        "station_number": "070014",
+        "balanced_score": 75.3,
+        "balanced_rank": 7,
+        "population_2025": 484630,
+        "population_growth_pct_2024_25": 1.3
+      }
+    }
+  ]
+}

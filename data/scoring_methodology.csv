@@ -1,0 +1,10 @@
+derived_field,input_fields,rule,interpretation
+day_temp_score,mean_max_temp_c,100 inside 18-26 C monthly mean maximum comfort band; subtract 8 points per degree outside the band; clamp 0-100.,Higher values mean milder daytime temperatures.
+night_temp_score,mean_min_temp_c,100 inside 10-19 C monthly mean minimum comfort band; subtract 8 points per degree outside the band; clamp 0-100.,Higher values mean more comfortable nights for sleeping.
+heat_score,"days_ge_30, days_ge_35, days_ge_40",100 - 1.3*days_ge_30 - 2.5*days_ge_35 - 6.0*days_ge_40; clamp 0-100.,Higher values mean fewer hot and extreme-hot days.
+rain_score,"mean_rain_mm, rain_days_ge_1mm, rain_days_ge_10mm, rain_days_ge_25mm",100 - 1.3*rain_days_ge_1mm - 2.3*rain_days_ge_10mm - 3.5*rain_days_ge_25mm - 0.02*mean_rain_mm; clamp 0-100.,Higher values mean lower everyday rain burden.
+humidity_score,"rh_9am, rh_3pm",Average 9am and 3pm relative humidity. 100 inside 40-62%; subtract 2.2 points per percentage point outside the band; clamp 0-100.,Higher values mean less muggy or overly dry air.
+sunshine_score,solar_exposure_mj_m2,Linearly scale monthly mean daily solar exposure from 7-26 MJ/m2 to 0-100; clamp 0-100.,Higher values mean more available sunshine/solar exposure.
+monthly_comfort_score,"day_temp_score, night_temp_score, heat_score, rain_score, humidity_score, sunshine_score",Weighted average using balanced weights renormalised after excluding annual stability.,A month-level comfort score used to show seasonal rhythm and stability.
+stability_score,monthly_comfort_score,100 - 1.8*(max monthly comfort - min monthly comfort); clamp 0-100.,Higher values mean comfort is more stable across the year.
+overall_score,seven component scores and scenario weights,Weighted average of annual component scores under each transparent preference scenario.,"Author-derived comparative index, not an official climate ranking."

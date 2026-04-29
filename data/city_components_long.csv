@@ -1,0 +1,393 @@
+city,scenario,rank,component,component_label,component_short,component_order,component_color,component_score
+Sydney,Balanced everyday comfort,1,day_temp_score,Day temperature,daytime mildness,1,#D99035,98.2
+Sydney,Balanced everyday comfort,1,night_temp_score,Night temperature,sleep comfort,2,#5D77A6,97.6
+Sydney,Balanced everyday comfort,1,heat_score,Heat burden,hot-day penalty,3,#C95A3C,97.54
+Sydney,Balanced everyday comfort,1,rain_score,Rain burden,rain frequency + amount,4,#4B8BBE,77.31
+Sydney,Balanced everyday comfort,1,humidity_score,Humidity,muggy-air penalty,5,#6B8E9A,94.68
+Sydney,Balanced everyday comfort,1,sunshine_score,Sunshine,solar exposure,6,#D8A83D,49.04
+Sydney,Balanced everyday comfort,1,stability_score,Seasonal stability,less monthly swing,7,#6B9E77,79.16
+Brisbane,Balanced everyday comfort,2,day_temp_score,Day temperature,daytime mildness,1,#D99035,91
+Brisbane,Balanced everyday comfort,2,night_temp_score,Night temperature,sleep comfort,2,#5D77A6,96.67
+Brisbane,Balanced everyday comfort,2,heat_score,Heat burden,hot-day penalty,3,#C95A3C,93.83
+Brisbane,Balanced everyday comfort,2,rain_score,Rain burden,rain frequency + amount,4,#4B8BBE,81.76
+Brisbane,Balanced everyday comfort,2,humidity_score,Humidity,muggy-air penalty,5,#6B8E9A,98.81
+Brisbane,Balanced everyday comfort,2,sunshine_score,Sunshine,solar exposure,6,#D8A83D,60.7
+Brisbane,Balanced everyday comfort,2,stability_score,Seasonal stability,less monthly swing,7,#6B9E77,74.82
+Adelaide,Balanced everyday comfort,3,day_temp_score,Day temperature,daytime mildness,1,#D99035,91.07
+Adelaide,Balanced everyday comfort,3,night_temp_score,Night temperature,sleep comfort,2,#5D77A6,95.67
+Adelaide,Balanced everyday comfort,3,heat_score,Heat burden,hot-day penalty,3,#C95A3C,89.81
+Adelaide,Balanced everyday comfort,3,rain_score,Rain burden,rain frequency + amount,4,#4B8BBE,86.66
+Adelaide,Balanced everyday comfort,3,humidity_score,Humidity,muggy-air penalty,5,#6B8E9A,96.52
+Adelaide,Balanced everyday comfort,3,sunshine_score,Sunshine,solar exposure,6,#D8A83D,53.29
+Adelaide,Balanced everyday comfort,3,stability_score,Seasonal stability,less monthly swing,7,#6B9E77,66.02
+Perth,Balanced everyday comfort,4,day_temp_score,Day temperature,daytime mildness,1,#D99035,87.2
+Perth,Balanced everyday comfort,4,night_temp_score,Night temperature,sleep comfort,2,#5D77A6,96.67
+Perth,Balanced everyday comfort,4,heat_score,Heat burden,hot-day penalty,3,#C95A3C,83.8
+Perth,Balanced everyday comfort,4,rain_score,Rain burden,rain frequency + amount,4,#4B8BBE,83.76
+Perth,Balanced everyday comfort,4,humidity_score,Humidity,muggy-air penalty,5,#6B8E9A,97.43
+Perth,Balanced everyday comfort,4,sunshine_score,Sunshine,solar exposure,6,#D8A83D,61.23
+Perth,Balanced everyday comfort,4,stability_score,Seasonal stability,less monthly swing,7,#6B9E77,70.66
+Melbourne,Balanced everyday comfort,5,day_temp_score,Day temperature,daytime mildness,1,#D99035,91.07
+Melbourne,Balanced everyday comfort,5,night_temp_score,Night temperature,sleep comfort,2,#5D77A6,90.6
+Melbourne,Balanced everyday comfort,5,heat_score,Heat burden,hot-day penalty,3,#C95A3C,94.02
+Melbourne,Balanced everyday comfort,5,rain_score,Rain burden,rain frequency + amount,4,#4B8BBE,83.79
+Melbourne,Balanced everyday comfort,5,humidity_score,Humidity,muggy-air penalty,5,#6B8E9A,95.23
+Melbourne,Balanced everyday comfort,5,sunshine_score,Sunshine,solar exposure,6,#D8A83D,42.72
+Melbourne,Balanced everyday comfort,5,stability_score,Seasonal stability,less monthly swing,7,#6B9E77,59.03
+Hobart,Balanced everyday comfort,6,day_temp_score,Day temperature,daytime mildness,1,#D99035,83.53
+Hobart,Balanced everyday comfort,6,night_temp_score,Night temperature,sleep comfort,2,#5D77A6,83.2
+Hobart,Balanced everyday comfort,6,heat_score,Heat burden,hot-day penalty,3,#C95A3C,99.07
+Hobart,Balanced everyday comfort,6,rain_score,Rain burden,rain frequency + amount,4,#4B8BBE,86.02
+Hobart,Balanced everyday comfort,6,humidity_score,Humidity,muggy-air penalty,5,#6B8E9A,93.49
+Hobart,Balanced everyday comfort,6,sunshine_score,Sunshine,solar exposure,6,#D8A83D,35.26
+Hobart,Balanced everyday comfort,6,stability_score,Seasonal stability,less monthly swing,7,#6B9E77,45.05
+Canberra,Balanced everyday comfort,7,day_temp_score,Day temperature,daytime mildness,1,#D99035,83.47
+Canberra,Balanced everyday comfort,7,night_temp_score,Night temperature,sleep comfort,2,#5D77A6,66.67
+Canberra,Balanced everyday comfort,7,heat_score,Heat burden,hot-day penalty,3,#C95A3C,95.39
+Canberra,Balanced everyday comfort,7,rain_score,Rain burden,rain frequency + amount,4,#4B8BBE,86.3
+Canberra,Balanced everyday comfort,7,humidity_score,Humidity,muggy-air penalty,5,#6B8E9A,94.68
+Canberra,Balanced everyday comfort,7,sunshine_score,Sunshine,solar exposure,6,#D8A83D,53.03
+Canberra,Balanced everyday comfort,7,stability_score,Seasonal stability,less monthly swing,7,#6B9E77,33.78
+Darwin,Balanced everyday comfort,8,day_temp_score,Day temperature,daytime mildness,1,#D99035,51
+Darwin,Balanced everyday comfort,8,night_temp_score,Night temperature,sleep comfort,2,#5D77A6,66
+Darwin,Balanced everyday comfort,8,heat_score,Heat burden,hot-day penalty,3,#C95A3C,62.34
+Darwin,Balanced everyday comfort,8,rain_score,Rain burden,rain frequency + amount,4,#4B8BBE,71.37
+Darwin,Balanced everyday comfort,8,humidity_score,Humidity,muggy-air penalty,5,#6B8E9A,90.1
+Darwin,Balanced everyday comfort,8,sunshine_score,Sunshine,solar exposure,6,#D8A83D,75.92
+Darwin,Balanced everyday comfort,8,stability_score,Seasonal stability,less monthly swing,7,#6B9E77,44.78
+Sydney,Avoid hot days,1,day_temp_score,Day temperature,daytime mildness,1,#D99035,98.2
+Sydney,Avoid hot days,1,night_temp_score,Night temperature,sleep comfort,2,#5D77A6,97.6
+Sydney,Avoid hot days,1,heat_score,Heat burden,hot-day penalty,3,#C95A3C,97.54
+Sydney,Avoid hot days,1,rain_score,Rain burden,rain frequency + amount,4,#4B8BBE,77.31
+Sydney,Avoid hot days,1,humidity_score,Humidity,muggy-air penalty,5,#6B8E9A,94.68
+Sydney,Avoid hot days,1,sunshine_score,Sunshine,solar exposure,6,#D8A83D,49.04
+Sydney,Avoid hot days,1,stability_score,Seasonal stability,less monthly swing,7,#6B9E77,79.16
+Brisbane,Avoid hot days,2,day_temp_score,Day temperature,daytime mildness,1,#D99035,91
+Brisbane,Avoid hot days,2,night_temp_score,Night temperature,sleep comfort,2,#5D77A6,96.67
+Brisbane,Avoid hot days,2,heat_score,Heat burden,hot-day penalty,3,#C95A3C,93.83
+Brisbane,Avoid hot days,2,rain_score,Rain burden,rain frequency + amount,4,#4B8BBE,81.76
+Brisbane,Avoid hot days,2,humidity_score,Humidity,muggy-air penalty,5,#6B8E9A,98.81
+Brisbane,Avoid hot days,2,sunshine_score,Sunshine,solar exposure,6,#D8A83D,60.7
+Brisbane,Avoid hot days,2,stability_score,Seasonal stability,less monthly swing,7,#6B9E77,74.82
+Melbourne,Avoid hot days,3,day_temp_score,Day temperature,daytime mildness,1,#D99035,91.07
+Melbourne,Avoid hot days,3,night_temp_score,Night temperature,sleep comfort,2,#5D77A6,90.6
+Melbourne,Avoid hot days,3,heat_score,Heat burden,hot-day penalty,3,#C95A3C,94.02
+Melbourne,Avoid hot days,3,rain_score,Rain burden,rain frequency + amount,4,#4B8BBE,83.79
+Melbourne,Avoid hot days,3,humidity_score,Humidity,muggy-air penalty,5,#6B8E9A,95.23
+Melbourne,Avoid hot days,3,sunshine_score,Sunshine,solar exposure,6,#D8A83D,42.72
+Melbourne,Avoid hot days,3,stability_score,Seasonal stability,less monthly swing,7,#6B9E77,59.03
+Adelaide,Avoid hot days,4,day_temp_score,Day temperature,daytime mildness,1,#D99035,91.07
+Adelaide,Avoid hot days,4,night_temp_score,Night temperature,sleep comfort,2,#5D77A6,95.67
+Adelaide,Avoid hot days,4,heat_score,Heat burden,hot-day penalty,3,#C95A3C,89.81
+Adelaide,Avoid hot days,4,rain_score,Rain burden,rain frequency + amount,4,#4B8BBE,86.66
+Adelaide,Avoid hot days,4,humidity_score,Humidity,muggy-air penalty,5,#6B8E9A,96.52
+Adelaide,Avoid hot days,4,sunshine_score,Sunshine,solar exposure,6,#D8A83D,53.29
+Adelaide,Avoid hot days,4,stability_score,Seasonal stability,less monthly swing,7,#6B9E77,66.02
+Hobart,Avoid hot days,5,day_temp_score,Day temperature,daytime mildness,1,#D99035,83.53
+Hobart,Avoid hot days,5,night_temp_score,Night temperature,sleep comfort,2,#5D77A6,83.2
+Hobart,Avoid hot days,5,heat_score,Heat burden,hot-day penalty,3,#C95A3C,99.07
+Hobart,Avoid hot days,5,rain_score,Rain burden,rain frequency + amount,4,#4B8BBE,86.02
+Hobart,Avoid hot days,5,humidity_score,Humidity,muggy-air penalty,5,#6B8E9A,93.49
+Hobart,Avoid hot days,5,sunshine_score,Sunshine,solar exposure,6,#D8A83D,35.26
+Hobart,Avoid hot days,5,stability_score,Seasonal stability,less monthly swing,7,#6B9E77,45.05
+Perth,Avoid hot days,6,day_temp_score,Day temperature,daytime mildness,1,#D99035,87.2
+Perth,Avoid hot days,6,night_temp_score,Night temperature,sleep comfort,2,#5D77A6,96.67
+Perth,Avoid hot days,6,heat_score,Heat burden,hot-day penalty,3,#C95A3C,83.8
+Perth,Avoid hot days,6,rain_score,Rain burden,rain frequency + amount,4,#4B8BBE,83.76
+Perth,Avoid hot days,6,humidity_score,Humidity,muggy-air penalty,5,#6B8E9A,97.43
+Perth,Avoid hot days,6,sunshine_score,Sunshine,solar exposure,6,#D8A83D,61.23
+Perth,Avoid hot days,6,stability_score,Seasonal stability,less monthly swing,7,#6B9E77,70.66
+Canberra,Avoid hot days,7,day_temp_score,Day temperature,daytime mildness,1,#D99035,83.47
+Canberra,Avoid hot days,7,night_temp_score,Night temperature,sleep comfort,2,#5D77A6,66.67
+Canberra,Avoid hot days,7,heat_score,Heat burden,hot-day penalty,3,#C95A3C,95.39
+Canberra,Avoid hot days,7,rain_score,Rain burden,rain frequency + amount,4,#4B8BBE,86.3
+Canberra,Avoid hot days,7,humidity_score,Humidity,muggy-air penalty,5,#6B8E9A,94.68
+Canberra,Avoid hot days,7,sunshine_score,Sunshine,solar exposure,6,#D8A83D,53.03
+Canberra,Avoid hot days,7,stability_score,Seasonal stability,less monthly swing,7,#6B9E77,33.78
+Darwin,Avoid hot days,8,day_temp_score,Day temperature,daytime mildness,1,#D99035,51
+Darwin,Avoid hot days,8,night_temp_score,Night temperature,sleep comfort,2,#5D77A6,66
+Darwin,Avoid hot days,8,heat_score,Heat burden,hot-day penalty,3,#C95A3C,62.34
+Darwin,Avoid hot days,8,rain_score,Rain burden,rain frequency + amount,4,#4B8BBE,71.37
+Darwin,Avoid hot days,8,humidity_score,Humidity,muggy-air penalty,5,#6B8E9A,90.1
+Darwin,Avoid hot days,8,sunshine_score,Sunshine,solar exposure,6,#D8A83D,75.92
+Darwin,Avoid hot days,8,stability_score,Seasonal stability,less monthly swing,7,#6B9E77,44.78
+Sydney,Sleep cool at night,1,day_temp_score,Day temperature,daytime mildness,1,#D99035,98.2
+Sydney,Sleep cool at night,1,night_temp_score,Night temperature,sleep comfort,2,#5D77A6,97.6
+Sydney,Sleep cool at night,1,heat_score,Heat burden,hot-day penalty,3,#C95A3C,97.54
+Sydney,Sleep cool at night,1,rain_score,Rain burden,rain frequency + amount,4,#4B8BBE,77.31
+Sydney,Sleep cool at night,1,humidity_score,Humidity,muggy-air penalty,5,#6B8E9A,94.68
+Sydney,Sleep cool at night,1,sunshine_score,Sunshine,solar exposure,6,#D8A83D,49.04
+Sydney,Sleep cool at night,1,stability_score,Seasonal stability,less monthly swing,7,#6B9E77,79.16
+Brisbane,Sleep cool at night,2,day_temp_score,Day temperature,daytime mildness,1,#D99035,91
+Brisbane,Sleep cool at night,2,night_temp_score,Night temperature,sleep comfort,2,#5D77A6,96.67
+Brisbane,Sleep cool at night,2,heat_score,Heat burden,hot-day penalty,3,#C95A3C,93.83
+Brisbane,Sleep cool at night,2,rain_score,Rain burden,rain frequency + amount,4,#4B8BBE,81.76
+Brisbane,Sleep cool at night,2,humidity_score,Humidity,muggy-air penalty,5,#6B8E9A,98.81
+Brisbane,Sleep cool at night,2,sunshine_score,Sunshine,solar exposure,6,#D8A83D,60.7
+Brisbane,Sleep cool at night,2,stability_score,Seasonal stability,less monthly swing,7,#6B9E77,74.82
+Adelaide,Sleep cool at night,3,day_temp_score,Day temperature,daytime mildness,1,#D99035,91.07
+Adelaide,Sleep cool at night,3,night_temp_score,Night temperature,sleep comfort,2,#5D77A6,95.67
+Adelaide,Sleep cool at night,3,heat_score,Heat burden,hot-day penalty,3,#C95A3C,89.81
+Adelaide,Sleep cool at night,3,rain_score,Rain burden,rain frequency + amount,4,#4B8BBE,86.66
+Adelaide,Sleep cool at night,3,humidity_score,Humidity,muggy-air penalty,5,#6B8E9A,96.52
+Adelaide,Sleep cool at night,3,sunshine_score,Sunshine,solar exposure,6,#D8A83D,53.29
+Adelaide,Sleep cool at night,3,stability_score,Seasonal stability,less monthly swing,7,#6B9E77,66.02
+Perth,Sleep cool at night,4,day_temp_score,Day temperature,daytime mildness,1,#D99035,87.2
+Perth,Sleep cool at night,4,night_temp_score,Night temperature,sleep comfort,2,#5D77A6,96.67
+Perth,Sleep cool at night,4,heat_score,Heat burden,hot-day penalty,3,#C95A3C,83.8
+Perth,Sleep cool at night,4,rain_score,Rain burden,rain frequency + amount,4,#4B8BBE,83.76
+Perth,Sleep cool at night,4,humidity_score,Humidity,muggy-air penalty,5,#6B8E9A,97.43
+Perth,Sleep cool at night,4,sunshine_score,Sunshine,solar exposure,6,#D8A83D,61.23
+Perth,Sleep cool at night,4,stability_score,Seasonal stability,less monthly swing,7,#6B9E77,70.66
+Melbourne,Sleep cool at night,5,day_temp_score,Day temperature,daytime mildness,1,#D99035,91.07
+Melbourne,Sleep cool at night,5,night_temp_score,Night temperature,sleep comfort,2,#5D77A6,90.6
+Melbourne,Sleep cool at night,5,heat_score,Heat burden,hot-day penalty,3,#C95A3C,94.02
+Melbourne,Sleep cool at night,5,rain_score,Rain burden,rain frequency + amount,4,#4B8BBE,83.79
+Melbourne,Sleep cool at night,5,humidity_score,Humidity,muggy-air penalty,5,#6B8E9A,95.23
+Melbourne,Sleep cool at night,5,sunshine_score,Sunshine,solar exposure,6,#D8A83D,42.72
+Melbourne,Sleep cool at night,5,stability_score,Seasonal stability,less monthly swing,7,#6B9E77,59.03
+Hobart,Sleep cool at night,6,day_temp_score,Day temperature,daytime mildness,1,#D99035,83.53
+Hobart,Sleep cool at night,6,night_temp_score,Night temperature,sleep comfort,2,#5D77A6,83.2
+Hobart,Sleep cool at night,6,heat_score,Heat burden,hot-day penalty,3,#C95A3C,99.07
+Hobart,Sleep cool at night,6,rain_score,Rain burden,rain frequency + amount,4,#4B8BBE,86.02
+Hobart,Sleep cool at night,6,humidity_score,Humidity,muggy-air penalty,5,#6B8E9A,93.49
+Hobart,Sleep cool at night,6,sunshine_score,Sunshine,solar exposure,6,#D8A83D,35.26
+Hobart,Sleep cool at night,6,stability_score,Seasonal stability,less monthly swing,7,#6B9E77,45.05
+Canberra,Sleep cool at night,7,day_temp_score,Day temperature,daytime mildness,1,#D99035,83.47
+Canberra,Sleep cool at night,7,night_temp_score,Night temperature,sleep comfort,2,#5D77A6,66.67
+Canberra,Sleep cool at night,7,heat_score,Heat burden,hot-day penalty,3,#C95A3C,95.39
+Canberra,Sleep cool at night,7,rain_score,Rain burden,rain frequency + amount,4,#4B8BBE,86.3
+Canberra,Sleep cool at night,7,humidity_score,Humidity,muggy-air penalty,5,#6B8E9A,94.68
+Canberra,Sleep cool at night,7,sunshine_score,Sunshine,solar exposure,6,#D8A83D,53.03
+Canberra,Sleep cool at night,7,stability_score,Seasonal stability,less monthly swing,7,#6B9E77,33.78
+Darwin,Sleep cool at night,8,day_temp_score,Day temperature,daytime mildness,1,#D99035,51
+Darwin,Sleep cool at night,8,night_temp_score,Night temperature,sleep comfort,2,#5D77A6,66
+Darwin,Sleep cool at night,8,heat_score,Heat burden,hot-day penalty,3,#C95A3C,62.34
+Darwin,Sleep cool at night,8,rain_score,Rain burden,rain frequency + amount,4,#4B8BBE,71.37
+Darwin,Sleep cool at night,8,humidity_score,Humidity,muggy-air penalty,5,#6B8E9A,90.1
+Darwin,Sleep cool at night,8,sunshine_score,Sunshine,solar exposure,6,#D8A83D,75.92
+Darwin,Sleep cool at night,8,stability_score,Seasonal stability,less monthly swing,7,#6B9E77,44.78
+Adelaide,Stay dry,1,day_temp_score,Day temperature,daytime mildness,1,#D99035,91.07
+Adelaide,Stay dry,1,night_temp_score,Night temperature,sleep comfort,2,#5D77A6,95.67
+Adelaide,Stay dry,1,heat_score,Heat burden,hot-day penalty,3,#C95A3C,89.81
+Adelaide,Stay dry,1,rain_score,Rain burden,rain frequency + amount,4,#4B8BBE,86.66
+Adelaide,Stay dry,1,humidity_score,Humidity,muggy-air penalty,5,#6B8E9A,96.52
+Adelaide,Stay dry,1,sunshine_score,Sunshine,solar exposure,6,#D8A83D,53.29
+Adelaide,Stay dry,1,stability_score,Seasonal stability,less monthly swing,7,#6B9E77,66.02
+Perth,Stay dry,2,day_temp_score,Day temperature,daytime mildness,1,#D99035,87.2
+Perth,Stay dry,2,night_temp_score,Night temperature,sleep comfort,2,#5D77A6,96.67
+Perth,Stay dry,2,heat_score,Heat burden,hot-day penalty,3,#C95A3C,83.8
+Perth,Stay dry,2,rain_score,Rain burden,rain frequency + amount,4,#4B8BBE,83.76
+Perth,Stay dry,2,humidity_score,Humidity,muggy-air penalty,5,#6B8E9A,97.43
+Perth,Stay dry,2,sunshine_score,Sunshine,solar exposure,6,#D8A83D,61.23
+Perth,Stay dry,2,stability_score,Seasonal stability,less monthly swing,7,#6B9E77,70.66
+Brisbane,Stay dry,3,day_temp_score,Day temperature,daytime mildness,1,#D99035,91
+Brisbane,Stay dry,3,night_temp_score,Night temperature,sleep comfort,2,#5D77A6,96.67
+Brisbane,Stay dry,3,heat_score,Heat burden,hot-day penalty,3,#C95A3C,93.83
+Brisbane,Stay dry,3,rain_score,Rain burden,rain frequency + amount,4,#4B8BBE,81.76
+Brisbane,Stay dry,3,humidity_score,Humidity,muggy-air penalty,5,#6B8E9A,98.81
+Brisbane,Stay dry,3,sunshine_score,Sunshine,solar exposure,6,#D8A83D,60.7
+Brisbane,Stay dry,3,stability_score,Seasonal stability,less monthly swing,7,#6B9E77,74.82
+Melbourne,Stay dry,4,day_temp_score,Day temperature,daytime mildness,1,#D99035,91.07
+Melbourne,Stay dry,4,night_temp_score,Night temperature,sleep comfort,2,#5D77A6,90.6
+Melbourne,Stay dry,4,heat_score,Heat burden,hot-day penalty,3,#C95A3C,94.02
+Melbourne,Stay dry,4,rain_score,Rain burden,rain frequency + amount,4,#4B8BBE,83.79
+Melbourne,Stay dry,4,humidity_score,Humidity,muggy-air penalty,5,#6B8E9A,95.23
+Melbourne,Stay dry,4,sunshine_score,Sunshine,solar exposure,6,#D8A83D,42.72
+Melbourne,Stay dry,4,stability_score,Seasonal stability,less monthly swing,7,#6B9E77,59.03
+Canberra,Stay dry,5,day_temp_score,Day temperature,daytime mildness,1,#D99035,83.47
+Canberra,Stay dry,5,night_temp_score,Night temperature,sleep comfort,2,#5D77A6,66.67
+Canberra,Stay dry,5,heat_score,Heat burden,hot-day penalty,3,#C95A3C,95.39
+Canberra,Stay dry,5,rain_score,Rain burden,rain frequency + amount,4,#4B8BBE,86.3
+Canberra,Stay dry,5,humidity_score,Humidity,muggy-air penalty,5,#6B8E9A,94.68
+Canberra,Stay dry,5,sunshine_score,Sunshine,solar exposure,6,#D8A83D,53.03
+Canberra,Stay dry,5,stability_score,Seasonal stability,less monthly swing,7,#6B9E77,33.78
+Hobart,Stay dry,6,day_temp_score,Day temperature,daytime mildness,1,#D99035,83.53
+Hobart,Stay dry,6,night_temp_score,Night temperature,sleep comfort,2,#5D77A6,83.2
+Hobart,Stay dry,6,heat_score,Heat burden,hot-day penalty,3,#C95A3C,99.07
+Hobart,Stay dry,6,rain_score,Rain burden,rain frequency + amount,4,#4B8BBE,86.02
+Hobart,Stay dry,6,humidity_score,Humidity,muggy-air penalty,5,#6B8E9A,93.49
+Hobart,Stay dry,6,sunshine_score,Sunshine,solar exposure,6,#D8A83D,35.26
+Hobart,Stay dry,6,stability_score,Seasonal stability,less monthly swing,7,#6B9E77,45.05
+Sydney,Stay dry,7,day_temp_score,Day temperature,daytime mildness,1,#D99035,98.2
+Sydney,Stay dry,7,night_temp_score,Night temperature,sleep comfort,2,#5D77A6,97.6
+Sydney,Stay dry,7,heat_score,Heat burden,hot-day penalty,3,#C95A3C,97.54
+Sydney,Stay dry,7,rain_score,Rain burden,rain frequency + amount,4,#4B8BBE,77.31
+Sydney,Stay dry,7,humidity_score,Humidity,muggy-air penalty,5,#6B8E9A,94.68
+Sydney,Stay dry,7,sunshine_score,Sunshine,solar exposure,6,#D8A83D,49.04
+Sydney,Stay dry,7,stability_score,Seasonal stability,less monthly swing,7,#6B9E77,79.16
+Darwin,Stay dry,8,day_temp_score,Day temperature,daytime mildness,1,#D99035,51
+Darwin,Stay dry,8,night_temp_score,Night temperature,sleep comfort,2,#5D77A6,66
+Darwin,Stay dry,8,heat_score,Heat burden,hot-day penalty,3,#C95A3C,62.34
+Darwin,Stay dry,8,rain_score,Rain burden,rain frequency + amount,4,#4B8BBE,71.37
+Darwin,Stay dry,8,humidity_score,Humidity,muggy-air penalty,5,#6B8E9A,90.1
+Darwin,Stay dry,8,sunshine_score,Sunshine,solar exposure,6,#D8A83D,75.92
+Darwin,Stay dry,8,stability_score,Seasonal stability,less monthly swing,7,#6B9E77,44.78
+Brisbane,Enjoy sunshine,1,day_temp_score,Day temperature,daytime mildness,1,#D99035,91
+Brisbane,Enjoy sunshine,1,night_temp_score,Night temperature,sleep comfort,2,#5D77A6,96.67
+Brisbane,Enjoy sunshine,1,heat_score,Heat burden,hot-day penalty,3,#C95A3C,93.83
+Brisbane,Enjoy sunshine,1,rain_score,Rain burden,rain frequency + amount,4,#4B8BBE,81.76
+Brisbane,Enjoy sunshine,1,humidity_score,Humidity,muggy-air penalty,5,#6B8E9A,98.81
+Brisbane,Enjoy sunshine,1,sunshine_score,Sunshine,solar exposure,6,#D8A83D,60.7
+Brisbane,Enjoy sunshine,1,stability_score,Seasonal stability,less monthly swing,7,#6B9E77,74.82
+Perth,Enjoy sunshine,2,day_temp_score,Day temperature,daytime mildness,1,#D99035,87.2
+Perth,Enjoy sunshine,2,night_temp_score,Night temperature,sleep comfort,2,#5D77A6,96.67
+Perth,Enjoy sunshine,2,heat_score,Heat burden,hot-day penalty,3,#C95A3C,83.8
+Perth,Enjoy sunshine,2,rain_score,Rain burden,rain frequency + amount,4,#4B8BBE,83.76
+Perth,Enjoy sunshine,2,humidity_score,Humidity,muggy-air penalty,5,#6B8E9A,97.43
+Perth,Enjoy sunshine,2,sunshine_score,Sunshine,solar exposure,6,#D8A83D,61.23
+Perth,Enjoy sunshine,2,stability_score,Seasonal stability,less monthly swing,7,#6B9E77,70.66
+Adelaide,Enjoy sunshine,3,day_temp_score,Day temperature,daytime mildness,1,#D99035,91.07
+Adelaide,Enjoy sunshine,3,night_temp_score,Night temperature,sleep comfort,2,#5D77A6,95.67
+Adelaide,Enjoy sunshine,3,heat_score,Heat burden,hot-day penalty,3,#C95A3C,89.81
+Adelaide,Enjoy sunshine,3,rain_score,Rain burden,rain frequency + amount,4,#4B8BBE,86.66
+Adelaide,Enjoy sunshine,3,humidity_score,Humidity,muggy-air penalty,5,#6B8E9A,96.52
+Adelaide,Enjoy sunshine,3,sunshine_score,Sunshine,solar exposure,6,#D8A83D,53.29
+Adelaide,Enjoy sunshine,3,stability_score,Seasonal stability,less monthly swing,7,#6B9E77,66.02
+Darwin,Enjoy sunshine,4,day_temp_score,Day temperature,daytime mildness,1,#D99035,51
+Darwin,Enjoy sunshine,4,night_temp_score,Night temperature,sleep comfort,2,#5D77A6,66
+Darwin,Enjoy sunshine,4,heat_score,Heat burden,hot-day penalty,3,#C95A3C,62.34
+Darwin,Enjoy sunshine,4,rain_score,Rain burden,rain frequency + amount,4,#4B8BBE,71.37
+Darwin,Enjoy sunshine,4,humidity_score,Humidity,muggy-air penalty,5,#6B8E9A,90.1
+Darwin,Enjoy sunshine,4,sunshine_score,Sunshine,solar exposure,6,#D8A83D,75.92
+Darwin,Enjoy sunshine,4,stability_score,Seasonal stability,less monthly swing,7,#6B9E77,44.78
+Sydney,Enjoy sunshine,5,day_temp_score,Day temperature,daytime mildness,1,#D99035,98.2
+Sydney,Enjoy sunshine,5,night_temp_score,Night temperature,sleep comfort,2,#5D77A6,97.6
+Sydney,Enjoy sunshine,5,heat_score,Heat burden,hot-day penalty,3,#C95A3C,97.54
+Sydney,Enjoy sunshine,5,rain_score,Rain burden,rain frequency + amount,4,#4B8BBE,77.31
+Sydney,Enjoy sunshine,5,humidity_score,Humidity,muggy-air penalty,5,#6B8E9A,94.68
+Sydney,Enjoy sunshine,5,sunshine_score,Sunshine,solar exposure,6,#D8A83D,49.04
+Sydney,Enjoy sunshine,5,stability_score,Seasonal stability,less monthly swing,7,#6B9E77,79.16
+Canberra,Enjoy sunshine,6,day_temp_score,Day temperature,daytime mildness,1,#D99035,83.47
+Canberra,Enjoy sunshine,6,night_temp_score,Night temperature,sleep comfort,2,#5D77A6,66.67
+Canberra,Enjoy sunshine,6,heat_score,Heat burden,hot-day penalty,3,#C95A3C,95.39
+Canberra,Enjoy sunshine,6,rain_score,Rain burden,rain frequency + amount,4,#4B8BBE,86.3
+Canberra,Enjoy sunshine,6,humidity_score,Humidity,muggy-air penalty,5,#6B8E9A,94.68
+Canberra,Enjoy sunshine,6,sunshine_score,Sunshine,solar exposure,6,#D8A83D,53.03
+Canberra,Enjoy sunshine,6,stability_score,Seasonal stability,less monthly swing,7,#6B9E77,33.78
+Melbourne,Enjoy sunshine,7,day_temp_score,Day temperature,daytime mildness,1,#D99035,91.07
+Melbourne,Enjoy sunshine,7,night_temp_score,Night temperature,sleep comfort,2,#5D77A6,90.6
+Melbourne,Enjoy sunshine,7,heat_score,Heat burden,hot-day penalty,3,#C95A3C,94.02
+Melbourne,Enjoy sunshine,7,rain_score,Rain burden,rain frequency + amount,4,#4B8BBE,83.79
+Melbourne,Enjoy sunshine,7,humidity_score,Humidity,muggy-air penalty,5,#6B8E9A,95.23
+Melbourne,Enjoy sunshine,7,sunshine_score,Sunshine,solar exposure,6,#D8A83D,42.72
+Melbourne,Enjoy sunshine,7,stability_score,Seasonal stability,less monthly swing,7,#6B9E77,59.03
+Hobart,Enjoy sunshine,8,day_temp_score,Day temperature,daytime mildness,1,#D99035,83.53
+Hobart,Enjoy sunshine,8,night_temp_score,Night temperature,sleep comfort,2,#5D77A6,83.2
+Hobart,Enjoy sunshine,8,heat_score,Heat burden,hot-day penalty,3,#C95A3C,99.07
+Hobart,Enjoy sunshine,8,rain_score,Rain burden,rain frequency + amount,4,#4B8BBE,86.02
+Hobart,Enjoy sunshine,8,humidity_score,Humidity,muggy-air penalty,5,#6B8E9A,93.49
+Hobart,Enjoy sunshine,8,sunshine_score,Sunshine,solar exposure,6,#D8A83D,35.26
+Hobart,Enjoy sunshine,8,stability_score,Seasonal stability,less monthly swing,7,#6B9E77,45.05
+Sydney,Stable all year,1,day_temp_score,Day temperature,daytime mildness,1,#D99035,98.2
+Sydney,Stable all year,1,night_temp_score,Night temperature,sleep comfort,2,#5D77A6,97.6
+Sydney,Stable all year,1,heat_score,Heat burden,hot-day penalty,3,#C95A3C,97.54
+Sydney,Stable all year,1,rain_score,Rain burden,rain frequency + amount,4,#4B8BBE,77.31
+Sydney,Stable all year,1,humidity_score,Humidity,muggy-air penalty,5,#6B8E9A,94.68
+Sydney,Stable all year,1,sunshine_score,Sunshine,solar exposure,6,#D8A83D,49.04
+Sydney,Stable all year,1,stability_score,Seasonal stability,less monthly swing,7,#6B9E77,79.16
+Brisbane,Stable all year,2,day_temp_score,Day temperature,daytime mildness,1,#D99035,91
+Brisbane,Stable all year,2,night_temp_score,Night temperature,sleep comfort,2,#5D77A6,96.67
+Brisbane,Stable all year,2,heat_score,Heat burden,hot-day penalty,3,#C95A3C,93.83
+Brisbane,Stable all year,2,rain_score,Rain burden,rain frequency + amount,4,#4B8BBE,81.76
+Brisbane,Stable all year,2,humidity_score,Humidity,muggy-air penalty,5,#6B8E9A,98.81
+Brisbane,Stable all year,2,sunshine_score,Sunshine,solar exposure,6,#D8A83D,60.7
+Brisbane,Stable all year,2,stability_score,Seasonal stability,less monthly swing,7,#6B9E77,74.82
+Perth,Stable all year,3,day_temp_score,Day temperature,daytime mildness,1,#D99035,87.2
+Perth,Stable all year,3,night_temp_score,Night temperature,sleep comfort,2,#5D77A6,96.67
+Perth,Stable all year,3,heat_score,Heat burden,hot-day penalty,3,#C95A3C,83.8
+Perth,Stable all year,3,rain_score,Rain burden,rain frequency + amount,4,#4B8BBE,83.76
+Perth,Stable all year,3,humidity_score,Humidity,muggy-air penalty,5,#6B8E9A,97.43
+Perth,Stable all year,3,sunshine_score,Sunshine,solar exposure,6,#D8A83D,61.23
+Perth,Stable all year,3,stability_score,Seasonal stability,less monthly swing,7,#6B9E77,70.66
+Adelaide,Stable all year,4,day_temp_score,Day temperature,daytime mildness,1,#D99035,91.07
+Adelaide,Stable all year,4,night_temp_score,Night temperature,sleep comfort,2,#5D77A6,95.67
+Adelaide,Stable all year,4,heat_score,Heat burden,hot-day penalty,3,#C95A3C,89.81
+Adelaide,Stable all year,4,rain_score,Rain burden,rain frequency + amount,4,#4B8BBE,86.66
+Adelaide,Stable all year,4,humidity_score,Humidity,muggy-air penalty,5,#6B8E9A,96.52
+Adelaide,Stable all year,4,sunshine_score,Sunshine,solar exposure,6,#D8A83D,53.29
+Adelaide,Stable all year,4,stability_score,Seasonal stability,less monthly swing,7,#6B9E77,66.02
+Melbourne,Stable all year,5,day_temp_score,Day temperature,daytime mildness,1,#D99035,91.07
+Melbourne,Stable all year,5,night_temp_score,Night temperature,sleep comfort,2,#5D77A6,90.6
+Melbourne,Stable all year,5,heat_score,Heat burden,hot-day penalty,3,#C95A3C,94.02
+Melbourne,Stable all year,5,rain_score,Rain burden,rain frequency + amount,4,#4B8BBE,83.79
+Melbourne,Stable all year,5,humidity_score,Humidity,muggy-air penalty,5,#6B8E9A,95.23
+Melbourne,Stable all year,5,sunshine_score,Sunshine,solar exposure,6,#D8A83D,42.72
+Melbourne,Stable all year,5,stability_score,Seasonal stability,less monthly swing,7,#6B9E77,59.03
+Hobart,Stable all year,6,day_temp_score,Day temperature,daytime mildness,1,#D99035,83.53
+Hobart,Stable all year,6,night_temp_score,Night temperature,sleep comfort,2,#5D77A6,83.2
+Hobart,Stable all year,6,heat_score,Heat burden,hot-day penalty,3,#C95A3C,99.07
+Hobart,Stable all year,6,rain_score,Rain burden,rain frequency + amount,4,#4B8BBE,86.02
+Hobart,Stable all year,6,humidity_score,Humidity,muggy-air penalty,5,#6B8E9A,93.49
+Hobart,Stable all year,6,sunshine_score,Sunshine,solar exposure,6,#D8A83D,35.26
+Hobart,Stable all year,6,stability_score,Seasonal stability,less monthly swing,7,#6B9E77,45.05
+Canberra,Stable all year,7,day_temp_score,Day temperature,daytime mildness,1,#D99035,83.47
+Canberra,Stable all year,7,night_temp_score,Night temperature,sleep comfort,2,#5D77A6,66.67
+Canberra,Stable all year,7,heat_score,Heat burden,hot-day penalty,3,#C95A3C,95.39
+Canberra,Stable all year,7,rain_score,Rain burden,rain frequency + amount,4,#4B8BBE,86.3
+Canberra,Stable all year,7,humidity_score,Humidity,muggy-air penalty,5,#6B8E9A,94.68
+Canberra,Stable all year,7,sunshine_score,Sunshine,solar exposure,6,#D8A83D,53.03
+Canberra,Stable all year,7,stability_score,Seasonal stability,less monthly swing,7,#6B9E77,33.78
+Darwin,Stable all year,8,day_temp_score,Day temperature,daytime mildness,1,#D99035,51
+Darwin,Stable all year,8,night_temp_score,Night temperature,sleep comfort,2,#5D77A6,66
+Darwin,Stable all year,8,heat_score,Heat burden,hot-day penalty,3,#C95A3C,62.34
+Darwin,Stable all year,8,rain_score,Rain burden,rain frequency + amount,4,#4B8BBE,71.37
+Darwin,Stable all year,8,humidity_score,Humidity,muggy-air penalty,5,#6B8E9A,90.1
+Darwin,Stable all year,8,sunshine_score,Sunshine,solar exposure,6,#D8A83D,75.92
+Darwin,Stable all year,8,stability_score,Seasonal stability,less monthly swing,7,#6B9E77,44.78
+Sydney,Avoid muggy heat,1,day_temp_score,Day temperature,daytime mildness,1,#D99035,98.2
+Sydney,Avoid muggy heat,1,night_temp_score,Night temperature,sleep comfort,2,#5D77A6,97.6
+Sydney,Avoid muggy heat,1,heat_score,Heat burden,hot-day penalty,3,#C95A3C,97.54
+Sydney,Avoid muggy heat,1,rain_score,Rain burden,rain frequency + amount,4,#4B8BBE,77.31
+Sydney,Avoid muggy heat,1,humidity_score,Humidity,muggy-air penalty,5,#6B8E9A,94.68
+Sydney,Avoid muggy heat,1,sunshine_score,Sunshine,solar exposure,6,#D8A83D,49.04
+Sydney,Avoid muggy heat,1,stability_score,Seasonal stability,less monthly swing,7,#6B9E77,79.16
+Brisbane,Avoid muggy heat,2,day_temp_score,Day temperature,daytime mildness,1,#D99035,91
+Brisbane,Avoid muggy heat,2,night_temp_score,Night temperature,sleep comfort,2,#5D77A6,96.67
+Brisbane,Avoid muggy heat,2,heat_score,Heat burden,hot-day penalty,3,#C95A3C,93.83
+Brisbane,Avoid muggy heat,2,rain_score,Rain burden,rain frequency + amount,4,#4B8BBE,81.76
+Brisbane,Avoid muggy heat,2,humidity_score,Humidity,muggy-air penalty,5,#6B8E9A,98.81
+Brisbane,Avoid muggy heat,2,sunshine_score,Sunshine,solar exposure,6,#D8A83D,60.7
+Brisbane,Avoid muggy heat,2,stability_score,Seasonal stability,less monthly swing,7,#6B9E77,74.82
+Adelaide,Avoid muggy heat,3,day_temp_score,Day temperature,daytime mildness,1,#D99035,91.07
+Adelaide,Avoid muggy heat,3,night_temp_score,Night temperature,sleep comfort,2,#5D77A6,95.67
+Adelaide,Avoid muggy heat,3,heat_score,Heat burden,hot-day penalty,3,#C95A3C,89.81
+Adelaide,Avoid muggy heat,3,rain_score,Rain burden,rain frequency + amount,4,#4B8BBE,86.66
+Adelaide,Avoid muggy heat,3,humidity_score,Humidity,muggy-air penalty,5,#6B8E9A,96.52
+Adelaide,Avoid muggy heat,3,sunshine_score,Sunshine,solar exposure,6,#D8A83D,53.29
+Adelaide,Avoid muggy heat,3,stability_score,Seasonal stability,less monthly swing,7,#6B9E77,66.02
+Melbourne,Avoid muggy heat,4,day_temp_score,Day temperature,daytime mildness,1,#D99035,91.07
+Melbourne,Avoid muggy heat,4,night_temp_score,Night temperature,sleep comfort,2,#5D77A6,90.6
+Melbourne,Avoid muggy heat,4,heat_score,Heat burden,hot-day penalty,3,#C95A3C,94.02
+Melbourne,Avoid muggy heat,4,rain_score,Rain burden,rain frequency + amount,4,#4B8BBE,83.79
+Melbourne,Avoid muggy heat,4,humidity_score,Humidity,muggy-air penalty,5,#6B8E9A,95.23
+Melbourne,Avoid muggy heat,4,sunshine_score,Sunshine,solar exposure,6,#D8A83D,42.72
+Melbourne,Avoid muggy heat,4,stability_score,Seasonal stability,less monthly swing,7,#6B9E77,59.03
+Perth,Avoid muggy heat,5,day_temp_score,Day temperature,daytime mildness,1,#D99035,87.2
+Perth,Avoid muggy heat,5,night_temp_score,Night temperature,sleep comfort,2,#5D77A6,96.67
+Perth,Avoid muggy heat,5,heat_score,Heat burden,hot-day penalty,3,#C95A3C,83.8
+Perth,Avoid muggy heat,5,rain_score,Rain burden,rain frequency + amount,4,#4B8BBE,83.76
+Perth,Avoid muggy heat,5,humidity_score,Humidity,muggy-air penalty,5,#6B8E9A,97.43
+Perth,Avoid muggy heat,5,sunshine_score,Sunshine,solar exposure,6,#D8A83D,61.23
+Perth,Avoid muggy heat,5,stability_score,Seasonal stability,less monthly swing,7,#6B9E77,70.66
+Hobart,Avoid muggy heat,6,day_temp_score,Day temperature,daytime mildness,1,#D99035,83.53
+Hobart,Avoid muggy heat,6,night_temp_score,Night temperature,sleep comfort,2,#5D77A6,83.2
+Hobart,Avoid muggy heat,6,heat_score,Heat burden,hot-day penalty,3,#C95A3C,99.07
+Hobart,Avoid muggy heat,6,rain_score,Rain burden,rain frequency + amount,4,#4B8BBE,86.02
+Hobart,Avoid muggy heat,6,humidity_score,Humidity,muggy-air penalty,5,#6B8E9A,93.49
+Hobart,Avoid muggy heat,6,sunshine_score,Sunshine,solar exposure,6,#D8A83D,35.26
+Hobart,Avoid muggy heat,6,stability_score,Seasonal stability,less monthly swing,7,#6B9E77,45.05
+Canberra,Avoid muggy heat,7,day_temp_score,Day temperature,daytime mildness,1,#D99035,83.47
+Canberra,Avoid muggy heat,7,night_temp_score,Night temperature,sleep comfort,2,#5D77A6,66.67
+Canberra,Avoid muggy heat,7,heat_score,Heat burden,hot-day penalty,3,#C95A3C,95.39
+Canberra,Avoid muggy heat,7,rain_score,Rain burden,rain frequency + amount,4,#4B8BBE,86.3
+Canberra,Avoid muggy heat,7,humidity_score,Humidity,muggy-air penalty,5,#6B8E9A,94.68
+Canberra,Avoid muggy heat,7,sunshine_score,Sunshine,solar exposure,6,#D8A83D,53.03
+Canberra,Avoid muggy heat,7,stability_score,Seasonal stability,less monthly swing,7,#6B9E77,33.78
+Darwin,Avoid muggy heat,8,day_temp_score,Day temperature,daytime mildness,1,#D99035,51
+Darwin,Avoid muggy heat,8,night_temp_score,Night temperature,sleep comfort,2,#5D77A6,66
+Darwin,Avoid muggy heat,8,heat_score,Heat burden,hot-day penalty,3,#C95A3C,62.34
+Darwin,Avoid muggy heat,8,rain_score,Rain burden,rain frequency + amount,4,#4B8BBE,71.37
+Darwin,Avoid muggy heat,8,humidity_score,Humidity,muggy-air penalty,5,#6B8E9A,90.1
+Darwin,Avoid muggy heat,8,sunshine_score,Sunshine,solar exposure,6,#D8A83D,75.92
+Darwin,Avoid muggy heat,8,stability_score,Seasonal stability,less monthly swing,7,#6B9E77,44.78

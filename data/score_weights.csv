@@ -1,0 +1,50 @@
+scenario,scenario_note,component,component_label,component_short,icon,weight,weight_percent,component_order,color
+Balanced everyday comfort,Default all-round climate comfort recipe.,day_temp_score,Day temperature,daytime mildness,sun,0.22,22,1,#D99035
+Balanced everyday comfort,Default all-round climate comfort recipe.,night_temp_score,Night temperature,sleep comfort,moon,0.18,18,2,#5D77A6
+Balanced everyday comfort,Default all-round climate comfort recipe.,heat_score,Heat burden,hot-day penalty,heat,0.16,16,3,#C95A3C
+Balanced everyday comfort,Default all-round climate comfort recipe.,rain_score,Rain burden,rain frequency + amount,rain,0.16,16,4,#4B8BBE
+Balanced everyday comfort,Default all-round climate comfort recipe.,humidity_score,Humidity,muggy-air penalty,humidity,0.08,8,5,#6B8E9A
+Balanced everyday comfort,Default all-round climate comfort recipe.,sunshine_score,Sunshine,solar exposure,sunshine,0.08,8,6,#D8A83D
+Balanced everyday comfort,Default all-round climate comfort recipe.,stability_score,Seasonal stability,less monthly swing,stability,0.12,12,7,#6B9E77
+Avoid hot days,Emphasises fewer hot and very hot days.,day_temp_score,Day temperature,daytime mildness,sun,0.18,18,1,#D99035
+Avoid hot days,Emphasises fewer hot and very hot days.,night_temp_score,Night temperature,sleep comfort,moon,0.12,12,2,#5D77A6
+Avoid hot days,Emphasises fewer hot and very hot days.,heat_score,Heat burden,hot-day penalty,heat,0.5,50,3,#C95A3C
+Avoid hot days,Emphasises fewer hot and very hot days.,rain_score,Rain burden,rain frequency + amount,rain,0.06,6,4,#4B8BBE
+Avoid hot days,Emphasises fewer hot and very hot days.,humidity_score,Humidity,muggy-air penalty,humidity,0.06,6,5,#6B8E9A
+Avoid hot days,Emphasises fewer hot and very hot days.,sunshine_score,Sunshine,solar exposure,sunshine,0.02,2,6,#D8A83D
+Avoid hot days,Emphasises fewer hot and very hot days.,stability_score,Seasonal stability,less monthly swing,stability,0.06,6,7,#6B9E77
+Sleep cool at night,Emphasises comfortable minimum temperatures for sleeping.,day_temp_score,Day temperature,daytime mildness,sun,0.1,10,1,#D99035
+Sleep cool at night,Emphasises comfortable minimum temperatures for sleeping.,night_temp_score,Night temperature,sleep comfort,moon,0.55,55,2,#5D77A6
+Sleep cool at night,Emphasises comfortable minimum temperatures for sleeping.,heat_score,Heat burden,hot-day penalty,heat,0.15,15,3,#C95A3C
+Sleep cool at night,Emphasises comfortable minimum temperatures for sleeping.,rain_score,Rain burden,rain frequency + amount,rain,0.05,5,4,#4B8BBE
+Sleep cool at night,Emphasises comfortable minimum temperatures for sleeping.,humidity_score,Humidity,muggy-air penalty,humidity,0.05,5,5,#6B8E9A
+Sleep cool at night,Emphasises comfortable minimum temperatures for sleeping.,sunshine_score,Sunshine,solar exposure,sunshine,0.03,3,6,#D8A83D
+Sleep cool at night,Emphasises comfortable minimum temperatures for sleeping.,stability_score,Seasonal stability,less monthly swing,stability,0.07,7,7,#6B9E77
+Stay dry,Emphasises fewer wet days and lower rainfall burden.,day_temp_score,Day temperature,daytime mildness,sun,0.05,5,1,#D99035
+Stay dry,Emphasises fewer wet days and lower rainfall burden.,night_temp_score,Night temperature,sleep comfort,moon,0.03,3,2,#5D77A6
+Stay dry,Emphasises fewer wet days and lower rainfall burden.,heat_score,Heat burden,hot-day penalty,heat,0.04,4,3,#C95A3C
+Stay dry,Emphasises fewer wet days and lower rainfall burden.,rain_score,Rain burden,rain frequency + amount,rain,0.7,70,4,#4B8BBE
+Stay dry,Emphasises fewer wet days and lower rainfall burden.,humidity_score,Humidity,muggy-air penalty,humidity,0.03,3,5,#6B8E9A
+Stay dry,Emphasises fewer wet days and lower rainfall burden.,sunshine_score,Sunshine,solar exposure,sunshine,0.08,8,6,#D8A83D
+Stay dry,Emphasises fewer wet days and lower rainfall burden.,stability_score,Seasonal stability,less monthly swing,stability,0.07,7,7,#6B9E77
+Enjoy sunshine,Emphasises solar exposure while still retaining basic comfort penalties.,day_temp_score,Day temperature,daytime mildness,sun,0.14,14,1,#D99035
+Enjoy sunshine,Emphasises solar exposure while still retaining basic comfort penalties.,night_temp_score,Night temperature,sleep comfort,moon,0.08,8,2,#5D77A6
+Enjoy sunshine,Emphasises solar exposure while still retaining basic comfort penalties.,heat_score,Heat burden,hot-day penalty,heat,0.08,8,3,#C95A3C
+Enjoy sunshine,Emphasises solar exposure while still retaining basic comfort penalties.,rain_score,Rain burden,rain frequency + amount,rain,0.08,8,4,#4B8BBE
+Enjoy sunshine,Emphasises solar exposure while still retaining basic comfort penalties.,humidity_score,Humidity,muggy-air penalty,humidity,0.03,3,5,#6B8E9A
+Enjoy sunshine,Emphasises solar exposure while still retaining basic comfort penalties.,sunshine_score,Sunshine,solar exposure,sunshine,0.54,54,6,#D8A83D
+Enjoy sunshine,Emphasises solar exposure while still retaining basic comfort penalties.,stability_score,Seasonal stability,less monthly swing,stability,0.05,5,7,#6B9E77
+Stable all year,Emphasises low month-to-month comfort variation.,day_temp_score,Day temperature,daytime mildness,sun,0.14,14,1,#D99035
+Stable all year,Emphasises low month-to-month comfort variation.,night_temp_score,Night temperature,sleep comfort,moon,0.1,10,2,#5D77A6
+Stable all year,Emphasises low month-to-month comfort variation.,heat_score,Heat burden,hot-day penalty,heat,0.04,4,3,#C95A3C
+Stable all year,Emphasises low month-to-month comfort variation.,rain_score,Rain burden,rain frequency + amount,rain,0.07,7,4,#4B8BBE
+Stable all year,Emphasises low month-to-month comfort variation.,humidity_score,Humidity,muggy-air penalty,humidity,0.04,4,5,#6B8E9A
+Stable all year,Emphasises low month-to-month comfort variation.,sunshine_score,Sunshine,solar exposure,sunshine,0.03,3,6,#D8A83D
+Stable all year,Emphasises low month-to-month comfort variation.,stability_score,Seasonal stability,less monthly swing,stability,0.58,58,7,#6B9E77
+Avoid muggy heat,Emphasises high humidity and heat burden together.,day_temp_score,Day temperature,daytime mildness,sun,0.1,10,1,#D99035
+Avoid muggy heat,Emphasises high humidity and heat burden together.,night_temp_score,Night temperature,sleep comfort,moon,0.18,18,2,#5D77A6
+Avoid muggy heat,Emphasises high humidity and heat burden together.,heat_score,Heat burden,hot-day penalty,heat,0.25,25,3,#C95A3C
+Avoid muggy heat,Emphasises high humidity and heat burden together.,rain_score,Rain burden,rain frequency + amount,rain,0.06,6,4,#4B8BBE
+Avoid muggy heat,Emphasises high humidity and heat burden together.,humidity_score,Humidity,muggy-air penalty,humidity,0.35,35,5,#6B8E9A
+Avoid muggy heat,Emphasises high humidity and heat burden together.,sunshine_score,Sunshine,solar exposure,sunshine,0.02,2,6,#D8A83D
+Avoid muggy heat,Emphasises high humidity and heat burden together.,stability_score,Seasonal stability,less monthly swing,stability,0.04,4,7,#6B9E77

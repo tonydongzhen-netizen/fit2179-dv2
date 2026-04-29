@@ -1,0 +1,18 @@
+file,type,primary_charts,notes
+city_climate_monthly.csv,processed BOM monthly climate data,"4,5,7,8,9","8 cities x 12 months with temperature, heat days, rain, humidity and solar exposure."
+city_scores_monthly.csv,author-derived monthly score data,"5,8,10",Monthly component scores plus comfort-band flags for seasonal and fingerprint charts.
+city_scores_overall.csv,author-derived scenario score data,"1,3,6,9,10,11","8 cities x 7 preference scenarios, with ranks and ABS population context joined in."
+city_components_long.csv,chart-ready long component scores,"1,3,6","Long format for component ticks, glyphs and tooltips."
+city_climate_annual.csv,annual climate and population summary,"1,4,7,9",Annual aggregates from monthly BOM statistics plus ABS population context.
+city_seasonal_metrics.csv,seasonal climate aggregates,"4,7",Annual and seasonal heat/rain metrics for optional season selector.
+city_temperature_band_summary.csv,temperature comfort-band summary,5,Counts of months inside day/night comfort bands and best/worst months.
+city_rain_rhythm_summary.csv,rain rhythm summary,8,"Wettest month, wettest season and top-3-month rain concentration index."
+city_population_context.csv,processed ABS population data,"1,methodology",Second official data source required by the assignment.
+score_weights.csv,score scenario definitions,"2,11",Transparent component weights for balanced and preference scenarios.
+chart2_donut.csv,chart-ready score recipe data,2,Balanced component weights with precomputed angles.
+chart2_labels.csv,chart-ready fixed label positions,2,Fixed coordinates for donut labels and connector lines.
+city_locations.geojson,processed point GeoJSON,"1,4,7",City station points with balanced score and ABS population context.
+australia_context_outline.geojson,processed map GeoJSON,"1,4,7",Australia feature extracted from Natural Earth to keep map data small.
+bom_variable_coverage.csv,metadata,methodology,Number of years and record periods by station and climate variable.
+scoring_methodology.csv,metadata,methodology,Plain-English formulas for all author-derived scores.
+data_sources.csv,metadata,footer,"Source names, URLs and how each source is used."

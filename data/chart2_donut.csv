@@ -1,0 +1,8 @@
+scenario,component,component_label,component_short,weight,weight_percent,component_order,color,start_angle_degrees,end_angle_degrees,mid_angle_degrees
+Balanced everyday comfort,day_temp_score,Day temperature,daytime mildness,0.22,22,1,#D99035,-90,-10.8,-50.4
+Balanced everyday comfort,night_temp_score,Night temperature,sleep comfort,0.18,18,2,#5D77A6,-10.8,54,21.6
+Balanced everyday comfort,heat_score,Heat burden,hot-day penalty,0.16,16,3,#C95A3C,54,111.6,82.8
+Balanced everyday comfort,rain_score,Rain burden,rain frequency + amount,0.16,16,4,#4B8BBE,111.6,169.2,140.4
+Balanced everyday comfort,humidity_score,Humidity,muggy-air penalty,0.08,8,5,#6B8E9A,169.2,198,183.6
+Balanced everyday comfort,sunshine_score,Sunshine,solar exposure,0.08,8,6,#D8A83D,198,226.8,212.4
+Balanced everyday comfort,stability_score,Seasonal stability,less monthly swing,0.12,12,7,#6B9E77,226.8,270,248.4

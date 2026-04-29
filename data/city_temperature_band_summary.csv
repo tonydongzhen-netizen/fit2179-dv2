@@ -1,0 +1,9 @@
+city,day_comfort_band_c,night_comfort_band_c,day_temp_months_in_band,night_temp_months_in_band,day_and_night_months_in_band,best_month,worst_month,highest_monthly_comfort_score,lowest_monthly_comfort_score
+Sydney,18-26,10-19,9,9,9,Dec,Jul,93.65,82.07
+Melbourne,18-26,10-19,7,6,6,Nov,Jul,93.62,70.86
+Brisbane,18-26,10-19,5,7,4,Sep,Jan,94.82,80.83
+Perth,18-26,10-19,7,8,3,Oct,Jan,95.52,79.22
+Adelaide,18-26,10-19,5,8,4,Nov,Jul,95.25,76.37
+Hobart,18-26,10-19,5,4,4,Jan,Jul,95.6,65.07
+Darwin,18-26,10-19,0,0,0,Jul,Jan,82.39,51.71
+Canberra,18-26,10-19,4,4,1,Dec,Jul,94.93,58.14

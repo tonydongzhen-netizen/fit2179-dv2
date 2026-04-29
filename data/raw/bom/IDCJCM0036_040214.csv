@@ -1,0 +1,69 @@
+"Monthly Climate Statistics for 'BRISBANE REGIONAL OFFICE' [040214]"
+"Created on [ 13 May 2026 13:42:17 UTC]"
+
+"040214 BRISBANE REGIONAL OFFICE"
+"Commenced: 1840"
+"Last Record: 1994"
+"Latitude:   27.47 Degrees South"
+"Longitude:  153.03 Degrees East"
+"Elevation:      38 m"
+"State: QLD"
+
+"Statistic Element","January","February","March","April","May","June","July","August","September","October","November","December","Annual","Number of Years","Start Year","End Year"
+"Mean maximum temperature (°C) for years 1887 to 1986 ",29.4,29.0,28.0,26.1,23.2,20.9,20.4,21.8,24.1,26.1,27.8,29.1,25.5,99,1887,1986
+"Highest temperature (°C) for years 1887 to 1986 ",43.2,40.9,38.8,36.1,32.4,31.6,29.1,32.8,38.3,40.7,41.2,41.2,43.2,99,1887,1986
+"Date of Highest temperature  °C  for years 1887 to 1986 ",26 Jan  1940,21 Feb  1925,13 Mar  1965,19 Apr  1973,21 May  1923,19 Jun  1918,23 Jul  1946,14 Aug  1946,22 Sep  1943,30 Oct  1958,18 Nov  1913,07 Dec  1981,26 Jan  1940,N/A,1887,1986
+"Lowest maximum temperature (°C) for years 1887 to 1986 ",19.8,20.7,19.2,16.3,13.3,11.3,10.6,10.2,14.9,15.2,16.7,18.9,10.2,99,1887,1986
+"Date of Lowest maximum temperature  °C  for years 1887 to 1986 ",06 Jan  1920,03 Feb  1906,07 Mar  1921,26 Apr  1983,26 May  1904,20 Jun  1916,04 Jul  1938,12 Aug  1954,10 Sep  1935,02 Oct  1898,08 Nov  1917,02 Dec  1888,12 Aug  1954,N/A,1887,1986
+"Decile 1 maximum temperature (°C) for years 1887 to 1986 ",26.2,25.8,24.9,23.3,20.5,18.1,17.7,19.1,21.0,22.5,24.3,25.7, ,101,1887,1986
+"Decile 9 maximum temperature (°C) for years 1887 to 1986 ",32.7,32.2,31.0,29.2,26.0,23.5,23.1,24.8,27.4,29.9,31.4,32.6, ,101,1887,1986
+"Mean number of days >= 30 °C for years 1887 to 1986 ",11.9,9.4,5.8,1.8,0.1,0.0,0.0,0.1,0.7,3.1,6.0,10.9,49.8,99,1887,1986
+"Mean number of days >= 35 °C for years 1887 to 1986 ",1.0,0.5,0.2,0.1,0.0,0.0,0.0,0.0,0.0,0.2,0.5,1.0,3.5,99,1887,1986
+"Mean number of days >= 40 °C for years 1887 to 1986 ",0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.1,0.0,0.1,99,1887,1986
+"Mean minimum temperature (°C) for years 1887 to 1986 ",20.7,20.6,19.4,16.6,13.3,10.9,9.5,10.3,12.9,15.8,18.1,19.8,15.7,99,1887,1986
+"Lowest temperature (°C) for years 1887 to 1986 ",14.9,14.7,11.3,6.9,4.8,2.4,2.3,2.7,4.8,6.3,9.2,13.5,2.3,99,1887,1986
+"Date of Lowest temperature  °C  for years 1887 to 1986 ",04 Jan  1893,23 Feb  1931,29 Mar  1913,25 Apr  1925,30 May  1951,29 Jun  1908,02 Jul  1896,13 Aug  1964,01 Sep  1896,03 Oct  1899,02 Nov  1905,05 Dec  1955,02 Jul  1896,N/A,1887,1986
+"Highest minimum temperature (°C) for years 1887 to 1986 ",28.0,26.0,25.5,23.6,21.9,19.0,18.9,17.8,22.2,23.2,25.2,26.4,28.0,99,1887,1986
+"Date of Highest minimum temperature  °C  for years 1887 to 1986 ",29 Jan  1940,19 Feb  1982,14 Mar  1973,20 Apr  1973,20 May  1892,01 Jun  1981,02 Jul  1920,13 Aug  1950,25 Sep  1981,13 Oct  1979,24 Nov  1968,26 Dec  1972,29 Jan  1940,N/A,1887,1986
+"Decile 1 minimum temperature (°C) for years 1887 to 1986 ",18.3,18.4,17.2,13.6,9.8,7.2,5.8,6.8,9.7,12.7,15.3,17.3, ,101,1887,1986
+"Decile 9 minimum temperature (°C) for years 1887 to 1986 ",23.1,22.8,21.7,19.4,16.4,14.3,13.1,13.6,16.0,18.7,20.8,22.3, ,101,1887,1986
+"Mean number of days <= 2 °C for years 1887 to 1986 ",0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,99,1887,1986
+"Mean number of days <= 0 °C for years 1887 to 1986 ",0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,99,1887,1986
+"Mean daily ground minimum temperature °C for years 1951 to 1986 ",19.5,19.6,18.3,15.4,11.8,9.3,7.7,8.6,11.0,14.1,16.7,18.5,14.2,35,1951,1986
+"Lowest ground temperature °C for years 1951 to 1986 ",12.8,12.3,11.1,5.7,2.9,1.3,0.3,0.2,3.8,5.0,8.5,9.6,0.2,35,1951,1986
+"Date of Lowest ground temperature °C for years 1951 to 1986 ",27 Jan  1965,25 Feb  1964,28 Mar  1953,30 Apr  1952,20 May  1955,23 Jun  1961,21 Jul  1951,13 Aug  1964,24 Sep  1956,01 Oct  1962,03 Nov  1974,05 Dec  1955,13 Aug  1964,N/A,1951,1986
+"Mean number of days ground min. temp. <= -1 °C for years 1951 to 1986 ",0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,35,1951,1986
+"Mean rainfall (mm) for years 1840 to 1994 ",159.6,158.3,140.7,92.5,73.7,67.8,56.5,45.9,45.7,75.4,97.0,133.3,1149.1,145,1840,1994
+"Highest rainfall (mm) for years 1840 to 1994 ",871.8,1025.9,864.7,547.6,409.6,647.4,329.5,372.7,137.9,457.1,412.8,839.5,2242.4,145,1840,1994
+"Date of Highest rainfall for years 1840 to 1994 ",1974,1893,1870,1989,1980,1967,1973,1879,1886,1972,1981,1859,1893,N/A,1840,1994
+"Lowest rainfall (mm) for years 1840 to 1994 ",8.2,14.7,0.0,1.1,0.0,0.0,0.0,0.0,0.2,0.8,0.0,8.9,411.5,145,1840,1994
+"Date of Lowest rainfall for years 1840 to 1994 ",1919,1859,1849,1944,1846,1895,1951,1991,1980,1948,1842,1865,1902,N/A,1840,1994
+"Decile 1 monthly rainfall (mm) for years 1800 to 3000 ",46.1,39.1,22.4,14.2,10.0,5.2,6.0,6.2,9.2,19.7,26.1,39.9, ,147,n/a,n/a
+"Decile 5 (median) monthly rainfall (mm) for years 1800 to 3000 ",126.0,115.8,110.1,60.6,51.8,43.5,37.9,29.4,39.5,61.2,83.3,116.0, ,147,n/a,n/a
+"Decile 5 (median) monthly rainfall (mm) for years 1800 to 3000 ",281.6,358.3,285.2,198.8,158.7,156.1,146.1,97.8,88.6,143.4,200.5,241.1, ,147,n/a,n/a
+"Highest daily rainfall (mm) for years 1841 to 1994 ",465.1,269.5,284.0,190.2,149.0,282.4,193.0,124.2,79.5,135.6,169.0,167.6,465.1,132,1841,1994
+"Date of Highest daily rainfall for years 1841 to 1994 ",21 Jan  1887,06 Feb  1931,14 Mar  1908,26 Apr  1989,09 May  1980,12 Jun  1967,20 Jul  1965,12 Aug  1887,12 Sep  1965,25 Oct  1949,02 Nov  1981,28 Dec  1871,21 Jan  1887,N/A,1841,1994
+"Mean number of days of rain for years 1840 to 1994 ",12.9,13.2,14.3,11.1,9.6,7.9,7.2,6.7,7.3,9.2,9.8,11.4,120.6,138,1840,1994
+"Mean number of days of rain >= 1 mm for years 1841 to 1994 ",8.4,8.8,9.4,6.8,5.8,4.5,4.2,4.0,4.4,5.9,6.5,7.7,76.4,132,1841,1994
+"Mean number of days of rain >= 10 mm for years 1841 to 1994 ",3.6,3.5,3.2,2.0,1.6,1.3,1.3,1.0,1.1,2.0,2.6,3.3,26.5,132,1841,1994
+"Mean number of days of rain >= 25 mm for years 1841 to 1994 ",1.5,1.5,1.3,0.8,0.6,0.6,0.5,0.4,0.3,0.6,0.9,1.2,10.2,132,1841,1994
+"Mean daily wind run (km) for years 1951 to 1985 ",283,269,260,234,225,235,231,231,241,251,259,265,249,35,1951,1985
+"Maximum wind gust speed (km/h) for years 1951 to 1986 ",145,102,106,104,87,95,111,100,102,93,111,124,145,35,1951,1986
+"Date of Maximum wind gust speed for years 1951 to 1986 ",18 Jan  1985,18 Feb  1959,14 Mar  1957,17 Apr  1956,30 May  1969,05 Jun  1963,19 Jul  1965,30 Aug  1963,27 Sep  1955,10 Oct  1974,17 Nov  1962,27 Dec  1972,18 Jan  1985,N/A,1951,1986
+"Mean daily sunshine (hours) for years 1951 to 1983 ",7.4,6.6,6.5,7.2,6.9,6.8,7.4,7.9,8.2,8.0,8.4,8.1,7.4,26,1951,1983
+"Mean daily solar exposure (MJ/(m*m)) for years 1990 to 2026 ",23.5,21.1,18.6,16.3,13.3,11.9,13.1,16.0,19.4,21.6,23.5,24.1,18.5,36,1990,2026
+"Mean number of clear days for years 1951 to 1986 ",4.0,3.5,6.7,8.7,10.7,12.1,15.2,15.4,14.1,9.2,7.4,6.1,113.1,35,1951,1986
+"Mean number of cloudy days for years 1951 to 1986 ",14.3,13.4,12.8,8.7,10.0,8.1,7.4,5.9,5.9,9.9,10.7,12.1,119.2,35,1951,1986
+"Mean daily evaporation (mm) for years 1951 to 1986 ",5.8,5.2,4.5,3.8,3.0,2.5,2.5,3.3,4.2,4.8,5.6,6.1,4.3,31,1951,1986
+"Mean 9am temperature (°C) for years 1951 to 1986 ",25.6,25.3,24.1,21.5,17.7,14.7,13.7,15.4,18.8,21.7,24.1,25.5,20.7,35,1951,1986
+"Mean 9am wet bulb temperature (°C) for years 1951 to 1986 ",21.3,21.4,20.5,18.0,14.6,11.9,10.7,11.9,14.5,17.0,18.9,20.5,16.8,35,1951,1986
+"Mean 9am dew point temperature (°C) for years 1951 to 1986 ",18.6,19.1,18.3,15.6,11.7,9.0,7.3,8.1,10.6,13.2,15.3,17.4,13.7,35,1951,1986
+"Mean 9am relative humidity (%) for years 1951 to 1986 ",66,69,71,70,70,70,67,63,61,60,60,62,66,35,1951,1986
+"Mean 9am cloud cover (okas) for years 1951 to 1986 ",5.4,5.3,4.4,3.5,3.6,3.2,2.9,2.6,2.8,4.1,4.6,4.9,3.9,35,1951,1986
+"Mean 9am wind speed (km/h) for years 1951 to 1986 ",7.8,7.5,7.3,6.8,7.3,8.4,8.1,7.6,7.0,7.1,7.1,7.1,7.4,35,1951,1986
+"Mean 3pm temperature (°C) for years 1951 to 1986 ",27.4,27.4,26.7,25.1,22.2,20.1,19.5,20.7,22.5,24.0,25.8,27.1,24.0,35,1951,1986
+"Mean 3pm wet bulb temperature (°C) for years 1951 to 1986 ",21.7,21.9,21.1,19.0,16.3,14.3,13.4,14.0,15.7,17.7,19.6,21.2,18.0,35,1951,1986
+"Mean 3pm dew point temperature (°C) for years 1951 to 1986 ",18.3,18.7,17.6,14.7,11.1,8.8,6.8,7.0,9.4,12.6,15.2,17.5,13.1,35,1951,1986
+"Mean 3pm relative humidity (%) for years 1951 to 1986 ",59,60,59,55,52,51,46,44,46,52,55,57,53,35,1951,1986
+"Mean 3pm cloud cover (oktas) for years 1951 to 1986 ",4.9,5.2,4.9,4.4,4.2,3.8,3.3,3.1,3.3,4.0,4.1,4.4,4.1,35,1951,1986
+"Mean 3pm wind speed (km/h) for years 1951 to 1986 ",14.4,13.6,13.1,11.0,9.5,9.9,10.5,11.7,13.3,14.3,14.5,14.9,12.6,35,1951,1986

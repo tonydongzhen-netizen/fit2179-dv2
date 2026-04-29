@@ -1,0 +1,9 @@
+city,annual_rainfall_mm,annual_rain_days,wettest_month,wettest_month_rainfall_mm,top_3_wettest_months,top_3_month_rainfall_share,rain_concentration_index,wettest_season,wettest_season_rainfall_mm,driest_season,driest_season_rainfall_mm
+Sydney,1211.3,143.2,Jun,133.1,"Jun,Mar,Apr",0.323,32.3,Autumn,375.5,Spring,228.6
+Melbourne,648.3,150.6,Oct,66,"Oct,Nov,Dec",0.286,28.6,Spring,184.3,Winter,147
+Brisbane,1146.4,120.6,Jan,159.6,"Jan,Feb,Mar",0.4,40,Summer,451.2,Winter,170.2
+Perth,722,108,Jul,147,"Jul,Jun,Aug",0.553,55.3,Winter,399.3,Summer,38.2
+Adelaide,524.7,120.8,Jun,72.1,"Jun,May,Jul",0.391,39.09,Winter,199,Summer,66.2
+Hobart,611.1,160.5,Oct,62,"Oct,Dec,Aug",0.282,28.24,Spring,169,Autumn,140.9
+Darwin,1733.4,112.9,Jan,432.1,"Jan,Feb,Mar",0.643,64.32,Summer,1059.8,Winter,7.3
+Canberra,616.1,106.1,Nov,64.4,"Nov,Oct,Jan",0.301,30.08,Spring,178.8,Winter,128.1
