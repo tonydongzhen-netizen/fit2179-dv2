@@ -1,0 +1,134 @@
+{
+  "description": "Balanced everyday comfort ranking for Australian capital cities.",
+  "width": 560,
+  "height": 360,
+  "padding": {
+    "left": 82,
+    "right": 38,
+    "top": 12,
+    "bottom": 46
+  },
+  "data": {
+    "url": "data/city_scores_overall.csv"
+  },
+  "transform": [
+    {
+      "filter": "datum.scenario == 'Balanced everyday comfort'"
+    }
+  ],
+  "layer": [
+    {
+      "mark": {
+        "type": "bar",
+        "cornerRadiusEnd": 4,
+        "height": {
+          "band": 0.56
+        }
+      },
+      "encoding": {
+        "y": {
+          "field": "city",
+          "type": "nominal",
+          "sort": {
+            "field": "rank",
+            "order": "ascending"
+          },
+          "title": null,
+          "axis": {
+            "labelFontSize": 14,
+            "labelPadding": 8,
+            "labelColor": "#202932"
+          }
+        },
+        "x": {
+          "field": "overall_score",
+          "type": "quantitative",
+          "title": "Balanced comfort score",
+          "scale": {
+            "domain": [
+              0,
+              100
+            ]
+          },
+          "axis": {
+            "tickCount": 6,
+            "labelFontSize": 12,
+            "titleFontSize": 12
+          }
+        },
+        "color": {
+          "condition": {
+            "test": "datum.rank == 1",
+            "value": "#1f766f"
+          },
+          "value": "#9fb1b7"
+        },
+        "tooltip": [
+          {
+            "field": "city"
+          },
+          {
+            "field": "rank"
+          },
+          {
+            "field": "overall_score",
+            "title": "Balanced score",
+            "format": ".1f"
+          }
+        ]
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "baseline": "middle",
+        "dx": 7,
+        "fontSize": 13,
+        "fontWeight": 700,
+        "color": "#26313b"
+      },
+      "encoding": {
+        "y": {
+          "field": "city",
+          "type": "nominal",
+          "sort": {
+            "field": "rank",
+            "order": "ascending"
+          }
+        },
+        "x": {
+          "field": "overall_score",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "overall_score",
+          "format": ".1f"
+        }
+      }
+    }
+  ],
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "config": {
+    "axis": {
+      "labelFont": "Inter, Arial, sans-serif",
+      "titleFont": "Inter, Arial, sans-serif",
+      "labelColor": "#4c5965",
+      "titleColor": "#26313b",
+      "gridColor": "#edf0f2",
+      "domainColor": "#c9d0d6",
+      "tickColor": "#c9d0d6"
+    },
+    "legend": {
+      "labelFont": "Inter, Arial, sans-serif",
+      "titleFont": "Inter, Arial, sans-serif",
+      "labelColor": "#4c5965",
+      "titleColor": "#26313b"
+    },
+    "view": {
+      "stroke": null
+    },
+    "font": "Inter, Arial, sans-serif",
+    "background": "#ffffff"
+  }
+}

@@ -1,0 +1,172 @@
+{
+  "description": "Monthly mean maximum/minimum temperature envelopes with a daytime comfort band.",
+  "data": {
+    "url": "data/city_scores_monthly.csv"
+  },
+  "facet": {
+    "field": "city",
+    "type": "nominal",
+    "sort": [
+      "Sydney",
+      "Brisbane",
+      "Adelaide",
+      "Perth",
+      "Melbourne",
+      "Hobart",
+      "Canberra",
+      "Darwin"
+    ],
+    "title": null
+  },
+  "columns": 2,
+  "spec": {
+    "width": 240,
+    "height": 118,
+    "layer": [
+      {
+        "mark": {
+          "type": "rule",
+          "stroke": "#6b9e77",
+          "strokeDash": [
+            4,
+            4
+          ],
+          "strokeWidth": 1.2
+        },
+        "encoding": {
+          "y": {
+            "datum": 18
+          }
+        }
+      },
+      {
+        "mark": {
+          "type": "rule",
+          "stroke": "#6b9e77",
+          "strokeDash": [
+            4,
+            4
+          ],
+          "strokeWidth": 1.2
+        },
+        "encoding": {
+          "y": {
+            "datum": 26
+          }
+        }
+      },
+      {
+        "mark": {
+          "type": "area",
+          "opacity": 0.32,
+          "color": "#d99035"
+        },
+        "encoding": {
+          "x": {
+            "field": "month_num",
+            "type": "ordinal",
+            "title": null,
+            "axis": {
+              "values": [
+                1,
+                3,
+                5,
+                7,
+                9,
+                11
+              ],
+              "labelExpr": "['Jan','Mar','May','Jul','Sep','Nov'][indexof([1,3,5,7,9,11], datum.value)]"
+            }
+          },
+          "y": {
+            "field": "mean_min_temp_c",
+            "type": "quantitative",
+            "title": "C",
+            "scale": {
+              "domain": [
+                -2,
+                35
+              ]
+            }
+          },
+          "y2": {
+            "field": "mean_max_temp_c"
+          },
+          "tooltip": [
+            {
+              "field": "city"
+            },
+            {
+              "field": "month"
+            },
+            {
+              "field": "mean_max_temp_c",
+              "title": "Mean max C"
+            },
+            {
+              "field": "mean_min_temp_c",
+              "title": "Mean min C"
+            }
+          ]
+        }
+      },
+      {
+        "mark": {
+          "type": "line",
+          "strokeWidth": 2,
+          "color": "#c95a3c"
+        },
+        "encoding": {
+          "x": {
+            "field": "month_num",
+            "type": "ordinal"
+          },
+          "y": {
+            "field": "mean_max_temp_c",
+            "type": "quantitative"
+          }
+        }
+      },
+      {
+        "mark": {
+          "type": "line",
+          "strokeWidth": 2,
+          "color": "#5d77a6"
+        },
+        "encoding": {
+          "x": {
+            "field": "month_num",
+            "type": "ordinal"
+          },
+          "y": {
+            "field": "mean_min_temp_c",
+            "type": "quantitative"
+          }
+        }
+      }
+    ]
+  },
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "config": {
+    "axis": {
+      "labelFont": "Inter, Arial, sans-serif",
+      "titleFont": "Inter, Arial, sans-serif",
+      "labelColor": "#4c5965",
+      "titleColor": "#26313b",
+      "gridColor": "#edf0f2",
+      "domainColor": "#c9d0d6",
+      "tickColor": "#c9d0d6"
+    },
+    "legend": {
+      "labelFont": "Inter, Arial, sans-serif",
+      "titleFont": "Inter, Arial, sans-serif",
+      "labelColor": "#4c5965",
+      "titleColor": "#26313b"
+    },
+    "view": {
+      "stroke": null
+    },
+    "font": "Inter, Arial, sans-serif",
+    "background": "#ffffff"
+  }
+}

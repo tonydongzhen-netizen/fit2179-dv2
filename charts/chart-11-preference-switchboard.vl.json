@@ -1,0 +1,202 @@
+{
+  "description": "Preference sensitivity switchboard comparing ranks across scenarios.",
+  "width": 760,
+  "height": 320,
+  "data": {
+    "url": "data/city_scores_overall.csv"
+  },
+  "transform": [
+    {
+      "calculate": "datum.rank_change_from_balanced > 0 ? '+' + datum.rank_change_from_balanced : datum.rank_change_from_balanced < 0 ? '' + datum.rank_change_from_balanced : '0'",
+      "as": "change_label"
+    }
+  ],
+  "layer": [
+    {
+      "mark": {
+        "type": "rect",
+        "cornerRadius": 3
+      },
+      "encoding": {
+        "x": {
+          "field": "city",
+          "type": "nominal",
+          "sort": [
+            "Sydney",
+            "Brisbane",
+            "Adelaide",
+            "Perth",
+            "Melbourne",
+            "Hobart",
+            "Canberra",
+            "Darwin"
+          ],
+          "title": null
+        },
+        "y": {
+          "field": "scenario",
+          "type": "nominal",
+          "sort": [
+            "Balanced everyday comfort",
+            "Avoid hot days",
+            "Sleep cool at night",
+            "Stay dry",
+            "Enjoy sunshine",
+            "Stable all year",
+            "Avoid muggy heat"
+          ],
+          "title": null
+        },
+        "color": {
+          "field": "overall_score",
+          "type": "quantitative",
+          "title": "Scenario score",
+          "scale": {
+            "scheme": "tealblues",
+            "domain": [
+              50,
+              95
+            ]
+          }
+        },
+        "stroke": {
+          "condition": {
+            "test": "datum.rank == 1",
+            "value": "#1f2933"
+          },
+          "value": "#ffffff"
+        },
+        "strokeWidth": {
+          "condition": {
+            "test": "datum.rank == 1",
+            "value": 2
+          },
+          "value": 0.5
+        },
+        "tooltip": [
+          {
+            "field": "scenario"
+          },
+          {
+            "field": "city"
+          },
+          {
+            "field": "rank"
+          },
+          {
+            "field": "overall_score",
+            "format": ".1f"
+          },
+          {
+            "field": "rank_change_from_balanced",
+            "title": "Rank change from balanced"
+          }
+        ]
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "fontSize": 14,
+        "fontWeight": 800,
+        "color": "#ffffff"
+      },
+      "encoding": {
+        "x": {
+          "field": "city",
+          "type": "nominal",
+          "sort": [
+            "Sydney",
+            "Brisbane",
+            "Adelaide",
+            "Perth",
+            "Melbourne",
+            "Hobart",
+            "Canberra",
+            "Darwin"
+          ]
+        },
+        "y": {
+          "field": "scenario",
+          "type": "nominal",
+          "sort": [
+            "Balanced everyday comfort",
+            "Avoid hot days",
+            "Sleep cool at night",
+            "Stay dry",
+            "Enjoy sunshine",
+            "Stable all year",
+            "Avoid muggy heat"
+          ]
+        },
+        "text": {
+          "field": "rank"
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "dy": 17,
+        "fontSize": 10,
+        "fontWeight": 650,
+        "color": "#26313b"
+      },
+      "encoding": {
+        "x": {
+          "field": "city",
+          "type": "nominal",
+          "sort": [
+            "Sydney",
+            "Brisbane",
+            "Adelaide",
+            "Perth",
+            "Melbourne",
+            "Hobart",
+            "Canberra",
+            "Darwin"
+          ]
+        },
+        "y": {
+          "field": "scenario",
+          "type": "nominal",
+          "sort": [
+            "Balanced everyday comfort",
+            "Avoid hot days",
+            "Sleep cool at night",
+            "Stay dry",
+            "Enjoy sunshine",
+            "Stable all year",
+            "Avoid muggy heat"
+          ]
+        },
+        "text": {
+          "field": "change_label"
+        }
+      }
+    }
+  ],
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "config": {
+    "axis": {
+      "labelFont": "Inter, Arial, sans-serif",
+      "titleFont": "Inter, Arial, sans-serif",
+      "labelColor": "#4c5965",
+      "titleColor": "#26313b",
+      "gridColor": "#edf0f2",
+      "domainColor": "#c9d0d6",
+      "tickColor": "#c9d0d6"
+    },
+    "legend": {
+      "labelFont": "Inter, Arial, sans-serif",
+      "titleFont": "Inter, Arial, sans-serif",
+      "labelColor": "#4c5965",
+      "titleColor": "#26313b"
+    },
+    "view": {
+      "stroke": null
+    },
+    "font": "Inter, Arial, sans-serif",
+    "background": "#ffffff"
+  }
+}

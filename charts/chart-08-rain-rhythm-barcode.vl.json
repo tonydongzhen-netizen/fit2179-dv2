@@ -1,0 +1,110 @@
+{
+  "description": "Rain rhythm barcode showing monthly rain days and rainfall intensity.",
+  "data": {
+    "url": "data/city_scores_monthly.csv"
+  },
+  "facet": {
+    "field": "city",
+    "type": "nominal",
+    "sort": [
+      "Sydney",
+      "Brisbane",
+      "Adelaide",
+      "Perth",
+      "Melbourne",
+      "Hobart",
+      "Canberra",
+      "Darwin"
+    ],
+    "title": null
+  },
+  "columns": 1,
+  "spec": {
+    "width": 620,
+    "height": 70,
+    "mark": {
+      "type": "bar",
+      "cornerRadiusEnd": 2
+    },
+    "encoding": {
+      "x": {
+        "field": "month_num",
+        "type": "ordinal",
+        "title": null,
+        "axis": {
+          "values": [
+            1,
+            3,
+            5,
+            7,
+            9,
+            11
+          ],
+          "labelExpr": "['Jan','Mar','May','Jul','Sep','Nov'][indexof([1,3,5,7,9,11], datum.value)]"
+        }
+      },
+      "y": {
+        "field": "rain_days",
+        "type": "quantitative",
+        "title": "Rain days",
+        "scale": {
+          "domain": [
+            0,
+            23
+          ]
+        }
+      },
+      "color": {
+        "field": "mean_rain_mm",
+        "type": "quantitative",
+        "title": "Rainfall mm",
+        "scale": {
+          "scheme": "blues"
+        }
+      },
+      "tooltip": [
+        {
+          "field": "city"
+        },
+        {
+          "field": "month"
+        },
+        {
+          "field": "rain_days",
+          "title": "Rain days"
+        },
+        {
+          "field": "mean_rain_mm",
+          "title": "Rainfall mm"
+        },
+        {
+          "field": "rain_days_ge_1mm",
+          "title": "Days >=1mm"
+        }
+      ]
+    }
+  },
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "config": {
+    "axis": {
+      "labelFont": "Inter, Arial, sans-serif",
+      "titleFont": "Inter, Arial, sans-serif",
+      "labelColor": "#4c5965",
+      "titleColor": "#26313b",
+      "gridColor": "#edf0f2",
+      "domainColor": "#c9d0d6",
+      "tickColor": "#c9d0d6"
+    },
+    "legend": {
+      "labelFont": "Inter, Arial, sans-serif",
+      "titleFont": "Inter, Arial, sans-serif",
+      "labelColor": "#4c5965",
+      "titleColor": "#26313b"
+    },
+    "view": {
+      "stroke": null
+    },
+    "font": "Inter, Arial, sans-serif",
+    "background": "#ffffff"
+  }
+}

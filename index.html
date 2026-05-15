@@ -1,0 +1,330 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Australian Capital Climate Comfort</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;750;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+  <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+</head>
+
+<body>
+  <header class="site-header">
+    <a class="brand" href="#top">Capital Climate Comfort</a>
+    <nav aria-label="Page sections">
+      <a href="#method">Method</a>
+      <a href="#temperature">Temperature</a>
+      <a href="#rain">Rain</a>
+      <a href="#preference">Preference</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">FIT2179 Data Visualisation 2</p>
+        <h1>Which capital has <span class="nowrap">Australia's</span> most comfortable climate?</h1>
+        <p class="lead">
+          Sydney leads the balanced score, but the answer changes when comfort is
+          redefined by heat, rain, sunshine and night-time comfort.
+        </p>
+        <p class="note">
+          The score is an author-derived index from official climate statistics. It is a
+          transparent comparison, not an official ranking.
+        </p>
+      </div>
+      <div class="hero-visual" id="chart-01" aria-label="Capital climate map"></div>
+    </section>
+
+    <section class="signal-band" aria-label="Main findings">
+      <div>
+        <span class="signal-label">Balanced leader</span>
+        <strong>Sydney</strong>
+        <p>Best under the default recipe, with strong day, night and stability scores.</p>
+      </div>
+      <div>
+        <span class="signal-label">Dry-weather answer</span>
+        <strong>Adelaide</strong>
+        <p>Moves to first when rain burden receives the largest weight.</p>
+      </div>
+      <div>
+        <span class="signal-label">Sunshine answer</span>
+        <strong>Brisbane</strong>
+        <p>Leads when solar exposure becomes the dominant preference.</p>
+      </div>
+    </section>
+
+    <section class="section narrow" id="method">
+      <p class="eyebrow">1. The scoring framework</p>
+      <h2>The ranking starts with a visible recipe.</h2>
+      <p>
+        Comfort is not a single weather variable. The balanced score gives the most weight
+        to daytime and night-time temperature, while still counting heat, rain, humidity,
+        sunshine and seasonal stability. Later sections test what happens when that recipe
+        changes.
+      </p>
+    </section>
+
+    <section class="viz-row">
+      <div class="viz-copy">
+        <p class="chart-kicker">Chart 2</p>
+        <h3>Balanced comfort score recipe</h3>
+        <p class="takeaway">Takeaway: the ranking is only meaningful after the weighting recipe is visible.</p>
+        <p>
+          The index is deliberately exposed before any city is declared first. This keeps
+          the ranking accountable and lets the reader judge whether the definition of
+          comfort matches their own priorities.
+        </p>
+      </div>
+      <figure class="viz-frame">
+        <div id="chart-02"></div>
+      </figure>
+    </section>
+
+    <section class="viz-row layout-stacked">
+      <div class="viz-copy">
+        <p class="chart-kicker">Chart 3a</p>
+        <h3>Sydney leads the balanced comfort ranking.</h3>
+        <p class="takeaway">Takeaway: similar overall scores can come from different climate strengths.</p>
+        <p>
+          The balanced ranking uses the scoring recipe introduced above. Sydney is first,
+          but Brisbane, Adelaide and Perth sit close behind, so the score alone is not the
+          full explanation.
+        </p>
+      </div>
+      <figure class="viz-frame">
+        <div id="chart-03a"></div>
+      </figure>
+    </section>
+
+    <section class="viz-row layout-stacked">
+      <div class="viz-copy">
+        <p class="chart-kicker">Chart 3b</p>
+        <h3>The component fingerprint explains the ranking.</h3>
+        <p class="takeaway">Takeaway: different cities earn similar totals through different strengths.</p>
+        <p>
+          The heat map shows why a single rank can hide useful detail. Some cities benefit
+          from dry weather, others from night comfort or sunshine, while Darwin is held back
+          by persistent heat.
+        </p>
+      </div>
+      <figure class="viz-frame">
+        <div id="chart-03b"></div>
+      </figure>
+    </section>
+
+    <section class="section narrow" id="temperature">
+      <p class="eyebrow">2. Temperature is not one number</p>
+      <h2>Average warmth hides the difference between days, nights and hot spells.</h2>
+      <p>
+        For everyday life, a mild annual average is not enough. Hot days matter, night
+        temperatures shape sleep comfort, and seasonal swings determine whether comfort is
+        stable or concentrated in a few months.
+      </p>
+    </section>
+
+    <section class="viz-row layout-stacked">
+      <div class="viz-copy">
+        <p class="chart-kicker">Chart 4</p>
+        <h3>Summer heat stress is spatially uneven.</h3>
+        <p class="takeaway">Takeaway: heat pressure clusters around northern and inland-influenced climates.</p>
+        <p>
+          Northern and inland-influenced cities face more frequent heat penalties. The map
+          uses hot days as colour and very hot days as size so the burden is not reduced to
+          a single average temperature.
+        </p>
+      </div>
+      <figure class="viz-frame">
+        <div id="chart-04"></div>
+      </figure>
+    </section>
+
+    <section class="viz-row layout-stacked">
+      <div class="viz-copy">
+        <p class="chart-kicker">Chart 5</p>
+        <h3>The comfort band shows which months feel easy.</h3>
+        <p class="takeaway">Takeaway: a city can have a good annual average and still miss the comfort band for months.
+        </p>
+        <p>
+          Temperature envelopes compare monthly mean maximum and minimum temperatures.
+          Sydney stays inside the daytime comfort band for more of the year, while Darwin
+          sits above it throughout.
+        </p>
+      </div>
+      <figure class="viz-frame">
+        <div id="chart-05"></div>
+      </figure>
+    </section>
+
+    <section class="viz-row">
+      <div class="viz-copy">
+        <p class="chart-kicker">Chart 6</p>
+        <h3>Day and night comfort are separate experiences.</h3>
+        <p class="takeaway">Takeaway: daytime mildness does not guarantee comfortable nights.</p>
+        <p>
+          Canberra&apos;s days score reasonably well, but colder nights pull its night comfort
+          down. Darwin has the opposite problem: persistent warmth affects both day and
+          night comfort.
+        </p>
+      </div>
+      <figure class="viz-frame">
+        <div id="chart-06"></div>
+      </figure>
+    </section>
+
+    <section class="section narrow" id="rain">
+      <p class="eyebrow">3. Everyday inconvenience</p>
+      <h2>Rain, humidity and sunshine change what comfort means outdoors.</h2>
+      <p>
+        A city can be mild but frequently wet, sunny but humid, or dry but seasonally
+        uneven. These dimensions move the story away from a one-dimensional league table.
+      </p>
+    </section>
+
+    <section class="viz-row layout-stacked">
+      <div class="viz-copy">
+        <p class="chart-kicker">Chart 7</p>
+        <h3>Rain burden is frequency as well as amount.</h3>
+        <p class="takeaway">Takeaway: rain is an everyday interruption, not just an annual total.</p>
+        <p>
+          The map distinguishes total rainfall from the number of days with at least one
+          millimetre of rain. This matches the everyday experience of interruption better
+          than rainfall volume alone.
+        </p>
+      </div>
+      <figure class="viz-frame">
+        <div id="chart-07"></div>
+      </figure>
+    </section>
+
+    <section class="viz-row layout-stacked">
+      <div class="viz-copy">
+        <p class="chart-kicker">Chart 8</p>
+        <h3>Rain arrives as a rhythm, not just a total.</h3>
+        <p class="takeaway">Takeaway: concentrated wet seasons feel different from frequent light rain.</p>
+        <p>
+          Darwin and Perth concentrate much of their rain into a few months, while Hobart
+          and Melbourne have a more distributed pattern of wet days.
+        </p>
+      </div>
+      <figure class="viz-frame">
+        <div id="chart-08"></div>
+      </figure>
+    </section>
+
+    <section class="viz-row">
+      <div class="viz-copy">
+        <p class="chart-kicker">Chart 9</p>
+        <h3>Sunshine and humidity pull comfort in different directions.</h3>
+        <p class="takeaway">Takeaway: sunshine improves outdoor appeal, but humidity changes how it feels.</p>
+        <p>
+          The compass separates bright and drier conditions from sunny but humid ones.
+          Brisbane gains from sunshine, while humidity changes how that sunshine feels.
+        </p>
+      </div>
+      <figure class="viz-frame">
+        <div id="chart-09"></div>
+      </figure>
+    </section>
+
+    <section class="section narrow" id="preference">
+      <p class="eyebrow">4. The answer depends on preference</p>
+      <h2>There is no universal best city, only a transparent definition of comfort.</h2>
+      <p>
+        The balanced recipe points to Sydney, but the answer changes when comfort is
+        redefined. Dry-weather priorities favour Adelaide and Perth; sunshine priorities
+        raise Brisbane and Perth.
+      </p>
+    </section>
+
+    <section class="viz-row layout-stacked">
+      <div class="viz-copy">
+        <p class="chart-kicker">Chart 10</p>
+        <h3>Annual averages hide seasonal stability.</h3>
+        <p class="takeaway">Takeaway: stable comfort is a year-round pattern, not a peak-season score.</p>
+        <p>
+          The fingerprint view shows whether comfort is steady across all months or
+          concentrated in a pleasant season. Stability is part of the score because daily
+          life happens all year.
+        </p>
+      </div>
+      <figure class="viz-frame">
+        <div id="chart-10"></div>
+      </figure>
+    </section>
+
+    <section class="viz-row layout-stacked">
+      <div class="viz-copy">
+        <p class="chart-kicker">Chart 11</p>
+        <h3>The conclusion is preference-sensitive.</h3>
+        <p class="takeaway">Takeaway: Sydney is robust, but Adelaide, Perth and Brisbane win under specific lifestyles.
+        </p>
+        <p>
+          Each cell shows a rank under one comfort definition. The arrows compare that rank
+          with the balanced scenario, revealing which cities are robust and which depend on
+          the chosen lifestyle preference.
+        </p>
+      </div>
+      <figure class="viz-frame">
+        <div id="chart-11"></div>
+      </figure>
+    </section>
+
+    <section class="methodology">
+      <div>
+        <p class="eyebrow">Methodology and sources</p>
+        <h2>Data is official; the comfort index is authored.</h2>
+        <p>
+          Climate variables come from the Australian Bureau of Meteorology&apos;s climate
+          statistics for selected capital-city weather stations. Population context comes
+          from the Australian Bureau of Statistics Regional population 2024-25 release.
+          The Australia outline is from Natural Earth. Comfort scores, scenarios and ranks
+          are author-derived for this visualisation.
+        </p>
+        <p>
+          BOM station records use all available suitable years of record, and the record
+          period differs between stations and variables. Scores should therefore be read as
+          a comparative index, not as an official climate ranking.
+        </p>
+      </div>
+      <div class="link-columns">
+        <div>
+          <h3>Data files</h3>
+          <a href="data/data_sources.csv">data_sources.csv</a>
+          <a href="data/scoring_methodology.csv">scoring_methodology.csv</a>
+          <a href="data/data_manifest.csv">data_manifest.csv</a>
+        </div>
+        <div>
+          <h3>Vega-Lite JSON</h3>
+          <a href="charts/chart-01-capital-climate-map.vl.json">Chart 1 JSON</a>
+          <a href="charts/chart-02-score-recipe.vl.json">Chart 2 JSON</a>
+          <a href="charts/chart-03a-balanced-ranking.vl.json">Chart 3a JSON</a>
+          <a href="charts/chart-03b-component-fingerprint.vl.json">Chart 3b JSON</a>
+          <a href="charts/chart-04-seasonal-heat-map.vl.json">Chart 4 JSON</a>
+          <a href="charts/chart-05-temperature-envelope.vl.json">Chart 5 JSON</a>
+          <a href="charts/chart-06-day-night-split.vl.json">Chart 6 JSON</a>
+          <a href="charts/chart-07-rain-burden-map.vl.json">Chart 7 JSON</a>
+          <a href="charts/chart-08-rain-rhythm-barcode.vl.json">Chart 8 JSON</a>
+          <a href="charts/chart-09-humidity-sunshine-compass.vl.json">Chart 9 JSON</a>
+          <a href="charts/chart-10-seasonal-stability-fingerprint.vl.json">Chart 10 JSON</a>
+          <a href="charts/chart-11-preference-switchboard.vl.json">Chart 11 JSON</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Author: Zhen Dong. FIT2179 Data Visualisation 2. May 2026.</p>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,139 @@
+{
+  "description": "Seasonal heat stress map using hot days and very hot days.",
+  "width": 760,
+  "height": 430,
+  "projection": {
+    "type": "mercator",
+    "center": [
+      134,
+      -28
+    ],
+    "scale": 580,
+    "translate": [
+      380,
+      215
+    ]
+  },
+  "params": [
+    {
+      "name": "season",
+      "value": "Summer",
+      "bind": {
+        "input": "select",
+        "options": [
+          "Annual",
+          "Summer",
+          "Autumn",
+          "Winter",
+          "Spring"
+        ],
+        "name": "Season "
+      }
+    }
+  ],
+  "layer": [
+    {
+      "data": {
+        "url": "data/australia_context_outline.geojson"
+      },
+      "mark": {
+        "type": "geoshape",
+        "fill": "#f2f0ed",
+        "stroke": "#c7cfd5",
+        "strokeWidth": 0.8
+      }
+    },
+    {
+      "data": {
+        "url": "data/city_seasonal_metrics.csv"
+      },
+      "transform": [
+        {
+          "filter": "datum.season == season"
+        }
+      ],
+      "mark": {
+        "type": "circle",
+        "stroke": "#5b2418",
+        "strokeWidth": 0.8
+      },
+      "encoding": {
+        "longitude": {
+          "field": "longitude",
+          "type": "quantitative"
+        },
+        "latitude": {
+          "field": "latitude",
+          "type": "quantitative"
+        },
+        "size": {
+          "field": "very_hot_days_ge_35",
+          "type": "quantitative",
+          "title": "Days >=35 C",
+          "scale": {
+            "range": [
+              90,
+              1400
+            ]
+          }
+        },
+        "color": {
+          "field": "hot_days_ge_30",
+          "type": "quantitative",
+          "title": "Days >=30 C",
+          "scale": {
+            "scheme": "orangered"
+          }
+        },
+        "tooltip": [
+          {
+            "field": "city"
+          },
+          {
+            "field": "season"
+          },
+          {
+            "field": "hot_days_ge_30",
+            "title": "Days >=30 C"
+          },
+          {
+            "field": "very_hot_days_ge_35",
+            "title": "Days >=35 C"
+          },
+          {
+            "field": "extreme_hot_days_ge_40",
+            "title": "Days >=40 C"
+          },
+          {
+            "field": "mean_heat_score",
+            "title": "Heat comfort",
+            "format": ".1f"
+          }
+        ]
+      }
+    }
+  ],
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "config": {
+    "axis": {
+      "labelFont": "Inter, Arial, sans-serif",
+      "titleFont": "Inter, Arial, sans-serif",
+      "labelColor": "#4c5965",
+      "titleColor": "#26313b",
+      "gridColor": "#edf0f2",
+      "domainColor": "#c9d0d6",
+      "tickColor": "#c9d0d6"
+    },
+    "legend": {
+      "labelFont": "Inter, Arial, sans-serif",
+      "titleFont": "Inter, Arial, sans-serif",
+      "labelColor": "#4c5965",
+      "titleColor": "#26313b"
+    },
+    "view": {
+      "stroke": null
+    },
+    "font": "Inter, Arial, sans-serif",
+    "background": "#ffffff"
+  }
+}

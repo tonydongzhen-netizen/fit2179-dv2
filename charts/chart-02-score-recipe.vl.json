@@ -1,0 +1,159 @@
+{
+  "description": "Balanced comfort score recipe as a donut chart with component weights.",
+  "width": 460,
+  "height": 360,
+  "data": {
+    "url": "data/score_weights.csv"
+  },
+  "transform": [
+    {
+      "filter": "datum.scenario == 'Balanced everyday comfort'"
+    },
+    {
+      "calculate": "format(datum.weight_percent, '.0f') + '%'",
+      "as": "weight_label"
+    }
+  ],
+  "layer": [
+    {
+      "mark": {
+        "type": "arc",
+        "innerRadius": 72,
+        "outerRadius": 135,
+        "cornerRadius": 2,
+        "stroke": "#ffffff",
+        "strokeWidth": 2
+      },
+      "encoding": {
+        "theta": {
+          "field": "weight",
+          "type": "quantitative",
+          "stack": true
+        },
+        "color": {
+          "field": "component_label",
+          "type": "nominal",
+          "title": "Component",
+          "scale": {
+            "domain": [
+              "Day temperature",
+              "Night temperature",
+              "Heat burden",
+              "Rain burden",
+              "Humidity",
+              "Sunshine",
+              "Seasonal stability"
+            ],
+            "range": [
+              "#D99035",
+              "#5D77A6",
+              "#C95A3C",
+              "#4B8BBE",
+              "#6B8E9A",
+              "#D8A83D",
+              "#6B9E77"
+            ]
+          }
+        },
+        "order": {
+          "field": "component_order"
+        },
+        "tooltip": [
+          {
+            "field": "component_label",
+            "title": "Component"
+          },
+          {
+            "field": "weight_percent",
+            "title": "Weight",
+            "format": ".0f"
+          },
+          {
+            "field": "component_short",
+            "title": "Role"
+          }
+        ]
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "radius": 158,
+        "font": "Inter, Arial, sans-serif",
+        "fontSize": 13,
+        "fontWeight": 700
+      },
+      "encoding": {
+        "theta": {
+          "field": "weight",
+          "type": "quantitative",
+          "stack": true
+        },
+        "order": {
+          "field": "component_order"
+        },
+        "text": {
+          "field": "weight_label",
+          "type": "nominal"
+        },
+        "color": {
+          "value": "#26313b"
+        }
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "label": "Balanced\ncomfort\nscore"
+          }
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "font": "Inter, Arial, sans-serif",
+        "fontSize": 18,
+        "fontWeight": 750,
+        "lineBreak": "\n",
+        "lineHeight": 22,
+        "align": "center",
+        "baseline": "middle",
+        "color": "#26313b"
+      },
+      "encoding": {
+        "x": {
+          "value": 230
+        },
+        "y": {
+          "value": 166
+        },
+        "text": {
+          "field": "label"
+        }
+      }
+    }
+  ],
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "config": {
+    "axis": {
+      "labelFont": "Inter, Arial, sans-serif",
+      "titleFont": "Inter, Arial, sans-serif",
+      "labelColor": "#4c5965",
+      "titleColor": "#26313b",
+      "gridColor": "#edf0f2",
+      "domainColor": "#c9d0d6",
+      "tickColor": "#c9d0d6"
+    },
+    "legend": {
+      "labelFont": "Inter, Arial, sans-serif",
+      "titleFont": "Inter, Arial, sans-serif",
+      "labelColor": "#4c5965",
+      "titleColor": "#26313b"
+    },
+    "view": {
+      "stroke": null
+    },
+    "font": "Inter, Arial, sans-serif",
+    "background": "#ffffff"
+  }
+}

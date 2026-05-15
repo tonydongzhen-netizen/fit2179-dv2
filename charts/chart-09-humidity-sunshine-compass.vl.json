@@ -1,0 +1,248 @@
+{
+  "description": "Humidity and sunshine comfort compass with contextual quadrants.",
+  "width": 680,
+  "height": 420,
+  "layer": [
+    {
+      "data": {
+        "values": [
+          {
+            "x1": 54,
+            "x2": 60,
+            "y1": 17.5,
+            "y2": 22.5,
+            "label": "Sunny & drier"
+          },
+          {
+            "x1": 60,
+            "x2": 65,
+            "y1": 17.5,
+            "y2": 22.5,
+            "label": "Sunny but humid"
+          },
+          {
+            "x1": 54,
+            "x2": 60,
+            "y1": 12.5,
+            "y2": 17.5,
+            "label": "Drier, less sun"
+          },
+          {
+            "x1": 60,
+            "x2": 65,
+            "y1": 12.5,
+            "y2": 17.5,
+            "label": "Humid, less sun"
+          }
+        ]
+      },
+      "mark": {
+        "type": "rect",
+        "fill": "#f4f6f4",
+        "stroke": "#ffffff"
+      },
+      "encoding": {
+        "x": {
+          "field": "x1",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              54,
+              65
+            ]
+          },
+          "title": "Mean relative humidity (%)"
+        },
+        "x2": {
+          "field": "x2"
+        },
+        "y": {
+          "field": "y1",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              12.5,
+              22.5
+            ]
+          },
+          "title": "Mean daily solar exposure (MJ/m2)"
+        },
+        "y2": {
+          "field": "y2"
+        }
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "x": 60
+          },
+          {
+            "x": 60
+          }
+        ]
+      },
+      "mark": {
+        "type": "rule",
+        "strokeDash": [
+          4,
+          4
+        ],
+        "color": "#b8c2c9"
+      },
+      "encoding": {
+        "x": {
+          "field": "x",
+          "type": "quantitative"
+        }
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "y": 17.5
+          }
+        ]
+      },
+      "mark": {
+        "type": "rule",
+        "strokeDash": [
+          4,
+          4
+        ],
+        "color": "#b8c2c9"
+      },
+      "encoding": {
+        "y": {
+          "field": "y",
+          "type": "quantitative"
+        }
+      }
+    },
+    {
+      "data": {
+        "url": "data/city_scores_overall.csv"
+      },
+      "transform": [
+        {
+          "filter": "datum.scenario == 'Balanced everyday comfort'"
+        }
+      ],
+      "mark": {
+        "type": "circle",
+        "stroke": "#26313b",
+        "strokeWidth": 0.8,
+        "opacity": 0.86
+      },
+      "encoding": {
+        "x": {
+          "field": "mean_rh_avg",
+          "type": "quantitative"
+        },
+        "y": {
+          "field": "mean_solar_exposure_mj_m2",
+          "type": "quantitative"
+        },
+        "size": {
+          "field": "overall_score",
+          "type": "quantitative",
+          "title": "Balanced score",
+          "scale": {
+            "range": [
+              110,
+              680
+            ]
+          }
+        },
+        "color": {
+          "field": "rain_component",
+          "type": "quantitative",
+          "title": "Rain comfort",
+          "scale": {
+            "scheme": "blues",
+            "domain": [
+              70,
+              90
+            ]
+          }
+        },
+        "tooltip": [
+          {
+            "field": "city"
+          },
+          {
+            "field": "mean_rh_avg",
+            "title": "Mean RH %",
+            "format": ".1f"
+          },
+          {
+            "field": "mean_solar_exposure_mj_m2",
+            "title": "Solar exposure",
+            "format": ".1f"
+          },
+          {
+            "field": "overall_score",
+            "title": "Balanced score",
+            "format": ".1f"
+          }
+        ]
+      }
+    },
+    {
+      "data": {
+        "url": "data/city_scores_overall.csv"
+      },
+      "transform": [
+        {
+          "filter": "datum.scenario == 'Balanced everyday comfort'"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "dx": 8,
+        "fontSize": 12,
+        "fontWeight": 650,
+        "color": "#26313b"
+      },
+      "encoding": {
+        "x": {
+          "field": "mean_rh_avg",
+          "type": "quantitative"
+        },
+        "y": {
+          "field": "mean_solar_exposure_mj_m2",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "city"
+        }
+      }
+    }
+  ],
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "config": {
+    "axis": {
+      "labelFont": "Inter, Arial, sans-serif",
+      "titleFont": "Inter, Arial, sans-serif",
+      "labelColor": "#4c5965",
+      "titleColor": "#26313b",
+      "gridColor": "#edf0f2",
+      "domainColor": "#c9d0d6",
+      "tickColor": "#c9d0d6"
+    },
+    "legend": {
+      "labelFont": "Inter, Arial, sans-serif",
+      "titleFont": "Inter, Arial, sans-serif",
+      "labelColor": "#4c5965",
+      "titleColor": "#26313b"
+    },
+    "view": {
+      "stroke": null
+    },
+    "font": "Inter, Arial, sans-serif",
+    "background": "#ffffff"
+  }
+}

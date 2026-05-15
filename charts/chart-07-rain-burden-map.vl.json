@@ -1,0 +1,135 @@
+{
+  "description": "Seasonal rain burden map comparing rain days and rainfall amount.",
+  "width": 760,
+  "height": 430,
+  "projection": {
+    "type": "mercator",
+    "center": [
+      134,
+      -28
+    ],
+    "scale": 580,
+    "translate": [
+      380,
+      215
+    ]
+  },
+  "params": [
+    {
+      "name": "season",
+      "value": "Annual",
+      "bind": {
+        "input": "select",
+        "options": [
+          "Annual",
+          "Summer",
+          "Autumn",
+          "Winter",
+          "Spring"
+        ],
+        "name": "Season "
+      }
+    }
+  ],
+  "layer": [
+    {
+      "data": {
+        "url": "data/australia_context_outline.geojson"
+      },
+      "mark": {
+        "type": "geoshape",
+        "fill": "#eef1f4",
+        "stroke": "#c7cfd5",
+        "strokeWidth": 0.8
+      }
+    },
+    {
+      "data": {
+        "url": "data/city_seasonal_metrics.csv"
+      },
+      "transform": [
+        {
+          "filter": "datum.season == season"
+        }
+      ],
+      "mark": {
+        "type": "circle",
+        "stroke": "#123b55",
+        "strokeWidth": 0.8
+      },
+      "encoding": {
+        "longitude": {
+          "field": "longitude",
+          "type": "quantitative"
+        },
+        "latitude": {
+          "field": "latitude",
+          "type": "quantitative"
+        },
+        "size": {
+          "field": "rainfall_mm",
+          "type": "quantitative",
+          "title": "Rainfall mm",
+          "scale": {
+            "range": [
+              120,
+              1500
+            ]
+          }
+        },
+        "color": {
+          "field": "rain_days_ge_1mm",
+          "type": "quantitative",
+          "title": "Rain days >=1mm",
+          "scale": {
+            "scheme": "blues"
+          }
+        },
+        "tooltip": [
+          {
+            "field": "city"
+          },
+          {
+            "field": "season"
+          },
+          {
+            "field": "rainfall_mm",
+            "title": "Rainfall mm"
+          },
+          {
+            "field": "rain_days_ge_1mm",
+            "title": "Rain days >=1mm"
+          },
+          {
+            "field": "mean_rain_score",
+            "title": "Rain comfort",
+            "format": ".1f"
+          }
+        ]
+      }
+    }
+  ],
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "config": {
+    "axis": {
+      "labelFont": "Inter, Arial, sans-serif",
+      "titleFont": "Inter, Arial, sans-serif",
+      "labelColor": "#4c5965",
+      "titleColor": "#26313b",
+      "gridColor": "#edf0f2",
+      "domainColor": "#c9d0d6",
+      "tickColor": "#c9d0d6"
+    },
+    "legend": {
+      "labelFont": "Inter, Arial, sans-serif",
+      "titleFont": "Inter, Arial, sans-serif",
+      "labelColor": "#4c5965",
+      "titleColor": "#26313b"
+    },
+    "view": {
+      "stroke": null
+    },
+    "font": "Inter, Arial, sans-serif",
+    "background": "#ffffff"
+  }
+}

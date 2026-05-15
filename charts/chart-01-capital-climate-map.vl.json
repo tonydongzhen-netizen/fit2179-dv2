@@ -1,0 +1,250 @@
+{
+  "description": "Australia capital climate comfort map focused on balanced comfort colour.",
+  "width": 640,
+  "height": 390,
+  "projection": {
+    "type": "mercator",
+    "center": [
+      134,
+      -28
+    ],
+    "scale": 610,
+    "translate": [
+      318,
+      190
+    ]
+  },
+  "layer": [
+    {
+      "data": {
+        "url": "data/australia_context_outline.geojson"
+      },
+      "mark": {
+        "type": "geoshape",
+        "fill": "#edf3f0",
+        "stroke": "#c7cfd5",
+        "strokeWidth": 0.8
+      }
+    },
+    {
+      "data": {
+        "url": "data/city_locations.geojson",
+        "format": {
+          "property": "features"
+        }
+      },
+      "transform": [
+        {
+          "calculate": "datum.properties.city",
+          "as": "city"
+        },
+        {
+          "calculate": "datum.properties.state_or_territory",
+          "as": "state"
+        },
+        {
+          "calculate": "datum.properties.balanced_score",
+          "as": "balanced_score"
+        },
+        {
+          "calculate": "datum.properties.balanced_rank",
+          "as": "rank"
+        },
+        {
+          "calculate": "datum.properties.population_2025",
+          "as": "population"
+        },
+        {
+          "calculate": "datum.geometry.coordinates[0]",
+          "as": "lon"
+        },
+        {
+          "calculate": "datum.geometry.coordinates[1]",
+          "as": "lat"
+        }
+      ],
+      "mark": {
+        "type": "circle",
+        "size": 430,
+        "stroke": "#1f2933",
+        "strokeWidth": 0.9
+      },
+      "encoding": {
+        "longitude": {
+          "field": "lon",
+          "type": "quantitative"
+        },
+        "latitude": {
+          "field": "lat",
+          "type": "quantitative"
+        },
+        "color": {
+          "field": "balanced_score",
+          "type": "quantitative",
+          "title": "Balanced score",
+          "scale": {
+            "scheme": "tealblues",
+            "domain": [
+              60,
+              90
+            ]
+          },
+          "legend": {
+            "orient": "right",
+            "gradientLength": 135,
+            "gradientThickness": 10,
+            "titleLimit": 160,
+            "labelFontSize": 10,
+            "titleFontSize": 11
+          }
+        },
+        "opacity": {
+          "value": 0.88
+        },
+        "tooltip": [
+          {
+            "field": "city",
+            "title": "City"
+          },
+          {
+            "field": "state",
+            "title": "State"
+          },
+          {
+            "field": "rank",
+            "title": "Balanced rank"
+          },
+          {
+            "field": "balanced_score",
+            "title": "Balanced score",
+            "format": ".1f"
+          },
+          {
+            "field": "population",
+            "title": "ABS population 2025",
+            "format": ","
+          }
+        ]
+      }
+    },
+    {
+      "data": {
+        "url": "data/city_locations.geojson",
+        "format": {
+          "property": "features"
+        }
+      },
+      "transform": [
+        {
+          "calculate": "datum.properties.city",
+          "as": "city"
+        },
+        {
+          "calculate": "datum.properties.balanced_rank",
+          "as": "rank"
+        },
+        {
+          "calculate": "datum.geometry.coordinates[0]",
+          "as": "lon"
+        },
+        {
+          "calculate": "datum.geometry.coordinates[1]",
+          "as": "lat"
+        },
+        {
+          "filter": "datum.rank == 1"
+        }
+      ],
+      "mark": {
+        "type": "circle",
+        "size": 900,
+        "fillOpacity": 0,
+        "stroke": "#1f766f",
+        "strokeWidth": 3
+      },
+      "encoding": {
+        "longitude": {
+          "field": "lon",
+          "type": "quantitative"
+        },
+        "latitude": {
+          "field": "lat",
+          "type": "quantitative"
+        },
+        "tooltip": [
+          {
+            "field": "city",
+            "title": "Balanced leader"
+          }
+        ]
+      }
+    },
+    {
+      "data": {
+        "url": "data/city_locations.geojson",
+        "format": {
+          "property": "features"
+        }
+      },
+      "transform": [
+        {
+          "calculate": "datum.properties.city",
+          "as": "city"
+        },
+        {
+          "calculate": "datum.geometry.coordinates[0]",
+          "as": "lon"
+        },
+        {
+          "calculate": "datum.geometry.coordinates[1]",
+          "as": "lat"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "font": "Inter, Arial, sans-serif",
+        "fontSize": 11,
+        "fontWeight": 650,
+        "color": "#26313b",
+        "dx": 7,
+        "dy": -7
+      },
+      "encoding": {
+        "longitude": {
+          "field": "lon",
+          "type": "quantitative"
+        },
+        "latitude": {
+          "field": "lat",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "city"
+        }
+      }
+    }
+  ],
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "config": {
+    "axis": {
+      "labelFont": "Inter, Arial, sans-serif",
+      "titleFont": "Inter, Arial, sans-serif",
+      "labelColor": "#4c5965",
+      "titleColor": "#26313b",
+      "gridColor": "#edf0f2",
+      "domainColor": "#c9d0d6",
+      "tickColor": "#c9d0d6"
+    },
+    "legend": {
+      "labelFont": "Inter, Arial, sans-serif",
+      "titleFont": "Inter, Arial, sans-serif",
+      "labelColor": "#4c5965",
+      "titleColor": "#26313b"
+    },
+    "view": {
+      "stroke": null
+    },
+    "font": "Inter, Arial, sans-serif",
+    "background": "transparent"
+  }
+}

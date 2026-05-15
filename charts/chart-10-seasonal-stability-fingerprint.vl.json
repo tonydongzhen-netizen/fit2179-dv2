@@ -1,0 +1,107 @@
+{
+  "description": "City-by-month comfort fingerprint showing seasonal stability.",
+  "width": 760,
+  "height": 300,
+  "data": {
+    "url": "data/city_scores_monthly.csv"
+  },
+  "mark": {
+    "type": "tick",
+    "thickness": 12,
+    "bandSize": 18
+  },
+  "encoding": {
+    "y": {
+      "field": "city",
+      "type": "nominal",
+      "sort": [
+        "Sydney",
+        "Brisbane",
+        "Adelaide",
+        "Perth",
+        "Melbourne",
+        "Hobart",
+        "Canberra",
+        "Darwin"
+      ],
+      "title": null
+    },
+    "x": {
+      "field": "month",
+      "type": "ordinal",
+      "sort": [
+        "Jan",
+        "Feb",
+        "Mar",
+        "Apr",
+        "May",
+        "Jun",
+        "Jul",
+        "Aug",
+        "Sep",
+        "Oct",
+        "Nov",
+        "Dec"
+      ],
+      "title": null
+    },
+    "color": {
+      "field": "monthly_comfort_score",
+      "type": "quantitative",
+      "title": "Monthly comfort",
+      "scale": {
+        "scheme": "yellowgreenblue",
+        "domain": [
+          45,
+          96
+        ]
+      }
+    },
+    "tooltip": [
+      {
+        "field": "city"
+      },
+      {
+        "field": "month"
+      },
+      {
+        "field": "monthly_comfort_score",
+        "title": "Monthly comfort",
+        "format": ".1f"
+      },
+      {
+        "field": "day_temp_score",
+        "title": "Day score",
+        "format": ".1f"
+      },
+      {
+        "field": "night_temp_score",
+        "title": "Night score",
+        "format": ".1f"
+      }
+    ]
+  },
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "config": {
+    "axis": {
+      "labelFont": "Inter, Arial, sans-serif",
+      "titleFont": "Inter, Arial, sans-serif",
+      "labelColor": "#4c5965",
+      "titleColor": "#26313b",
+      "gridColor": "#edf0f2",
+      "domainColor": "#c9d0d6",
+      "tickColor": "#c9d0d6"
+    },
+    "legend": {
+      "labelFont": "Inter, Arial, sans-serif",
+      "titleFont": "Inter, Arial, sans-serif",
+      "labelColor": "#4c5965",
+      "titleColor": "#26313b"
+    },
+    "view": {
+      "stroke": null
+    },
+    "font": "Inter, Arial, sans-serif",
+    "background": "#ffffff"
+  }
+}

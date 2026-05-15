@@ -1,0 +1,134 @@
+{
+  "description": "Paired day and night comfort component comparison by city.",
+  "width": 720,
+  "height": 330,
+  "data": {
+    "url": "data/city_scores_overall.csv"
+  },
+  "transform": [
+    {
+      "filter": "datum.scenario == 'Balanced everyday comfort'"
+    }
+  ],
+  "layer": [
+    {
+      "mark": {
+        "type": "rule",
+        "strokeWidth": 2,
+        "color": "#cfd7dd"
+      },
+      "encoding": {
+        "y": {
+          "field": "city",
+          "type": "nominal",
+          "sort": {
+            "field": "rank",
+            "order": "ascending"
+          },
+          "title": null
+        },
+        "x": {
+          "field": "day_temp_component",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              50,
+              100
+            ]
+          },
+          "title": "Component score"
+        },
+        "x2": {
+          "field": "night_temp_component"
+        }
+      }
+    },
+    {
+      "transform": [
+        {
+          "fold": [
+            "day_temp_component",
+            "night_temp_component"
+          ],
+          "as": [
+            "type",
+            "score"
+          ]
+        },
+        {
+          "calculate": "datum.type == 'day_temp_component' ? 'Day' : 'Night'",
+          "as": "comfort_type"
+        }
+      ],
+      "mark": {
+        "type": "circle",
+        "size": 130,
+        "stroke": "#ffffff",
+        "strokeWidth": 1
+      },
+      "encoding": {
+        "y": {
+          "field": "city",
+          "type": "nominal",
+          "sort": {
+            "field": "rank",
+            "order": "ascending"
+          }
+        },
+        "x": {
+          "field": "score",
+          "type": "quantitative"
+        },
+        "color": {
+          "field": "comfort_type",
+          "type": "nominal",
+          "scale": {
+            "domain": [
+              "Day",
+              "Night"
+            ],
+            "range": [
+              "#D99035",
+              "#5D77A6"
+            ]
+          }
+        },
+        "tooltip": [
+          {
+            "field": "city"
+          },
+          {
+            "field": "comfort_type"
+          },
+          {
+            "field": "score",
+            "format": ".1f"
+          }
+        ]
+      }
+    }
+  ],
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "config": {
+    "axis": {
+      "labelFont": "Inter, Arial, sans-serif",
+      "titleFont": "Inter, Arial, sans-serif",
+      "labelColor": "#4c5965",
+      "titleColor": "#26313b",
+      "gridColor": "#edf0f2",
+      "domainColor": "#c9d0d6",
+      "tickColor": "#c9d0d6"
+    },
+    "legend": {
+      "labelFont": "Inter, Arial, sans-serif",
+      "titleFont": "Inter, Arial, sans-serif",
+      "labelColor": "#4c5965",
+      "titleColor": "#26313b"
+    },
+    "view": {
+      "stroke": null
+    },
+    "font": "Inter, Arial, sans-serif",
+    "background": "#ffffff"
+  }
+}
