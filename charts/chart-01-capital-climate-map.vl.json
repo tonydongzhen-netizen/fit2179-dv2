@@ -1,17 +1,24 @@
 {
-  "description": "Australia capital climate comfort map focused on balanced comfort colour.",
-  "width": 640,
-  "height": 390,
+  "description": "Australia capital climate comfort map with direct labels for each city.",
+  "width": 620,
+  "height": 460,
+  "background": "transparent",
+  "padding": {
+    "left": 0,
+    "top": 4,
+    "right": 4,
+    "bottom": 4
+  },
   "projection": {
     "type": "mercator",
     "center": [
-      134,
+      134.5,
       -28
     ],
-    "scale": 610,
+    "scale": 710,
     "translate": [
-      318,
-      190
+      292,
+      222
     ]
   },
   "layer": [
@@ -23,7 +30,7 @@
         "type": "geoshape",
         "fill": "#edf3f0",
         "stroke": "#c7cfd5",
-        "strokeWidth": 0.8
+        "strokeWidth": 1.05
       }
     },
     {
@@ -65,10 +72,23 @@
       ],
       "mark": {
         "type": "circle",
-        "size": 430,
+        "size": 280,
         "stroke": "#1f2933",
-        "strokeWidth": 0.9
+        "strokeWidth": 1.1
       },
+      "params": [
+        {
+          "name": "hoverCity",
+          "select": {
+            "type": "point",
+            "on": "pointerover",
+            "clear": "pointerout",
+            "fields": [
+              "city"
+            ]
+          }
+        }
+      ],
       "encoding": {
         "longitude": {
           "field": "lon",
@@ -91,15 +111,19 @@
           },
           "legend": {
             "orient": "right",
-            "gradientLength": 135,
-            "gradientThickness": 10,
+            "gradientLength": 150,
+            "gradientThickness": 11,
             "titleLimit": 160,
-            "labelFontSize": 10,
-            "titleFontSize": 11
+            "labelFontSize": 15,
+            "titleFontSize": 16
           }
         },
         "opacity": {
-          "value": 0.88
+          "condition": {
+            "param": "hoverCity",
+            "value": 0.88
+          },
+          "value": 0.2
         },
         "tooltip": [
           {
@@ -116,7 +140,7 @@
           },
           {
             "field": "balanced_score",
-            "title": "Balanced score",
+            "title": "Balanced score (0-100)",
             "format": ".1f"
           },
           {
@@ -140,8 +164,20 @@
           "as": "city"
         },
         {
+          "calculate": "datum.properties.state_or_territory",
+          "as": "state"
+        },
+        {
+          "calculate": "datum.properties.balanced_score",
+          "as": "balanced_score"
+        },
+        {
           "calculate": "datum.properties.balanced_rank",
           "as": "rank"
+        },
+        {
+          "calculate": "datum.properties.population_2025",
+          "as": "population"
         },
         {
           "calculate": "datum.geometry.coordinates[0]",
@@ -157,10 +193,10 @@
       ],
       "mark": {
         "type": "circle",
-        "size": 900,
+        "size": 620,
         "fillOpacity": 0,
         "stroke": "#1f766f",
-        "strokeWidth": 3
+        "strokeWidth": 2.8
       },
       "encoding": {
         "longitude": {
@@ -174,7 +210,25 @@
         "tooltip": [
           {
             "field": "city",
-            "title": "Balanced leader"
+            "title": "City"
+          },
+          {
+            "field": "state",
+            "title": "State"
+          },
+          {
+            "field": "rank",
+            "title": "Balanced rank"
+          },
+          {
+            "field": "balanced_score",
+            "title": "Balanced score (0-100)",
+            "format": ".1f"
+          },
+          {
+            "field": "population",
+            "title": "ABS population 2025",
+            "format": ","
           }
         ]
       }
@@ -198,28 +252,43 @@
         {
           "calculate": "datum.geometry.coordinates[1]",
           "as": "lat"
+        },
+        {
+          "calculate": "datum.properties.city == 'Darwin' ? 131.4 : datum.properties.city == 'Perth' ? 116.9 : datum.properties.city == 'Adelaide' ? 139.8 : datum.properties.city == 'Brisbane' ? 154.0 : datum.properties.city == 'Sydney' ? 153.5 : datum.properties.city == 'Canberra' ? 151.2 : datum.properties.city == 'Melbourne' ? 144.6 : datum.properties.city == 'Hobart' ? 148.1 : datum.geometry.coordinates[0]",
+          "as": "label_lon"
+        },
+        {
+          "calculate": "datum.properties.city == 'Darwin' ? -12.0 : datum.properties.city == 'Perth' ? -30.6 : datum.properties.city == 'Adelaide' ? -33.6 : datum.properties.city == 'Brisbane' ? -26.0 : datum.properties.city == 'Sydney' ? -32.7 : datum.properties.city == 'Canberra' ? -36.3 : datum.properties.city == 'Melbourne' ? -39.2 : datum.properties.city == 'Hobart' ? -43.3 : datum.geometry.coordinates[1]",
+          "as": "label_lat"
         }
       ],
       "mark": {
         "type": "text",
         "font": "Inter, Arial, sans-serif",
-        "fontSize": 11,
-        "fontWeight": 650,
-        "color": "#26313b",
-        "dx": 7,
-        "dy": -7
+        "fontSize": 16,
+        "fontWeight": 750,
+        "fill": "#26313b",
+        "align": "left",
+        "baseline": "middle"
       },
       "encoding": {
         "longitude": {
-          "field": "lon",
+          "field": "label_lon",
           "type": "quantitative"
         },
         "latitude": {
-          "field": "lat",
+          "field": "label_lat",
           "type": "quantitative"
         },
         "text": {
           "field": "city"
+        },
+        "opacity": {
+          "condition": {
+            "param": "hoverCity",
+            "value": 1
+          },
+          "value": 0.25
         }
       }
     }
@@ -233,18 +302,31 @@
       "titleColor": "#26313b",
       "gridColor": "#edf0f2",
       "domainColor": "#c9d0d6",
-      "tickColor": "#c9d0d6"
+      "tickColor": "#c9d0d6",
+      "labelFontSize": 15,
+      "titleFontSize": 16
     },
     "legend": {
       "labelFont": "Inter, Arial, sans-serif",
       "titleFont": "Inter, Arial, sans-serif",
       "labelColor": "#4c5965",
-      "titleColor": "#26313b"
+      "titleColor": "#26313b",
+      "labelFontSize": 15,
+      "titleFontSize": 16
     },
     "view": {
       "stroke": null
     },
     "font": "Inter, Arial, sans-serif",
-    "background": "transparent"
+    "background": "transparent",
+    "header": {
+      "labelFont": "Inter, Arial, sans-serif",
+      "labelFontSize": 16,
+      "labelFontWeight": 750,
+      "labelColor": "#26313b",
+      "titleFont": "Inter, Arial, sans-serif",
+      "titleFontSize": 16,
+      "titleColor": "#26313b"
+    }
   }
 }

@@ -1,13 +1,31 @@
 {
   "description": "Component score fingerprint for the balanced everyday comfort scenario.",
-  "width": 620,
-  "height": 270,
+  "width": "container",
+  "height": 500,
+  "background": "transparent",
   "data": {
     "url": "data/city_components_long.csv"
   },
   "transform": [
     {
       "filter": "datum.scenario == 'Balanced everyday comfort'"
+    },
+    {
+      "calculate": "datum.component == 'day_temp_score' ? 'Day' : datum.component == 'night_temp_score' ? 'Sleep' : datum.component == 'heat_score' ? 'Heat' : datum.component == 'rain_score' ? 'Rain' : datum.component == 'humidity_score' ? 'Muggy' : datum.component == 'sunshine_score' ? 'Sun' : 'Stable'",
+      "as": "component_axis_label"
+    }
+  ],
+  "params": [
+    {
+      "name": "hoverCity",
+      "select": {
+        "type": "point",
+        "on": "pointerover",
+        "clear": "pointerout",
+        "fields": [
+          "city"
+        ]
+      }
     }
   ],
   "mark": {
@@ -24,11 +42,11 @@
       },
       "title": null,
       "axis": {
-        "labelFontSize": 12
+        "labelFontSize": 16
       }
     },
     "x": {
-      "field": "component_short",
+      "field": "component_axis_label",
       "type": "nominal",
       "sort": {
         "field": "component_order",
@@ -37,9 +55,10 @@
       },
       "title": null,
       "axis": {
-        "labelAngle": -30,
-        "labelLimit": 92,
-        "labelFontSize": 10
+        "labelAngle": -35,
+        "labelLimit": 90,
+        "labelFontSize": 16,
+        "labelPadding": 8
       }
     },
     "color": {
@@ -52,7 +71,19 @@
           45,
           100
         ]
+      },
+      "legend": {
+        "orient": "bottom",
+        "direction": "horizontal",
+        "gradientLength": 190
       }
+    },
+    "opacity": {
+      "condition": {
+        "param": "hoverCity",
+        "value": 1
+      },
+      "value": 0.35
     },
     "tooltip": [
       {
@@ -64,7 +95,7 @@
       },
       {
         "field": "component_score",
-        "title": "Score",
+        "title": "Component score (0-100)",
         "format": ".1f"
       }
     ]
@@ -78,18 +109,31 @@
       "titleColor": "#26313b",
       "gridColor": "#edf0f2",
       "domainColor": "#c9d0d6",
-      "tickColor": "#c9d0d6"
+      "tickColor": "#c9d0d6",
+      "labelFontSize": 15,
+      "titleFontSize": 16
     },
     "legend": {
       "labelFont": "Inter, Arial, sans-serif",
       "titleFont": "Inter, Arial, sans-serif",
       "labelColor": "#4c5965",
-      "titleColor": "#26313b"
+      "titleColor": "#26313b",
+      "labelFontSize": 15,
+      "titleFontSize": 16
     },
     "view": {
       "stroke": null
     },
     "font": "Inter, Arial, sans-serif",
-    "background": "#ffffff"
+    "background": "transparent",
+    "header": {
+      "labelFont": "Inter, Arial, sans-serif",
+      "labelFontSize": 16,
+      "labelFontWeight": 750,
+      "labelColor": "#26313b",
+      "titleFont": "Inter, Arial, sans-serif",
+      "titleFontSize": 16,
+      "titleColor": "#26313b"
+    }
   }
 }

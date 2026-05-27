@@ -1,17 +1,18 @@
 {
   "description": "Seasonal heat stress map using hot days and very hot days.",
-  "width": 760,
-  "height": 430,
+  "width": 960,
+  "height": 540,
+  "background": "transparent",
   "projection": {
     "type": "mercator",
     "center": [
       134,
       -28
     ],
-    "scale": 580,
+    "scale": 800,
     "translate": [
-      380,
-      215
+      480,
+      270
     ]
   },
   "params": [
@@ -57,6 +58,19 @@
         "stroke": "#5b2418",
         "strokeWidth": 0.8
       },
+      "params": [
+        {
+          "name": "hoverCity",
+          "select": {
+            "type": "point",
+            "on": "pointerover",
+            "clear": "pointerout",
+            "fields": [
+              "city"
+            ]
+          }
+        }
+      ],
       "encoding": {
         "longitude": {
           "field": "longitude",
@@ -69,7 +83,7 @@
         "size": {
           "field": "very_hot_days_ge_35",
           "type": "quantitative",
-          "title": "Days >=35 C",
+          "title": "Very hot days (35℃+)",
           "scale": {
             "range": [
               90,
@@ -80,10 +94,17 @@
         "color": {
           "field": "hot_days_ge_30",
           "type": "quantitative",
-          "title": "Days >=30 C",
+          "title": "Hot days (30℃+)",
           "scale": {
             "scheme": "orangered"
           }
+        },
+        "opacity": {
+          "condition": {
+            "param": "hoverCity",
+            "value": 1
+          },
+          "value": 0.25
         },
         "tooltip": [
           {
@@ -94,22 +115,66 @@
           },
           {
             "field": "hot_days_ge_30",
-            "title": "Days >=30 C"
+            "title": "Hot days (>=30℃)"
           },
           {
             "field": "very_hot_days_ge_35",
-            "title": "Days >=35 C"
+            "title": "Very hot days (>=35℃)"
           },
           {
             "field": "extreme_hot_days_ge_40",
-            "title": "Days >=40 C"
+            "title": "Extreme hot days (>=40℃)"
           },
           {
             "field": "mean_heat_score",
-            "title": "Heat comfort",
+            "title": "Heat comfort score",
             "format": ".1f"
           }
         ]
+      }
+    },
+    {
+      "data": {
+        "url": "data/city_seasonal_metrics.csv"
+      },
+      "transform": [
+        {
+          "filter": "datum.season == season"
+        },
+        {
+          "filter": "datum.city == 'Darwin' || datum.city == 'Perth' || datum.city == 'Adelaide'"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "baseline": "middle",
+        "dx": 10,
+        "dy": -10,
+        "font": "Inter, Arial, sans-serif",
+        "fontSize": 16,
+        "fontWeight": 750,
+        "fill": "#5b2418"
+      },
+      "encoding": {
+        "longitude": {
+          "field": "longitude",
+          "type": "quantitative"
+        },
+        "latitude": {
+          "field": "latitude",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "city"
+        },
+        "opacity": {
+          "condition": {
+            "param": "hoverCity",
+            "value": 1
+          },
+          "value": 0.25
+        }
       }
     }
   ],
@@ -122,18 +187,31 @@
       "titleColor": "#26313b",
       "gridColor": "#edf0f2",
       "domainColor": "#c9d0d6",
-      "tickColor": "#c9d0d6"
+      "tickColor": "#c9d0d6",
+      "labelFontSize": 15,
+      "titleFontSize": 16
     },
     "legend": {
       "labelFont": "Inter, Arial, sans-serif",
       "titleFont": "Inter, Arial, sans-serif",
       "labelColor": "#4c5965",
-      "titleColor": "#26313b"
+      "titleColor": "#26313b",
+      "labelFontSize": 15,
+      "titleFontSize": 16
     },
     "view": {
       "stroke": null
     },
     "font": "Inter, Arial, sans-serif",
-    "background": "#ffffff"
+    "background": "transparent",
+    "header": {
+      "labelFont": "Inter, Arial, sans-serif",
+      "labelFontSize": 16,
+      "labelFontWeight": 750,
+      "labelColor": "#26313b",
+      "titleFont": "Inter, Arial, sans-serif",
+      "titleFontSize": 16,
+      "titleColor": "#26313b"
+    }
   }
 }

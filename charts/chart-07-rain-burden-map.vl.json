@@ -1,17 +1,18 @@
 {
   "description": "Seasonal rain burden map comparing rain days and rainfall amount.",
-  "width": 760,
-  "height": 430,
+  "width": 960,
+  "height": 540,
+  "background": "transparent",
   "projection": {
     "type": "mercator",
     "center": [
       134,
       -28
     ],
-    "scale": 580,
+    "scale": 800,
     "translate": [
-      380,
-      215
+      480,
+      270
     ]
   },
   "params": [
@@ -57,6 +58,19 @@
         "stroke": "#123b55",
         "strokeWidth": 0.8
       },
+      "params": [
+        {
+          "name": "hoverCity",
+          "select": {
+            "type": "point",
+            "on": "pointerover",
+            "clear": "pointerout",
+            "fields": [
+              "city"
+            ]
+          }
+        }
+      ],
       "encoding": {
         "longitude": {
           "field": "longitude",
@@ -69,7 +83,7 @@
         "size": {
           "field": "rainfall_mm",
           "type": "quantitative",
-          "title": "Rainfall mm",
+          "title": "Total rainfall (mm)",
           "scale": {
             "range": [
               120,
@@ -80,10 +94,17 @@
         "color": {
           "field": "rain_days_ge_1mm",
           "type": "quantitative",
-          "title": "Rain days >=1mm",
+          "title": "Wet days (>=1 mm)",
           "scale": {
             "scheme": "blues"
           }
+        },
+        "opacity": {
+          "condition": {
+            "param": "hoverCity",
+            "value": 1
+          },
+          "value": 0.25
         },
         "tooltip": [
           {
@@ -94,18 +115,62 @@
           },
           {
             "field": "rainfall_mm",
-            "title": "Rainfall mm"
+            "title": "Total rainfall (mm)"
           },
           {
             "field": "rain_days_ge_1mm",
-            "title": "Rain days >=1mm"
+            "title": "Wet days (>=1 mm)"
           },
           {
             "field": "mean_rain_score",
-            "title": "Rain comfort",
+            "title": "Rain comfort score",
             "format": ".1f"
           }
         ]
+      }
+    },
+    {
+      "data": {
+        "url": "data/city_seasonal_metrics.csv"
+      },
+      "transform": [
+        {
+          "filter": "datum.season == season"
+        },
+        {
+          "filter": "datum.city == 'Darwin' || datum.city == 'Sydney' || datum.city == 'Hobart'"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "baseline": "middle",
+        "dx": 10,
+        "dy": -9,
+        "font": "Inter, Arial, sans-serif",
+        "fontSize": 16,
+        "fontWeight": 750,
+        "fill": "#123b55"
+      },
+      "encoding": {
+        "longitude": {
+          "field": "longitude",
+          "type": "quantitative"
+        },
+        "latitude": {
+          "field": "latitude",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "city"
+        },
+        "opacity": {
+          "condition": {
+            "param": "hoverCity",
+            "value": 1
+          },
+          "value": 0.25
+        }
       }
     }
   ],
@@ -118,18 +183,31 @@
       "titleColor": "#26313b",
       "gridColor": "#edf0f2",
       "domainColor": "#c9d0d6",
-      "tickColor": "#c9d0d6"
+      "tickColor": "#c9d0d6",
+      "labelFontSize": 15,
+      "titleFontSize": 16
     },
     "legend": {
       "labelFont": "Inter, Arial, sans-serif",
       "titleFont": "Inter, Arial, sans-serif",
       "labelColor": "#4c5965",
-      "titleColor": "#26313b"
+      "titleColor": "#26313b",
+      "labelFontSize": 15,
+      "titleFontSize": 16
     },
     "view": {
       "stroke": null
     },
     "font": "Inter, Arial, sans-serif",
-    "background": "#ffffff"
+    "background": "transparent",
+    "header": {
+      "labelFont": "Inter, Arial, sans-serif",
+      "labelFontSize": 16,
+      "labelFontWeight": 750,
+      "labelColor": "#26313b",
+      "titleFont": "Inter, Arial, sans-serif",
+      "titleFontSize": 16,
+      "titleColor": "#26313b"
+    }
   }
 }

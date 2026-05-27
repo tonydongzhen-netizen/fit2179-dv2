@@ -1,7 +1,8 @@
 {
   "description": "Paired day and night comfort component comparison by city.",
-  "width": 720,
-  "height": 330,
+  "width": "container",
+  "height": 480,
+  "background": "transparent",
   "data": {
     "url": "data/city_scores_overall.csv"
   },
@@ -17,6 +18,19 @@
         "strokeWidth": 2,
         "color": "#cfd7dd"
       },
+      "params": [
+        {
+          "name": "hoverCity",
+          "select": {
+            "type": "point",
+            "on": "pointerover",
+            "clear": "pointerout",
+            "fields": [
+              "city"
+            ]
+          }
+        }
+      ],
       "encoding": {
         "y": {
           "field": "city",
@@ -33,13 +47,30 @@
           "scale": {
             "domain": [
               50,
-              100
+              102
             ]
           },
-          "title": "Component score"
+          "title": "Temperature comfort score (0-100)",
+          "axis": {
+            "values": [
+              50,
+              60,
+              70,
+              80,
+              90,
+              100
+            ]
+          }
         },
         "x2": {
           "field": "night_temp_component"
+        },
+        "opacity": {
+          "condition": {
+            "param": "hoverCity",
+            "value": 1
+          },
+          "value": 0.25
         }
       }
     },
@@ -82,6 +113,7 @@
         "color": {
           "field": "comfort_type",
           "type": "nominal",
+          "title": "Day / night",
           "scale": {
             "domain": [
               "Day",
@@ -91,20 +123,73 @@
               "#D99035",
               "#5D77A6"
             ]
+          },
+          "legend": {
+            "orient": "bottom",
+            "direction": "horizontal"
           }
+        },
+        "opacity": {
+          "condition": {
+            "param": "hoverCity",
+            "value": 1
+          },
+          "value": 0.25
         },
         "tooltip": [
           {
             "field": "city"
           },
           {
-            "field": "comfort_type"
+            "field": "comfort_type",
+            "title": "Component"
           },
           {
             "field": "score",
+            "title": "Temperature comfort score (0-100)",
             "format": ".1f"
           }
         ]
+      }
+    },
+    {
+      "transform": [
+        {
+          "filter": "datum.city == 'Canberra'"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "align": "right",
+        "baseline": "middle",
+        "dx": -9,
+        "fontSize": 15,
+        "fontWeight": 750,
+        "color": "#5D77A6"
+      },
+      "encoding": {
+        "y": {
+          "field": "city",
+          "type": "nominal",
+          "sort": {
+            "field": "rank",
+            "order": "ascending"
+          }
+        },
+        "x": {
+          "field": "night_temp_component",
+          "type": "quantitative"
+        },
+        "text": {
+          "value": "cooler nights"
+        },
+        "opacity": {
+          "condition": {
+            "param": "hoverCity",
+            "value": 1
+          },
+          "value": 0.25
+        }
       }
     }
   ],
@@ -117,18 +202,31 @@
       "titleColor": "#26313b",
       "gridColor": "#edf0f2",
       "domainColor": "#c9d0d6",
-      "tickColor": "#c9d0d6"
+      "tickColor": "#c9d0d6",
+      "labelFontSize": 15,
+      "titleFontSize": 16
     },
     "legend": {
       "labelFont": "Inter, Arial, sans-serif",
       "titleFont": "Inter, Arial, sans-serif",
       "labelColor": "#4c5965",
-      "titleColor": "#26313b"
+      "titleColor": "#26313b",
+      "labelFontSize": 15,
+      "titleFontSize": 16
     },
     "view": {
       "stroke": null
     },
     "font": "Inter, Arial, sans-serif",
-    "background": "#ffffff"
+    "background": "transparent",
+    "header": {
+      "labelFont": "Inter, Arial, sans-serif",
+      "labelFontSize": 16,
+      "labelFontWeight": 750,
+      "labelColor": "#26313b",
+      "titleFont": "Inter, Arial, sans-serif",
+      "titleFontSize": 16,
+      "titleColor": "#26313b"
+    }
   }
 }

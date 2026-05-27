@@ -20,9 +20,29 @@
   },
   "columns": 2,
   "spec": {
-    "width": 240,
-    "height": 118,
+    "width": 420,
+    "height": 210,
     "layer": [
+      {
+        "data": {
+          "values": [
+            {}
+          ]
+        },
+        "mark": {
+          "type": "rect",
+          "opacity": 0.18,
+          "color": "#6b9e77"
+        },
+        "encoding": {
+          "y": {
+            "datum": 26
+          },
+          "y2": {
+            "datum": 18
+          }
+        }
+      },
       {
         "mark": {
           "type": "rule",
@@ -65,7 +85,7 @@
           "x": {
             "field": "month_num",
             "type": "ordinal",
-            "title": null,
+            "title": "Month",
             "axis": {
               "values": [
                 1,
@@ -81,7 +101,7 @@
           "y": {
             "field": "mean_min_temp_c",
             "type": "quantitative",
-            "title": "C",
+            "title": "Temperature (℃)",
             "scale": {
               "domain": [
                 -2,
@@ -101,11 +121,11 @@
             },
             {
               "field": "mean_max_temp_c",
-              "title": "Mean max C"
+              "title": "Daytime high (℃)"
             },
             {
               "field": "mean_min_temp_c",
-              "title": "Mean min C"
+              "title": "Night-time low (℃)"
             }
           ]
         }
@@ -114,7 +134,7 @@
         "mark": {
           "type": "line",
           "strokeWidth": 2,
-          "color": "#c95a3c"
+          "color": "#D99035"
         },
         "encoding": {
           "x": {
@@ -155,18 +175,32 @@
       "titleColor": "#26313b",
       "gridColor": "#edf0f2",
       "domainColor": "#c9d0d6",
-      "tickColor": "#c9d0d6"
+      "tickColor": "#c9d0d6",
+      "labelFontSize": 15,
+      "titleFontSize": 16
     },
     "legend": {
       "labelFont": "Inter, Arial, sans-serif",
       "titleFont": "Inter, Arial, sans-serif",
       "labelColor": "#4c5965",
-      "titleColor": "#26313b"
+      "titleColor": "#26313b",
+      "labelFontSize": 15,
+      "titleFontSize": 16
     },
     "view": {
       "stroke": null
     },
     "font": "Inter, Arial, sans-serif",
-    "background": "#ffffff"
-  }
+    "background": "transparent",
+    "header": {
+      "labelFont": "Inter, Arial, sans-serif",
+      "labelFontSize": 16,
+      "labelFontWeight": 750,
+      "labelColor": "#26313b",
+      "titleFont": "Inter, Arial, sans-serif",
+      "titleFontSize": 16,
+      "titleColor": "#26313b"
+    }
+  },
+  "background": "transparent"
 }

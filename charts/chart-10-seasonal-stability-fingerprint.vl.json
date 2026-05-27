@@ -1,10 +1,24 @@
 {
   "description": "City-by-month comfort fingerprint showing seasonal stability.",
-  "width": 760,
-  "height": 300,
+  "width": "container",
+  "height": 500,
+  "background": "transparent",
   "data": {
     "url": "data/city_scores_monthly.csv"
   },
+  "params": [
+    {
+      "name": "hoverCity",
+      "select": {
+        "type": "point",
+        "on": "pointerover",
+        "clear": "pointerout",
+        "fields": [
+          "city"
+        ]
+      }
+    }
+  ],
   "mark": {
     "type": "tick",
     "thickness": 12,
@@ -24,7 +38,10 @@
         "Canberra",
         "Darwin"
       ],
-      "title": null
+      "title": null,
+      "axis": {
+        "labelFontSize": 16
+      }
     },
     "x": {
       "field": "month",
@@ -43,12 +60,15 @@
         "Nov",
         "Dec"
       ],
-      "title": null
+      "title": "Month",
+      "axis": {
+        "labelFontSize": 15
+      }
     },
     "color": {
       "field": "monthly_comfort_score",
       "type": "quantitative",
-      "title": "Monthly comfort",
+      "title": "Monthly score",
       "scale": {
         "scheme": "yellowgreenblue",
         "domain": [
@@ -56,6 +76,13 @@
           96
         ]
       }
+    },
+    "opacity": {
+      "condition": {
+        "param": "hoverCity",
+        "value": 1
+      },
+      "value": 0.25
     },
     "tooltip": [
       {
@@ -66,17 +93,17 @@
       },
       {
         "field": "monthly_comfort_score",
-        "title": "Monthly comfort",
+        "title": "Monthly comfort score (0-100)",
         "format": ".1f"
       },
       {
         "field": "day_temp_score",
-        "title": "Day score",
+        "title": "Day temperature score",
         "format": ".1f"
       },
       {
         "field": "night_temp_score",
-        "title": "Night score",
+        "title": "Night temperature score",
         "format": ".1f"
       }
     ]
@@ -90,18 +117,31 @@
       "titleColor": "#26313b",
       "gridColor": "#edf0f2",
       "domainColor": "#c9d0d6",
-      "tickColor": "#c9d0d6"
+      "tickColor": "#c9d0d6",
+      "labelFontSize": 15,
+      "titleFontSize": 16
     },
     "legend": {
       "labelFont": "Inter, Arial, sans-serif",
       "titleFont": "Inter, Arial, sans-serif",
       "labelColor": "#4c5965",
-      "titleColor": "#26313b"
+      "titleColor": "#26313b",
+      "labelFontSize": 15,
+      "titleFontSize": 16
     },
     "view": {
       "stroke": null
     },
     "font": "Inter, Arial, sans-serif",
-    "background": "#ffffff"
+    "background": "transparent",
+    "header": {
+      "labelFont": "Inter, Arial, sans-serif",
+      "labelFontSize": 16,
+      "labelFontWeight": 750,
+      "labelColor": "#26313b",
+      "titleFont": "Inter, Arial, sans-serif",
+      "titleFontSize": 16,
+      "titleColor": "#26313b"
+    }
   }
 }

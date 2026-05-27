@@ -1,7 +1,8 @@
 {
   "description": "Balanced everyday comfort ranking for Australian capital cities.",
-  "width": 560,
-  "height": 360,
+  "width": "container",
+  "height": 470,
+  "background": "transparent",
   "padding": {
     "left": 82,
     "right": 38,
@@ -25,6 +26,19 @@
           "band": 0.56
         }
       },
+      "params": [
+        {
+          "name": "hoverCity",
+          "select": {
+            "type": "point",
+            "on": "pointerover",
+            "clear": "pointerout",
+            "fields": [
+              "city"
+            ]
+          }
+        }
+      ],
       "encoding": {
         "y": {
           "field": "city",
@@ -35,7 +49,7 @@
           },
           "title": null,
           "axis": {
-            "labelFontSize": 14,
+            "labelFontSize": 17,
             "labelPadding": 8,
             "labelColor": "#202932"
           }
@@ -43,7 +57,7 @@
         "x": {
           "field": "overall_score",
           "type": "quantitative",
-          "title": "Balanced comfort score",
+          "title": "Balanced comfort score (0-100)",
           "scale": {
             "domain": [
               0,
@@ -52,16 +66,29 @@
           },
           "axis": {
             "tickCount": 6,
-            "labelFontSize": 12,
-            "titleFontSize": 12
+            "labelFontSize": 15,
+            "titleFontSize": 16
           }
         },
         "color": {
-          "condition": {
-            "test": "datum.rank == 1",
-            "value": "#1f766f"
-          },
+          "condition": [
+            {
+              "test": "datum.rank == 1",
+              "value": "#1f766f"
+            },
+            {
+              "test": "datum.rank <= 4",
+              "value": "#7fa39f"
+            }
+          ],
           "value": "#9fb1b7"
+        },
+        "opacity": {
+          "condition": {
+            "param": "hoverCity",
+            "value": 1
+          },
+          "value": 0.35
         },
         "tooltip": [
           {
@@ -72,7 +99,7 @@
           },
           {
             "field": "overall_score",
-            "title": "Balanced score",
+            "title": "Balanced score (0-100)",
             "format": ".1f"
           }
         ]
@@ -84,7 +111,7 @@
         "align": "left",
         "baseline": "middle",
         "dx": 7,
-        "fontSize": 13,
+        "fontSize": 17,
         "fontWeight": 700,
         "color": "#26313b"
       },
@@ -104,6 +131,13 @@
         "text": {
           "field": "overall_score",
           "format": ".1f"
+        },
+        "opacity": {
+          "condition": {
+            "param": "hoverCity",
+            "value": 1
+          },
+          "value": 0.35
         }
       }
     }
@@ -117,18 +151,31 @@
       "titleColor": "#26313b",
       "gridColor": "#edf0f2",
       "domainColor": "#c9d0d6",
-      "tickColor": "#c9d0d6"
+      "tickColor": "#c9d0d6",
+      "labelFontSize": 15,
+      "titleFontSize": 16
     },
     "legend": {
       "labelFont": "Inter, Arial, sans-serif",
       "titleFont": "Inter, Arial, sans-serif",
       "labelColor": "#4c5965",
-      "titleColor": "#26313b"
+      "titleColor": "#26313b",
+      "labelFontSize": 15,
+      "titleFontSize": 16
     },
     "view": {
       "stroke": null
     },
     "font": "Inter, Arial, sans-serif",
-    "background": "#ffffff"
+    "background": "transparent",
+    "header": {
+      "labelFont": "Inter, Arial, sans-serif",
+      "labelFontSize": 16,
+      "labelFontWeight": 750,
+      "labelColor": "#26313b",
+      "titleFont": "Inter, Arial, sans-serif",
+      "titleFontSize": 16,
+      "titleColor": "#26313b"
+    }
   }
 }

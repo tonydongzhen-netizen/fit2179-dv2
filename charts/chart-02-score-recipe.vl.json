@@ -1,7 +1,8 @@
 {
   "description": "Balanced comfort score recipe as a donut chart with component weights.",
-  "width": 460,
-  "height": 360,
+  "width": 840,
+  "height": 560,
+  "background": "transparent",
   "data": {
     "url": "data/score_weights.csv"
   },
@@ -18,12 +19,22 @@
     {
       "mark": {
         "type": "arc",
-        "innerRadius": 72,
-        "outerRadius": 135,
+        "innerRadius": 88,
+        "outerRadius": 170,
         "cornerRadius": 2,
         "stroke": "#ffffff",
         "strokeWidth": 2
       },
+      "params": [
+        {
+          "name": "hoverSlice",
+          "select": {
+            "type": "point",
+            "on": "pointerover",
+            "clear": "pointerout"
+          }
+        }
+      ],
       "encoding": {
         "theta": {
           "field": "weight",
@@ -53,10 +64,18 @@
               "#D8A83D",
               "#6B9E77"
             ]
-          }
+          },
+          "legend": null
         },
         "order": {
           "field": "component_order"
+        },
+        "opacity": {
+          "condition": {
+            "param": "hoverSlice",
+            "value": 1
+          },
+          "value": 0.45
         },
         "tooltip": [
           {
@@ -76,24 +95,158 @@
       }
     },
     {
+      "data": {
+        "url": "data/chart2_labels.csv"
+      },
+      "transform": [
+        {
+          "filter": "datum.scenario == 'Balanced everyday comfort'"
+        },
+        {
+          "calculate": "datum.connector_x * 1.22 + 115",
+          "as": "connector_plot_x"
+        },
+        {
+          "calculate": "datum.connector_y * 1.22 - 25",
+          "as": "connector_plot_y"
+        },
+        {
+          "calculate": "datum.label_x * 1.22 + 115",
+          "as": "label_plot_x"
+        },
+        {
+          "calculate": "datum.label_y * 1.22 - 25",
+          "as": "label_plot_y"
+        }
+      ],
       "mark": {
-        "type": "text",
-        "radius": 158,
-        "font": "Inter, Arial, sans-serif",
-        "fontSize": 13,
-        "fontWeight": 700
+        "type": "rule",
+        "stroke": "#b8c2c9",
+        "strokeWidth": 1.2,
+        "opacity": 0.75
       },
       "encoding": {
-        "theta": {
-          "field": "weight",
+        "x": {
+          "field": "connector_plot_x",
           "type": "quantitative",
-          "stack": true
+          "scale": null,
+          "axis": null
         },
-        "order": {
-          "field": "component_order"
+        "y": {
+          "field": "connector_plot_y",
+          "type": "quantitative",
+          "scale": null,
+          "axis": null
+        },
+        "x2": {
+          "field": "label_plot_x"
+        },
+        "y2": {
+          "field": "label_plot_y"
+        }
+      }
+    },
+    {
+      "data": {
+        "url": "data/chart2_labels.csv"
+      },
+      "transform": [
+        {
+          "filter": "datum.scenario == 'Balanced everyday comfort'"
+        },
+        {
+          "filter": "datum.text_anchor == 'start'"
+        },
+        {
+          "calculate": "datum.label_x * 1.22 + 115",
+          "as": "label_plot_x"
+        },
+        {
+          "calculate": "datum.label_y * 1.22 - 25",
+          "as": "label_plot_y"
+        },
+        {
+          "calculate": "datum.component_label + ' ' + format(datum.weight_percent, '.0f') + '%'",
+          "as": "label_text"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "font": "Inter, Arial, sans-serif",
+        "fontSize": 16,
+        "fontWeight": 750,
+        "align": "left",
+        "baseline": "middle"
+      },
+      "encoding": {
+        "x": {
+          "field": "label_plot_x",
+          "type": "quantitative",
+          "scale": null,
+          "axis": null
+        },
+        "y": {
+          "field": "label_plot_y",
+          "type": "quantitative",
+          "scale": null,
+          "axis": null
         },
         "text": {
-          "field": "weight_label",
+          "field": "label_text",
+          "type": "nominal"
+        },
+        "color": {
+          "value": "#26313b"
+        }
+      }
+    },
+    {
+      "data": {
+        "url": "data/chart2_labels.csv"
+      },
+      "transform": [
+        {
+          "filter": "datum.scenario == 'Balanced everyday comfort'"
+        },
+        {
+          "filter": "datum.text_anchor == 'end'"
+        },
+        {
+          "calculate": "datum.label_x * 1.22 + 115",
+          "as": "label_plot_x"
+        },
+        {
+          "calculate": "datum.label_y * 1.22 - 25",
+          "as": "label_plot_y"
+        },
+        {
+          "calculate": "datum.component_label + ' ' + format(datum.weight_percent, '.0f') + '%'",
+          "as": "label_text"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "font": "Inter, Arial, sans-serif",
+        "fontSize": 16,
+        "fontWeight": 750,
+        "align": "right",
+        "baseline": "middle"
+      },
+      "encoding": {
+        "x": {
+          "field": "label_plot_x",
+          "type": "quantitative",
+          "scale": null,
+          "axis": null
+        },
+        "y": {
+          "field": "label_plot_y",
+          "type": "quantitative",
+          "scale": null,
+          "axis": null
+        },
+        "text": {
+          "field": "label_text",
           "type": "nominal"
         },
         "color": {
@@ -112,20 +265,20 @@
       "mark": {
         "type": "text",
         "font": "Inter, Arial, sans-serif",
-        "fontSize": 18,
+        "fontSize": 23,
         "fontWeight": 750,
         "lineBreak": "\n",
-        "lineHeight": 22,
+        "lineHeight": 27,
         "align": "center",
         "baseline": "middle",
         "color": "#26313b"
       },
       "encoding": {
         "x": {
-          "value": 230
+          "value": 420
         },
         "y": {
-          "value": 166
+          "value": 257
         },
         "text": {
           "field": "label"
@@ -142,18 +295,31 @@
       "titleColor": "#26313b",
       "gridColor": "#edf0f2",
       "domainColor": "#c9d0d6",
-      "tickColor": "#c9d0d6"
+      "tickColor": "#c9d0d6",
+      "labelFontSize": 15,
+      "titleFontSize": 16
     },
     "legend": {
       "labelFont": "Inter, Arial, sans-serif",
       "titleFont": "Inter, Arial, sans-serif",
       "labelColor": "#4c5965",
-      "titleColor": "#26313b"
+      "titleColor": "#26313b",
+      "labelFontSize": 15,
+      "titleFontSize": 16
     },
     "view": {
       "stroke": null
     },
     "font": "Inter, Arial, sans-serif",
-    "background": "#ffffff"
+    "background": "transparent",
+    "header": {
+      "labelFont": "Inter, Arial, sans-serif",
+      "labelFontSize": 16,
+      "labelFontWeight": 750,
+      "labelColor": "#26313b",
+      "titleFont": "Inter, Arial, sans-serif",
+      "titleFontSize": 16,
+      "titleColor": "#26313b"
+    }
   }
 }

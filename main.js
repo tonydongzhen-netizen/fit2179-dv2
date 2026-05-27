@@ -18,18 +18,29 @@ const embedOptions = {
   renderer: "svg",
 };
 
+const embeddedViews = [];
+let resizeTimer;
+
+function resizeCharts() {
+  clearTimeout(resizeTimer);
+  resizeTimer = setTimeout(() => {
+    embeddedViews.forEach((view) => view.resize().runAsync());
+  }, 120);
+}
+
 async function embedCharts() {
   for (const [id, specUrl] of charts) {
     const element = document.getElementById(id);
     if (!element) continue;
 
     try {
-      const response = await fetch(specUrl);
+      const response = await fetch(specUrl, { cache: "no-cache" });
       if (!response.ok) {
         throw new Error(`${response.status} ${response.statusText}`);
       }
       const spec = await response.json();
-      await vegaEmbed(element, spec, embedOptions);
+      const result = await vegaEmbed(element, spec, embedOptions);
+      embeddedViews.push(result.view);
     } catch (error) {
       element.innerHTML = `<p class="chart-error">Chart failed to load: ${specUrl}</p>`;
       console.error(error);
@@ -38,3 +49,4 @@ async function embedCharts() {
 }
 
 embedCharts();
+window.addEventListener("resize", resizeCharts);

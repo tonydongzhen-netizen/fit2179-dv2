@@ -1,7 +1,8 @@
 {
   "description": "Preference sensitivity switchboard comparing ranks across scenarios.",
-  "width": 760,
-  "height": 320,
+  "width": "container",
+  "height": 520,
+  "background": "transparent",
   "data": {
     "url": "data/city_scores_overall.csv"
   },
@@ -9,6 +10,10 @@
     {
       "calculate": "datum.rank_change_from_balanced > 0 ? '+' + datum.rank_change_from_balanced : datum.rank_change_from_balanced < 0 ? '' + datum.rank_change_from_balanced : '0'",
       "as": "change_label"
+    },
+    {
+      "calculate": "datum.rank_arrow == 'up' ? 'Rank improves' : datum.rank_arrow == 'down' ? 'Rank drops' : 'Rank unchanged'",
+      "as": "change_tooltip"
     }
   ],
   "layer": [
@@ -17,6 +22,19 @@
         "type": "rect",
         "cornerRadius": 3
       },
+      "params": [
+        {
+          "name": "hoverCity",
+          "select": {
+            "type": "point",
+            "on": "pointerover",
+            "clear": "pointerout",
+            "fields": [
+              "city"
+            ]
+          }
+        }
+      ],
       "encoding": {
         "x": {
           "field": "city",
@@ -31,7 +49,11 @@
             "Canberra",
             "Darwin"
           ],
-          "title": null
+          "title": null,
+          "axis": {
+            "labelAngle": -90,
+            "labelFontSize": 15
+          }
         },
         "y": {
           "field": "scenario",
@@ -45,18 +67,29 @@
             "Stable all year",
             "Avoid muggy heat"
           ],
-          "title": null
+          "title": null,
+          "axis": {
+            "labelExpr": "datum.label == 'Balanced everyday comfort' ? 'Balanced' : datum.label == 'Sleep cool at night' ? 'Cool nights' : datum.label == 'Enjoy sunshine' ? 'Sunshine' : datum.label == 'Stable all year' ? 'Stable year' : datum.label == 'Avoid muggy heat' ? 'Avoid muggy' : datum.label",
+            "labelLimit": 130,
+            "labelFontSize": 15
+          }
         },
         "color": {
           "field": "overall_score",
           "type": "quantitative",
-          "title": "Scenario score",
+          "title": "Scenario score (0-100)",
           "scale": {
             "scheme": "tealblues",
             "domain": [
               50,
               95
             ]
+          },
+          "legend": {
+            "orient": "bottom",
+            "direction": "horizontal",
+            "gradientLength": 280,
+            "titleLimit": 260
           }
         },
         "stroke": {
@@ -73,23 +106,38 @@
           },
           "value": 0.5
         },
+        "opacity": {
+          "condition": {
+            "param": "hoverCity",
+            "value": 1
+          },
+          "value": 0.55
+        },
         "tooltip": [
           {
-            "field": "scenario"
+            "field": "scenario",
+            "title": "Preference scenario"
           },
           {
-            "field": "city"
+            "field": "city",
+            "title": "City"
           },
           {
-            "field": "rank"
+            "field": "rank",
+            "title": "Rank in scenario"
           },
           {
             "field": "overall_score",
+            "title": "Scenario score (0-100)",
             "format": ".1f"
           },
           {
             "field": "rank_change_from_balanced",
             "title": "Rank change from balanced"
+          },
+          {
+            "field": "change_tooltip",
+            "title": "Movement"
           }
         ]
       }
@@ -97,9 +145,13 @@
     {
       "mark": {
         "type": "text",
-        "fontSize": 14,
+        "dy": -9,
+        "fontSize": 20,
         "fontWeight": 800,
-        "color": "#ffffff"
+        "color": "#ffffff",
+        "stroke": "#17313a",
+        "strokeWidth": 0.35,
+        "strokeOpacity": 0.55
       },
       "encoding": {
         "x": {
@@ -131,6 +183,13 @@
         },
         "text": {
           "field": "rank"
+        },
+        "opacity": {
+          "condition": {
+            "param": "hoverCity",
+            "value": 1
+          },
+          "value": 0.65
         }
       }
     },
@@ -138,9 +197,11 @@
       "mark": {
         "type": "text",
         "dy": 17,
-        "fontSize": 10,
-        "fontWeight": 650,
-        "color": "#26313b"
+        "fontSize": 16,
+        "fontWeight": 800,
+        "stroke": "#17313a",
+        "strokeWidth": 0.35,
+        "strokeOpacity": 0.65
       },
       "encoding": {
         "x": {
@@ -172,6 +233,26 @@
         },
         "text": {
           "field": "change_label"
+        },
+        "color": {
+          "condition": [
+            {
+              "test": "datum.rank_arrow == 'up'",
+              "value": "#d7f5e7"
+            },
+            {
+              "test": "datum.rank_arrow == 'down'",
+              "value": "#ffe1d6"
+            }
+          ],
+          "value": "#f7fbfb"
+        },
+        "opacity": {
+          "condition": {
+            "param": "hoverCity",
+            "value": 1
+          },
+          "value": 0.65
         }
       }
     }
@@ -185,18 +266,31 @@
       "titleColor": "#26313b",
       "gridColor": "#edf0f2",
       "domainColor": "#c9d0d6",
-      "tickColor": "#c9d0d6"
+      "tickColor": "#c9d0d6",
+      "labelFontSize": 15,
+      "titleFontSize": 16
     },
     "legend": {
       "labelFont": "Inter, Arial, sans-serif",
       "titleFont": "Inter, Arial, sans-serif",
       "labelColor": "#4c5965",
-      "titleColor": "#26313b"
+      "titleColor": "#26313b",
+      "labelFontSize": 15,
+      "titleFontSize": 16
     },
     "view": {
       "stroke": null
     },
     "font": "Inter, Arial, sans-serif",
-    "background": "#ffffff"
+    "background": "transparent",
+    "header": {
+      "labelFont": "Inter, Arial, sans-serif",
+      "labelFontSize": 16,
+      "labelFontWeight": 750,
+      "labelColor": "#26313b",
+      "titleFont": "Inter, Arial, sans-serif",
+      "titleFontSize": 16,
+      "titleColor": "#26313b"
+    }
   }
 }
