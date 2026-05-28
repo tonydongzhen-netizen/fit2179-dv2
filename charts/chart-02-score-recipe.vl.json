@@ -1,7 +1,7 @@
 {
   "description": "Balanced comfort score recipe as a donut chart with component weights.",
   "width": 840,
-  "height": 560,
+  "height": 500,
   "background": "transparent",
   "data": {
     "url": "data/score_weights.csv"
@@ -19,11 +19,11 @@
     {
       "mark": {
         "type": "arc",
-        "innerRadius": 88,
-        "outerRadius": 170,
-        "cornerRadius": 2,
-        "stroke": "#ffffff",
-        "strokeWidth": 2
+        "innerRadius": 92,
+        "outerRadius": 176,
+        "cornerRadius": 5,
+        "stroke": "#fffdf8",
+        "strokeWidth": 3
       },
       "params": [
         {
@@ -121,9 +121,9 @@
       ],
       "mark": {
         "type": "rule",
-        "stroke": "#b8c2c9",
-        "strokeWidth": 1.2,
-        "opacity": 0.75
+        "stroke": "#aeb8be",
+        "strokeWidth": 1.15,
+        "opacity": 0.68
       },
       "encoding": {
         "x": {
@@ -174,7 +174,7 @@
         "type": "text",
         "font": "Inter, Arial, sans-serif",
         "fontSize": 16,
-        "fontWeight": 750,
+        "fontWeight": 800,
         "align": "left",
         "baseline": "middle"
       },
@@ -228,7 +228,7 @@
         "type": "text",
         "font": "Inter, Arial, sans-serif",
         "fontSize": 16,
-        "fontWeight": 750,
+        "fontWeight": 800,
         "align": "right",
         "baseline": "middle"
       },
@@ -265,10 +265,10 @@
       "mark": {
         "type": "text",
         "font": "Inter, Arial, sans-serif",
-        "fontSize": 23,
-        "fontWeight": 750,
+        "fontSize": 22,
+        "fontWeight": 800,
         "lineBreak": "\n",
-        "lineHeight": 27,
+        "lineHeight": 28,
         "align": "center",
         "baseline": "middle",
         "color": "#26313b"
@@ -278,7 +278,7 @@
           "value": 420
         },
         "y": {
-          "value": 257
+          "value": 222
         },
         "text": {
           "field": "label"
@@ -293,19 +293,22 @@
       "titleFont": "Inter, Arial, sans-serif",
       "labelColor": "#4c5965",
       "titleColor": "#26313b",
-      "gridColor": "#edf0f2",
-      "domainColor": "#c9d0d6",
-      "tickColor": "#c9d0d6",
-      "labelFontSize": 15,
-      "titleFontSize": 16
+      "gridColor": "#e8eeed",
+      "domainColor": "#d2dad7",
+      "tickColor": "#d2dad7",
+      "labelFontSize": 14,
+      "titleFontSize": 15,
+      "gridOpacity": 0.72,
+      "titleFontWeight": 800
     },
     "legend": {
       "labelFont": "Inter, Arial, sans-serif",
       "titleFont": "Inter, Arial, sans-serif",
       "labelColor": "#4c5965",
       "titleColor": "#26313b",
-      "labelFontSize": 15,
-      "titleFontSize": 16
+      "labelFontSize": 14,
+      "titleFontSize": 15,
+      "titleFontWeight": 800
     },
     "view": {
       "stroke": null
@@ -314,11 +317,11 @@
     "background": "transparent",
     "header": {
       "labelFont": "Inter, Arial, sans-serif",
-      "labelFontSize": 16,
-      "labelFontWeight": 750,
+      "labelFontSize": 15,
+      "labelFontWeight": 800,
       "labelColor": "#26313b",
       "titleFont": "Inter, Arial, sans-serif",
-      "titleFontSize": 16,
+      "titleFontSize": 15,
       "titleColor": "#26313b"
     }
   }

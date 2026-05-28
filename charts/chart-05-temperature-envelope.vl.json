@@ -19,9 +19,17 @@
     "title": null
   },
   "columns": 2,
+  "resolve": {
+    "scale": {
+      "x": "independent"
+    },
+    "axis": {
+      "x": "independent"
+    }
+  },
   "spec": {
     "width": 420,
-    "height": 210,
+    "height": 170,
     "layer": [
       {
         "data": {
@@ -31,8 +39,8 @@
         },
         "mark": {
           "type": "rect",
-          "opacity": 0.18,
-          "color": "#6b9e77"
+          "opacity": 0.24,
+          "color": "#7dae7e"
         },
         "encoding": {
           "y": {
@@ -51,7 +59,7 @@
             4,
             4
           ],
-          "strokeWidth": 1.2
+          "strokeWidth": 1.4
         },
         "encoding": {
           "y": {
@@ -67,7 +75,7 @@
             4,
             4
           ],
-          "strokeWidth": 1.2
+          "strokeWidth": 1.4
         },
         "encoding": {
           "y": {
@@ -78,24 +86,35 @@
       {
         "mark": {
           "type": "area",
-          "opacity": 0.32,
-          "color": "#d99035"
+          "opacity": 0.26,
+          "color": "#d99035",
+          "interpolate": "monotone"
         },
         "encoding": {
           "x": {
             "field": "month_num",
             "type": "ordinal",
-            "title": "Month",
+            "sort": [
+              "1",
+              "2",
+              "3",
+              "4",
+              "5",
+              "6",
+              "7",
+              "8",
+              "9",
+              "10",
+              "11",
+              "12"
+            ],
+            "title": null,
             "axis": {
-              "values": [
-                1,
-                3,
-                5,
-                7,
-                9,
-                11
-              ],
-              "labelExpr": "['Jan','Mar','May','Jul','Sep','Nov'][indexof([1,3,5,7,9,11], datum.value)]"
+              "labelExpr": "['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'][toNumber(datum.value) - 1]",
+              "labelAngle": 0,
+              "labelOverlap": false,
+              "labelPadding": 5,
+              "tickSize": 4
             }
           },
           "y": {
@@ -133,13 +152,33 @@
       {
         "mark": {
           "type": "line",
-          "strokeWidth": 2,
-          "color": "#D99035"
+          "strokeWidth": 2.4,
+          "color": "#D99035",
+          "interpolate": "monotone",
+          "point": {
+            "filled": true,
+            "size": 18,
+            "opacity": 0.78
+          }
         },
         "encoding": {
           "x": {
             "field": "month_num",
-            "type": "ordinal"
+            "type": "ordinal",
+            "sort": [
+              "1",
+              "2",
+              "3",
+              "4",
+              "5",
+              "6",
+              "7",
+              "8",
+              "9",
+              "10",
+              "11",
+              "12"
+            ]
           },
           "y": {
             "field": "mean_max_temp_c",
@@ -150,13 +189,33 @@
       {
         "mark": {
           "type": "line",
-          "strokeWidth": 2,
-          "color": "#5d77a6"
+          "strokeWidth": 2.4,
+          "color": "#5d77a6",
+          "interpolate": "monotone",
+          "point": {
+            "filled": true,
+            "size": 18,
+            "opacity": 0.78
+          }
         },
         "encoding": {
           "x": {
             "field": "month_num",
-            "type": "ordinal"
+            "type": "ordinal",
+            "sort": [
+              "1",
+              "2",
+              "3",
+              "4",
+              "5",
+              "6",
+              "7",
+              "8",
+              "9",
+              "10",
+              "11",
+              "12"
+            ]
           },
           "y": {
             "field": "mean_min_temp_c",
@@ -173,19 +232,22 @@
       "titleFont": "Inter, Arial, sans-serif",
       "labelColor": "#4c5965",
       "titleColor": "#26313b",
-      "gridColor": "#edf0f2",
-      "domainColor": "#c9d0d6",
-      "tickColor": "#c9d0d6",
-      "labelFontSize": 15,
-      "titleFontSize": 16
+      "gridColor": "#e8eeed",
+      "domainColor": "#d2dad7",
+      "tickColor": "#d2dad7",
+      "labelFontSize": 14,
+      "titleFontSize": 15,
+      "gridOpacity": 0.72,
+      "titleFontWeight": 800
     },
     "legend": {
       "labelFont": "Inter, Arial, sans-serif",
       "titleFont": "Inter, Arial, sans-serif",
       "labelColor": "#4c5965",
       "titleColor": "#26313b",
-      "labelFontSize": 15,
-      "titleFontSize": 16
+      "labelFontSize": 14,
+      "titleFontSize": 15,
+      "titleFontWeight": 800
     },
     "view": {
       "stroke": null
@@ -194,11 +256,11 @@
     "background": "transparent",
     "header": {
       "labelFont": "Inter, Arial, sans-serif",
-      "labelFontSize": 16,
-      "labelFontWeight": 750,
+      "labelFontSize": 15,
+      "labelFontWeight": 800,
       "labelColor": "#26313b",
       "titleFont": "Inter, Arial, sans-serif",
-      "titleFontSize": 16,
+      "titleFontSize": 15,
       "titleColor": "#26313b"
     }
   },

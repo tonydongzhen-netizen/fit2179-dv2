@@ -1,7 +1,7 @@
 {
   "description": "Balanced everyday comfort ranking for Australian capital cities.",
   "width": "container",
-  "height": 470,
+  "height": 400,
   "background": "transparent",
   "padding": {
     "left": 82,
@@ -23,7 +23,39 @@
         "type": "bar",
         "cornerRadiusEnd": 4,
         "height": {
-          "band": 0.56
+          "band": 0.62
+        },
+        "color": "#edf2ef",
+        "opacity": 0.88
+      },
+      "encoding": {
+        "x": {
+          "field": "track_score",
+          "type": "quantitative",
+          "title": "Balanced comfort score (0-100)",
+          "scale": {
+            "domain": [
+              0,
+              100
+            ]
+          },
+          "axis": null
+        },
+        "tooltip": null
+      },
+      "transform": [
+        {
+          "calculate": "100",
+          "as": "track_score"
+        }
+      ]
+    },
+    {
+      "mark": {
+        "type": "bar",
+        "cornerRadiusEnd": 5,
+        "height": {
+          "band": 0.62
         }
       },
       "params": [
@@ -40,20 +72,6 @@
         }
       ],
       "encoding": {
-        "y": {
-          "field": "city",
-          "type": "nominal",
-          "sort": {
-            "field": "rank",
-            "order": "ascending"
-          },
-          "title": null,
-          "axis": {
-            "labelFontSize": 17,
-            "labelPadding": 8,
-            "labelColor": "#202932"
-          }
-        },
         "x": {
           "field": "overall_score",
           "type": "quantitative",
@@ -66,8 +84,8 @@
           },
           "axis": {
             "tickCount": 6,
-            "labelFontSize": 15,
-            "titleFontSize": 16
+            "labelFontSize": 14,
+            "titleFontSize": 15
           }
         },
         "color": {
@@ -110,20 +128,12 @@
         "type": "text",
         "align": "left",
         "baseline": "middle",
-        "dx": 7,
-        "fontSize": 17,
-        "fontWeight": 700,
+        "dx": 9,
+        "fontSize": 16,
+        "fontWeight": 800,
         "color": "#26313b"
       },
       "encoding": {
-        "y": {
-          "field": "city",
-          "type": "nominal",
-          "sort": {
-            "field": "rank",
-            "order": "ascending"
-          }
-        },
         "x": {
           "field": "overall_score",
           "type": "quantitative"
@@ -149,19 +159,22 @@
       "titleFont": "Inter, Arial, sans-serif",
       "labelColor": "#4c5965",
       "titleColor": "#26313b",
-      "gridColor": "#edf0f2",
-      "domainColor": "#c9d0d6",
-      "tickColor": "#c9d0d6",
-      "labelFontSize": 15,
-      "titleFontSize": 16
+      "gridColor": "#e8eeed",
+      "domainColor": "#d2dad7",
+      "tickColor": "#d2dad7",
+      "labelFontSize": 14,
+      "titleFontSize": 15,
+      "gridOpacity": 0.72,
+      "titleFontWeight": 800
     },
     "legend": {
       "labelFont": "Inter, Arial, sans-serif",
       "titleFont": "Inter, Arial, sans-serif",
       "labelColor": "#4c5965",
       "titleColor": "#26313b",
-      "labelFontSize": 15,
-      "titleFontSize": 16
+      "labelFontSize": 14,
+      "titleFontSize": 15,
+      "titleFontWeight": 800
     },
     "view": {
       "stroke": null
@@ -170,12 +183,29 @@
     "background": "transparent",
     "header": {
       "labelFont": "Inter, Arial, sans-serif",
-      "labelFontSize": 16,
-      "labelFontWeight": 750,
+      "labelFontSize": 15,
+      "labelFontWeight": 800,
       "labelColor": "#26313b",
       "titleFont": "Inter, Arial, sans-serif",
-      "titleFontSize": 16,
+      "titleFontSize": 15,
       "titleColor": "#26313b"
+    }
+  },
+  "encoding": {
+    "y": {
+      "field": "city",
+      "type": "nominal",
+      "sort": {
+        "field": "rank",
+        "op": "min",
+        "order": "ascending"
+      },
+      "title": null,
+      "axis": {
+        "labelFontSize": 14,
+        "labelPadding": 8,
+        "labelColor": "#202932"
+      }
     }
   }
 }

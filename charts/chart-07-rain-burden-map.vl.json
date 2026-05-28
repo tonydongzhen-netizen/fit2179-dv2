@@ -1,7 +1,7 @@
 {
   "description": "Seasonal rain burden map comparing rain days and rainfall amount.",
   "width": 960,
-  "height": 540,
+  "height": 460,
   "background": "transparent",
   "projection": {
     "type": "mercator",
@@ -39,8 +39,8 @@
       },
       "mark": {
         "type": "geoshape",
-        "fill": "#eef1f4",
-        "stroke": "#c7cfd5",
+        "fill": "#eef3f5",
+        "stroke": "#c4ced0",
         "strokeWidth": 0.8
       }
     },
@@ -55,8 +55,9 @@
       ],
       "mark": {
         "type": "circle",
-        "stroke": "#123b55",
-        "strokeWidth": 0.8
+        "stroke": "#fffdf8",
+        "strokeWidth": 1.5,
+        "opacity": 0.94
       },
       "params": [
         {
@@ -87,8 +88,14 @@
           "scale": {
             "range": [
               120,
-              1500
+              1900
             ]
+          },
+          "legend": {
+            "orient": "right",
+            "titleLimit": 180,
+            "symbolStrokeColor": "#123b55",
+            "symbolStrokeWidth": 1
           }
         },
         "color": {
@@ -96,7 +103,17 @@
           "type": "quantitative",
           "title": "Wet days (>=1 mm)",
           "scale": {
-            "scheme": "blues"
+            "range": [
+              "#d6eaf5",
+              "#78b7d6",
+              "#145c91"
+            ]
+          },
+          "legend": {
+            "orient": "right",
+            "gradientLength": 170,
+            "gradientThickness": 13,
+            "titleLimit": 170
           }
         },
         "opacity": {
@@ -149,7 +166,7 @@
         "dy": -9,
         "font": "Inter, Arial, sans-serif",
         "fontSize": 16,
-        "fontWeight": 750,
+        "fontWeight": 800,
         "fill": "#123b55"
       },
       "encoding": {
@@ -181,19 +198,22 @@
       "titleFont": "Inter, Arial, sans-serif",
       "labelColor": "#4c5965",
       "titleColor": "#26313b",
-      "gridColor": "#edf0f2",
-      "domainColor": "#c9d0d6",
-      "tickColor": "#c9d0d6",
-      "labelFontSize": 15,
-      "titleFontSize": 16
+      "gridColor": "#e8eeed",
+      "domainColor": "#d2dad7",
+      "tickColor": "#d2dad7",
+      "labelFontSize": 14,
+      "titleFontSize": 15,
+      "gridOpacity": 0.72,
+      "titleFontWeight": 800
     },
     "legend": {
       "labelFont": "Inter, Arial, sans-serif",
       "titleFont": "Inter, Arial, sans-serif",
       "labelColor": "#4c5965",
       "titleColor": "#26313b",
-      "labelFontSize": 15,
-      "titleFontSize": 16
+      "labelFontSize": 14,
+      "titleFontSize": 15,
+      "titleFontWeight": 800
     },
     "view": {
       "stroke": null
@@ -202,11 +222,11 @@
     "background": "transparent",
     "header": {
       "labelFont": "Inter, Arial, sans-serif",
-      "labelFontSize": 16,
-      "labelFontWeight": 750,
+      "labelFontSize": 15,
+      "labelFontWeight": 800,
       "labelColor": "#26313b",
       "titleFont": "Inter, Arial, sans-serif",
-      "titleFontSize": 16,
+      "titleFontSize": 15,
       "titleColor": "#26313b"
     }
   }

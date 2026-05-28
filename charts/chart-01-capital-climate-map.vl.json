@@ -28,9 +28,9 @@
       },
       "mark": {
         "type": "geoshape",
-        "fill": "#edf3f0",
-        "stroke": "#c7cfd5",
-        "strokeWidth": 1.05
+        "fill": "#eef4f0",
+        "stroke": "#bcc9cc",
+        "strokeWidth": 1
       }
     },
     {
@@ -72,9 +72,10 @@
       ],
       "mark": {
         "type": "circle",
-        "size": 280,
-        "stroke": "#1f2933",
-        "strokeWidth": 1.1
+        "size": 340,
+        "stroke": "#fffdf8",
+        "strokeWidth": 1.6,
+        "opacity": 0.94
       },
       "params": [
         {
@@ -111,11 +112,11 @@
           },
           "legend": {
             "orient": "right",
-            "gradientLength": 150,
-            "gradientThickness": 11,
-            "titleLimit": 160,
-            "labelFontSize": 15,
-            "titleFontSize": 16
+            "gradientLength": 170,
+            "gradientThickness": 14,
+            "titleLimit": 170,
+            "labelFontSize": 14,
+            "titleFontSize": 15
           }
         },
         "opacity": {
@@ -193,10 +194,10 @@
       ],
       "mark": {
         "type": "circle",
-        "size": 620,
+        "size": 760,
         "fillOpacity": 0,
         "stroke": "#1f766f",
-        "strokeWidth": 2.8
+        "strokeWidth": 3.2
       },
       "encoding": {
         "longitude": {
@@ -266,8 +267,8 @@
         "type": "text",
         "font": "Inter, Arial, sans-serif",
         "fontSize": 16,
-        "fontWeight": 750,
-        "fill": "#26313b",
+        "fontWeight": 800,
+        "fill": "#1f2b32",
         "align": "left",
         "baseline": "middle"
       },
@@ -300,19 +301,22 @@
       "titleFont": "Inter, Arial, sans-serif",
       "labelColor": "#4c5965",
       "titleColor": "#26313b",
-      "gridColor": "#edf0f2",
-      "domainColor": "#c9d0d6",
-      "tickColor": "#c9d0d6",
-      "labelFontSize": 15,
-      "titleFontSize": 16
+      "gridColor": "#e8eeed",
+      "domainColor": "#d2dad7",
+      "tickColor": "#d2dad7",
+      "labelFontSize": 14,
+      "titleFontSize": 15,
+      "gridOpacity": 0.72,
+      "titleFontWeight": 800
     },
     "legend": {
       "labelFont": "Inter, Arial, sans-serif",
       "titleFont": "Inter, Arial, sans-serif",
       "labelColor": "#4c5965",
       "titleColor": "#26313b",
-      "labelFontSize": 15,
-      "titleFontSize": 16
+      "labelFontSize": 14,
+      "titleFontSize": 15,
+      "titleFontWeight": 800
     },
     "view": {
       "stroke": null
@@ -321,11 +325,11 @@
     "background": "transparent",
     "header": {
       "labelFont": "Inter, Arial, sans-serif",
-      "labelFontSize": 16,
-      "labelFontWeight": 750,
+      "labelFontSize": 15,
+      "labelFontWeight": 800,
       "labelColor": "#26313b",
       "titleFont": "Inter, Arial, sans-serif",
-      "titleFontSize": 16,
+      "titleFontSize": 15,
       "titleColor": "#26313b"
     }
   }

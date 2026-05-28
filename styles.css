@@ -15,8 +15,8 @@
   --sun: #d8a83d;
   --content-width: 1260px;
   --measure: 760px;
-  --space-lg: clamp(78px, 8vw, 120px);
-  --space-md: clamp(54px, 6vw, 84px);
+  --space-lg: clamp(46px, 5vw, 72px);
+  --space-md: clamp(32px, 4vw, 52px);
   --space-sm: clamp(22px, 3vw, 36px);
   --radius: 8px;
 }
@@ -35,8 +35,8 @@ body {
   background: var(--paper);
   color: var(--ink);
   font-family: Inter, "Segoe UI", Arial, sans-serif;
-  font-size: 21px;
-  line-height: 1.57;
+  font-size: 19px;
+  line-height: 1.56;
   overflow-x: hidden;
 }
 
@@ -76,7 +76,7 @@ nav {
   flex-wrap: wrap;
   gap: 8px;
   color: var(--muted);
-  font-size: 1.12rem;
+  font-size: 1.05rem;
 }
 
 nav a {
@@ -98,7 +98,7 @@ nav a:hover {
   gap: clamp(34px, 5vw, 72px);
   max-width: var(--content-width);
   margin: 0 auto;
-  padding: clamp(54px, 7vw, 86px) var(--space-sm) clamp(44px, 6vw, 70px);
+  padding: clamp(36px, 5vw, 58px) var(--space-sm) clamp(28px, 4vw, 44px);
   border-bottom: 1px solid rgba(31, 43, 50, 0.12);
   background:
     linear-gradient(90deg, rgba(255, 253, 248, 0.68) 0%, rgba(220, 235, 230, 0.48) 100%),
@@ -157,7 +157,7 @@ p {
   max-width: 540px;
   margin-top: 24px;
   color: var(--ink-soft);
-  font-size: clamp(1.3rem, 1.55vw, 1.42rem);
+  font-size: clamp(1.22rem, 1.45vw, 1.34rem);
 }
 
 .hero-finding {
@@ -183,7 +183,7 @@ p {
 
 .hero-finding strong {
   color: var(--accent);
-  font-size: 1.3rem;
+  font-size: 1.22rem;
   line-height: 1;
 }
 
@@ -206,7 +206,7 @@ p {
   grid-template-columns: repeat(3, minmax(0, 1fr));
   max-width: var(--content-width);
   margin: 0 auto;
-  padding: 34px var(--space-sm) 46px;
+  padding: 22px var(--space-sm) 28px;
   border-bottom: 1px solid rgba(31, 43, 50, 0.14);
 }
 
@@ -243,7 +243,7 @@ p {
   max-width: 320px;
   margin-top: 12px;
   color: var(--ink-soft);
-  font-size: 1.28rem;
+  font-size: 1.18rem;
 }
 
 .section {
@@ -272,7 +272,7 @@ p {
   max-width: var(--measure);
   margin-top: 24px;
   color: var(--ink-soft);
-  font-size: clamp(1.28rem, 1.5vw, 1.42rem);
+  font-size: clamp(1.2rem, 1.42vw, 1.32rem);
 }
 
 .viz-row {
@@ -282,13 +282,13 @@ p {
   align-items: start;
   max-width: var(--content-width);
   margin: 0 auto;
-  padding: clamp(62px, 6vw, 88px) var(--space-sm);
+  padding: clamp(28px, 3.8vw, 48px) var(--space-sm);
   border-top: 1px solid rgba(31, 43, 50, 0.11);
 }
 
 .viz-row.layout-stacked {
   grid-template-columns: 1fr;
-  gap: 24px;
+  gap: 16px;
 }
 
 .viz-row.layout-stacked .viz-copy {
@@ -310,9 +310,9 @@ p {
 }
 
 .viz-copy p:not(.chart-kicker) {
-  margin-top: 18px;
+  margin-top: 10px;
   color: var(--muted);
-  font-size: 1.32rem;
+  font-size: 1.1rem;
 }
 
 .viz-copy > p:not(.chart-kicker) {
@@ -322,12 +322,12 @@ p {
 .reading-pair {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: clamp(14px, 2vw, 22px);
+  gap: clamp(10px, 1.4vw, 16px);
   align-items: start;
   width: 100%;
   max-width: none;
-  margin-top: 18px;
-  margin-bottom: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .reading-pair .takeaway,
@@ -337,7 +337,7 @@ p {
   height: auto;
   min-height: auto;
   margin-top: 0;
-  padding: 14px 18px;
+  padding: 10px 14px;
 }
 
 .reading-pair + p {
@@ -350,7 +350,7 @@ p {
   border-left: 4px solid var(--accent);
   background: rgba(255, 253, 248, 0.64);
   color: var(--ink) !important;
-  font-size: 1.24rem !important;
+  font-size: 1.1rem !important;
   font-weight: 700;
   line-height: 1.45;
   transition: background-color 0.18s ease, border-color 0.18s ease;
@@ -362,7 +362,7 @@ p {
   border-radius: var(--radius);
   background: rgba(220, 235, 230, 0.28);
   color: var(--ink-soft) !important;
-  font-size: 1.26rem !important;
+  font-size: 1.1rem !important;
   font-weight: 600;
   line-height: 1.45;
 }
@@ -376,16 +376,22 @@ p {
   min-width: 0;
   margin: 0;
   padding: clamp(10px, 1.5vw, 16px);
-  border: 1px solid rgba(31, 43, 50, 0.12);
+  border: 1px solid rgba(31, 43, 50, 0.11);
   border-radius: var(--radius);
-  background: var(--surface);
-  box-shadow: 0 16px 40px rgba(31, 43, 50, 0.07);
+  background:
+    linear-gradient(180deg, rgba(255, 253, 248, 0.98), rgba(250, 247, 239, 0.96)),
+    var(--surface);
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.72) inset,
+    0 18px 42px rgba(31, 43, 50, 0.075);
   transition: border-color 0.18s ease, box-shadow 0.18s ease, transform 0.18s ease;
 }
 
 .viz-row:hover .viz-frame {
   border-color: rgba(31, 118, 111, 0.18);
-  box-shadow: 0 18px 44px rgba(31, 43, 50, 0.09);
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.8) inset,
+    0 20px 48px rgba(31, 43, 50, 0.095);
   transform: translateY(-1px);
 }
 
@@ -406,6 +412,7 @@ p {
 .vega-embed canvas,
 .vega-embed svg {
   display: block;
+  margin-inline: auto;
   max-width: 100%;
   height: auto !important;
 }
@@ -417,7 +424,7 @@ p {
 .vega-bindings {
   margin-bottom: 12px;
   color: var(--muted);
-  font-size: 1.2rem;
+  font-size: 1.1rem;
 }
 
 .vega-bindings select {
@@ -440,7 +447,7 @@ p {
   box-shadow: 0 14px 34px rgba(31, 43, 50, 0.16) !important;
   color: var(--ink) !important;
   font-family: Inter, "Segoe UI", Arial, sans-serif !important;
-  font-size: 17px !important;
+  font-size: 16px !important;
   line-height: 1.45 !important;
 }
 
@@ -467,8 +474,8 @@ p {
 .methodology {
   display: block;
   max-width: var(--content-width);
-  margin: 80px auto 0;
-  padding: 56px var(--space-sm) 96px;
+  margin: 48px auto 0;
+  padding: 30px var(--space-sm) 52px;
   border-top: 1px solid rgba(31, 43, 50, 0.16);
 }
 
@@ -484,7 +491,7 @@ p {
 
 .method-stack {
   display: grid;
-  gap: 18px;
+  gap: 14px;
   min-width: 0;
   max-width: 100%;
 }
@@ -492,7 +499,7 @@ p {
 .link-columns {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 18px;
+  gap: 14px;
 }
 
 .link-columns.single-column {
@@ -502,7 +509,7 @@ p {
 .appendix-overview-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 18px;
+  gap: 14px;
   align-items: start;
 }
 
@@ -514,7 +521,7 @@ p {
 }
 
 .source-card {
-  padding: 18px;
+  padding: 14px;
   transition: border-color 0.18s ease, background-color 0.18s ease;
 }
 
@@ -526,7 +533,7 @@ p {
 .source-card h3 {
   margin-bottom: 14px;
   font-family: Inter, "Segoe UI", Arial, sans-serif;
-  font-size: 1.25rem;
+  font-size: 1.18rem;
   font-weight: 800;
   line-height: 1.2;
 }
@@ -534,8 +541,8 @@ p {
 .source-card p,
 .source-card li {
   color: var(--ink-soft);
-  font-size: 1.12rem;
-  line-height: 1.48;
+  font-size: 1.04rem;
+  line-height: 1.42;
 }
 
 .source-card a {
@@ -543,7 +550,7 @@ p {
   padding: 9px 0;
   border-top: 1px solid rgba(31, 43, 50, 0.12);
   color: #285e68;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   overflow-wrap: anywhere;
   text-decoration: none;
 }
@@ -586,13 +593,13 @@ p {
 
 .appendix-file-list {
   display: grid;
-  gap: 10px;
-  margin-top: 16px;
+  gap: 8px;
+  margin-top: 12px;
 }
 
 .appendix-file-card {
   min-width: 0;
-  padding: 14px;
+  padding: 12px;
   border: 1px solid rgba(31, 43, 50, 0.12);
   border-radius: var(--radius);
   background: rgba(255, 253, 248, 0.72);
@@ -603,20 +610,20 @@ p {
   padding: 0;
   border-top: 0;
   color: #285e68;
-  font-size: 1.08rem;
+  font-size: 1.02rem;
   font-weight: 800;
   text-decoration: underline;
 }
 
 .appendix-file-card span {
   color: var(--muted);
-  font-size: 1.02rem;
+  font-size: 0.96rem;
 }
 
 .appendix-file-card p {
-  margin-top: 8px;
-  font-size: 1.06rem;
-  line-height: 1.48;
+  margin-top: 6px;
+  font-size: 1rem;
+  line-height: 1.42;
 }
 
 .reference-list ol,
@@ -626,14 +633,14 @@ p {
 }
 
 .reference-list li + li {
-  margin-top: 14px;
+  margin-top: 10px;
 }
 
 .reference-station-list {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 10px 16px;
-  margin: 14px 0 0;
+  gap: 8px 14px;
+  margin: 10px 0 0;
   padding-left: 0;
   list-style: none;
 }
@@ -641,7 +648,7 @@ p {
 .reference-station-list li {
   min-width: 0;
   margin-top: 0 !important;
-  padding: 10px 0;
+  padding: 8px 0;
   border-top: 1px solid rgba(31, 43, 50, 0.12);
 }
 
@@ -677,7 +684,7 @@ p {
 .data-map-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 16px;
+  gap: 12px;
 }
 
 .provenance-grid h3,
@@ -688,7 +695,7 @@ p {
 .provenance-grid div,
 .data-map-grid div {
   min-width: 0;
-  padding: 14px;
+  padding: 12px;
   border: 1px solid rgba(31, 43, 50, 0.1);
   border-radius: var(--radius);
   background: rgba(255, 253, 248, 0.58);
@@ -706,14 +713,14 @@ p {
 .station-source-list ul {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 10px 16px;
+  gap: 8px 14px;
   padding-left: 0;
   list-style: none;
 }
 
 .station-source-list li {
   min-width: 0;
-  padding: 12px 0;
+  padding: 9px 0;
   border-top: 1px solid rgba(31, 43, 50, 0.12);
 }
 
@@ -742,7 +749,7 @@ p {
   padding: 28px var(--space-sm) 42px;
   border-top: 1px solid rgba(31, 43, 50, 0.16);
   color: var(--muted);
-  font-size: 1.2rem;
+  font-size: 1.1rem;
 }
 
 .site-footer p {
@@ -751,6 +758,12 @@ p {
 
 .footer-note {
   max-width: 760px;
+}
+
+@media (min-width: 981px) {
+  .appendix-file-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
 
 @media (max-width: 980px) {
@@ -763,7 +776,7 @@ p {
 
   .hero {
     grid-template-columns: 1fr;
-    padding-top: 46px;
+    padding-top: 30px;
   }
 
   h1 {
@@ -779,7 +792,7 @@ p {
   }
 
   .signal-band div {
-    padding: 24px 0;
+    padding: 14px 0;
     border-top: 1px solid rgba(31, 43, 50, 0.13);
     border-left: 0;
   }
@@ -796,7 +809,7 @@ p {
 @media (max-width: 700px) {
   .reading-pair {
     grid-template-columns: 1fr;
-    gap: 12px;
+    gap: 10px;
   }
 
   .hero-finding {

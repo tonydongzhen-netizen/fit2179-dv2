@@ -1,7 +1,7 @@
 {
   "description": "Seasonal heat stress map using hot days and very hot days.",
   "width": 960,
-  "height": 540,
+  "height": 460,
   "background": "transparent",
   "projection": {
     "type": "mercator",
@@ -39,8 +39,8 @@
       },
       "mark": {
         "type": "geoshape",
-        "fill": "#f2f0ed",
-        "stroke": "#c7cfd5",
+        "fill": "#f2eee8",
+        "stroke": "#c4ced0",
         "strokeWidth": 0.8
       }
     },
@@ -55,8 +55,9 @@
       ],
       "mark": {
         "type": "circle",
-        "stroke": "#5b2418",
-        "strokeWidth": 0.8
+        "stroke": "#fffdf8",
+        "strokeWidth": 1.5,
+        "opacity": 0.94
       },
       "params": [
         {
@@ -83,20 +84,40 @@
         "size": {
           "field": "very_hot_days_ge_35",
           "type": "quantitative",
-          "title": "Very hot days (35℃+)",
+          "title": "Very hot days (>=35℃)",
           "scale": {
             "range": [
-              90,
-              1400
+              120,
+              1900
             ]
+          },
+          "legend": {
+            "orient": "right",
+            "titleLimit": 180,
+            "symbolStrokeColor": "#5b2418",
+            "symbolStrokeWidth": 1
           }
         },
         "color": {
           "field": "hot_days_ge_30",
           "type": "quantitative",
-          "title": "Hot days (30℃+)",
+          "title": "Hot days (>=30℃)",
           "scale": {
-            "scheme": "orangered"
+            "range": [
+              "#f6c27a",
+              "#e06b3c",
+              "#8f2b1e"
+            ],
+            "domain": [
+              0,
+              50
+            ]
+          },
+          "legend": {
+            "orient": "right",
+            "gradientLength": 170,
+            "gradientThickness": 13,
+            "titleLimit": 170
           }
         },
         "opacity": {
@@ -153,7 +174,7 @@
         "dy": -10,
         "font": "Inter, Arial, sans-serif",
         "fontSize": 16,
-        "fontWeight": 750,
+        "fontWeight": 800,
         "fill": "#5b2418"
       },
       "encoding": {
@@ -185,19 +206,22 @@
       "titleFont": "Inter, Arial, sans-serif",
       "labelColor": "#4c5965",
       "titleColor": "#26313b",
-      "gridColor": "#edf0f2",
-      "domainColor": "#c9d0d6",
-      "tickColor": "#c9d0d6",
-      "labelFontSize": 15,
-      "titleFontSize": 16
+      "gridColor": "#e8eeed",
+      "domainColor": "#d2dad7",
+      "tickColor": "#d2dad7",
+      "labelFontSize": 14,
+      "titleFontSize": 15,
+      "gridOpacity": 0.72,
+      "titleFontWeight": 800
     },
     "legend": {
       "labelFont": "Inter, Arial, sans-serif",
       "titleFont": "Inter, Arial, sans-serif",
       "labelColor": "#4c5965",
       "titleColor": "#26313b",
-      "labelFontSize": 15,
-      "titleFontSize": 16
+      "labelFontSize": 14,
+      "titleFontSize": 15,
+      "titleFontWeight": 800
     },
     "view": {
       "stroke": null
@@ -206,11 +230,11 @@
     "background": "transparent",
     "header": {
       "labelFont": "Inter, Arial, sans-serif",
-      "labelFontSize": 16,
-      "labelFontWeight": 750,
+      "labelFontSize": 15,
+      "labelFontWeight": 800,
       "labelColor": "#26313b",
       "titleFont": "Inter, Arial, sans-serif",
-      "titleFontSize": 16,
+      "titleFontSize": 15,
       "titleColor": "#26313b"
     }
   }

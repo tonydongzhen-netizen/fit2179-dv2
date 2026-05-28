@@ -1,7 +1,7 @@
 {
   "description": "Humidity and sunshine comfort compass with contextual quadrants.",
   "width": "container",
-  "height": 540,
+  "height": 460,
   "background": "transparent",
   "layer": [
     {
@@ -40,7 +40,7 @@
       "mark": {
         "type": "rect",
         "fill": "#f8faf8",
-        "fillOpacity": 0.28,
+        "fillOpacity": 0,
         "stroke": null
       },
       "encoding": {
@@ -106,7 +106,7 @@
         "fontSize": 16,
         "fontWeight": 750,
         "color": "#6a747a",
-        "opacity": 0.78
+        "opacity": 0.72
       },
       "encoding": {
         "x": {
@@ -136,10 +136,11 @@
       "mark": {
         "type": "rule",
         "strokeDash": [
-          4,
-          4
+          5,
+          5
         ],
-        "color": "#b8c2c9"
+        "color": "#b8c7c7",
+        "strokeWidth": 1.4
       },
       "encoding": {
         "x": {
@@ -159,10 +160,11 @@
       "mark": {
         "type": "rule",
         "strokeDash": [
-          4,
-          4
+          5,
+          5
         ],
-        "color": "#b8c2c9"
+        "color": "#b8c7c7",
+        "strokeWidth": 1.4
       },
       "encoding": {
         "y": {
@@ -182,9 +184,9 @@
       ],
       "mark": {
         "type": "circle",
-        "stroke": "#26313b",
-        "strokeWidth": 0.8,
-        "opacity": 0.86
+        "stroke": "#fffdf8",
+        "strokeWidth": 1.8,
+        "opacity": 0.94
       },
       "params": [
         {
@@ -214,18 +216,20 @@
           "title": "Balanced score",
           "scale": {
             "domain": [
-              60,
-              90
+              53,
+              95
             ],
             "range": [
-              80,
-              1250
+              150,
+              2800
             ]
           },
           "legend": {
             "orient": "bottom",
             "direction": "horizontal",
-            "titleLimit": 180
+            "titleLimit": 190,
+            "symbolStrokeColor": "#26313b",
+            "symbolStrokeWidth": 0.8
           }
         },
         "color": {
@@ -233,17 +237,22 @@
           "type": "quantitative",
           "title": "Rain score",
           "scale": {
-            "scheme": "blues",
             "domain": [
               70,
               90
+            ],
+            "range": [
+              "#d7ecf8",
+              "#73b1d3",
+              "#235f91"
             ]
           },
           "legend": {
             "orient": "bottom",
             "direction": "horizontal",
-            "gradientLength": 220,
-            "titleLimit": 160
+            "gradientLength": 240,
+            "titleLimit": 160,
+            "gradientThickness": 13
           }
         },
         "opacity": {
@@ -257,26 +266,26 @@
           {
             "field": "city"
           },
-        {
-          "field": "mean_rh_avg",
-          "title": "Mean relative humidity (%)",
-          "format": ".1f"
-        },
-        {
-          "field": "mean_solar_exposure_mj_m2",
-          "title": "Mean daily solar exposure (MJ/m2)",
-          "format": ".1f"
-        },
-        {
-          "field": "rain_component",
-          "title": "Rain comfort score",
-          "format": ".1f"
-        },
-        {
-          "field": "overall_score",
-          "title": "Balanced score (0-100)",
-          "format": ".1f"
-        }
+          {
+            "field": "mean_rh_avg",
+            "title": "Mean relative humidity (%)",
+            "format": ".1f"
+          },
+          {
+            "field": "mean_solar_exposure_mj_m2",
+            "title": "Mean daily solar exposure (MJ/m2)",
+            "format": ".1f"
+          },
+          {
+            "field": "rain_component",
+            "title": "Rain comfort score",
+            "format": ".1f"
+          },
+          {
+            "field": "overall_score",
+            "title": "Balanced score (0-100)",
+            "format": ".1f"
+          }
         ]
       }
     },
@@ -294,8 +303,8 @@
         "align": "left",
         "dx": 8,
         "fontSize": 16,
-        "fontWeight": 650,
-        "color": "#26313b"
+        "fontWeight": 800,
+        "color": "#1f2b32"
       },
       "encoding": {
         "x": {
@@ -326,19 +335,22 @@
       "titleFont": "Inter, Arial, sans-serif",
       "labelColor": "#4c5965",
       "titleColor": "#26313b",
-      "gridColor": "#edf0f2",
-      "domainColor": "#c9d0d6",
-      "tickColor": "#c9d0d6",
-      "labelFontSize": 15,
-      "titleFontSize": 16
+      "gridColor": "#e8eeed",
+      "domainColor": "#d2dad7",
+      "tickColor": "#d2dad7",
+      "labelFontSize": 14,
+      "titleFontSize": 15,
+      "gridOpacity": 0.72,
+      "titleFontWeight": 800
     },
     "legend": {
       "labelFont": "Inter, Arial, sans-serif",
       "titleFont": "Inter, Arial, sans-serif",
       "labelColor": "#4c5965",
       "titleColor": "#26313b",
-      "labelFontSize": 15,
-      "titleFontSize": 16
+      "labelFontSize": 14,
+      "titleFontSize": 15,
+      "titleFontWeight": 800
     },
     "view": {
       "stroke": null
@@ -347,11 +359,11 @@
     "background": "transparent",
     "header": {
       "labelFont": "Inter, Arial, sans-serif",
-      "labelFontSize": 16,
-      "labelFontWeight": 750,
+      "labelFontSize": 15,
+      "labelFontWeight": 800,
       "labelColor": "#26313b",
       "titleFont": "Inter, Arial, sans-serif",
-      "titleFontSize": 16,
+      "titleFontSize": 15,
       "titleColor": "#26313b"
     }
   }

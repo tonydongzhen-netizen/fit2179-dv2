@@ -1,7 +1,7 @@
 {
   "description": "Preference sensitivity switchboard comparing ranks across scenarios.",
   "width": "container",
-  "height": 520,
+  "height": 450,
   "background": "transparent",
   "data": {
     "url": "data/city_scores_overall.csv"
@@ -20,7 +20,9 @@
     {
       "mark": {
         "type": "rect",
-        "cornerRadius": 3
+        "cornerRadius": 5,
+        "stroke": "#fffdf8",
+        "strokeWidth": 1.1
       },
       "params": [
         {
@@ -52,7 +54,7 @@
           "title": null,
           "axis": {
             "labelAngle": -90,
-            "labelFontSize": 15
+            "labelFontSize": 14
           }
         },
         "y": {
@@ -71,7 +73,7 @@
           "axis": {
             "labelExpr": "datum.label == 'Balanced everyday comfort' ? 'Balanced' : datum.label == 'Sleep cool at night' ? 'Cool nights' : datum.label == 'Enjoy sunshine' ? 'Sunshine' : datum.label == 'Stable all year' ? 'Stable year' : datum.label == 'Avoid muggy heat' ? 'Avoid muggy' : datum.label",
             "labelLimit": 130,
-            "labelFontSize": 15
+            "labelFontSize": 14
           }
         },
         "color": {
@@ -79,32 +81,37 @@
           "type": "quantitative",
           "title": "Scenario score (0-100)",
           "scale": {
-            "scheme": "tealblues",
             "domain": [
               50,
               95
+            ],
+            "range": [
+              "#bde5dc",
+              "#4aa5ba",
+              "#1e5d85"
             ]
           },
           "legend": {
             "orient": "bottom",
             "direction": "horizontal",
-            "gradientLength": 280,
-            "titleLimit": 260
+            "gradientLength": 200,
+            "titleLimit": 220,
+            "gradientThickness": 13
           }
         },
         "stroke": {
           "condition": {
             "test": "datum.rank == 1",
-            "value": "#1f2933"
+            "value": "#26313b"
           },
-          "value": "#ffffff"
+          "value": "#fffdf8"
         },
         "strokeWidth": {
           "condition": {
             "test": "datum.rank == 1",
-            "value": 2
+            "value": 1.8
           },
-          "value": 0.5
+          "value": 0.9
         },
         "opacity": {
           "condition": {
@@ -146,11 +153,11 @@
       "mark": {
         "type": "text",
         "dy": -9,
-        "fontSize": 20,
+        "fontSize": 18,
         "fontWeight": 800,
         "color": "#ffffff",
         "stroke": "#17313a",
-        "strokeWidth": 0.35,
+        "strokeWidth": 0.25,
         "strokeOpacity": 0.55
       },
       "encoding": {
@@ -197,10 +204,10 @@
       "mark": {
         "type": "text",
         "dy": 17,
-        "fontSize": 16,
+        "fontSize": 15,
         "fontWeight": 800,
         "stroke": "#17313a",
-        "strokeWidth": 0.35,
+        "strokeWidth": 0.25,
         "strokeOpacity": 0.65
       },
       "encoding": {
@@ -264,19 +271,22 @@
       "titleFont": "Inter, Arial, sans-serif",
       "labelColor": "#4c5965",
       "titleColor": "#26313b",
-      "gridColor": "#edf0f2",
-      "domainColor": "#c9d0d6",
-      "tickColor": "#c9d0d6",
-      "labelFontSize": 15,
-      "titleFontSize": 16
+      "gridColor": "#e8eeed",
+      "domainColor": "#d2dad7",
+      "tickColor": "#d2dad7",
+      "labelFontSize": 14,
+      "titleFontSize": 15,
+      "gridOpacity": 0.72,
+      "titleFontWeight": 800
     },
     "legend": {
       "labelFont": "Inter, Arial, sans-serif",
       "titleFont": "Inter, Arial, sans-serif",
       "labelColor": "#4c5965",
       "titleColor": "#26313b",
-      "labelFontSize": 15,
-      "titleFontSize": 16
+      "labelFontSize": 14,
+      "titleFontSize": 15,
+      "titleFontWeight": 800
     },
     "view": {
       "stroke": null
@@ -285,11 +295,11 @@
     "background": "transparent",
     "header": {
       "labelFont": "Inter, Arial, sans-serif",
-      "labelFontSize": 16,
-      "labelFontWeight": 750,
+      "labelFontSize": 15,
+      "labelFontWeight": 800,
       "labelColor": "#26313b",
       "titleFont": "Inter, Arial, sans-serif",
-      "titleFontSize": 16,
+      "titleFontSize": 15,
       "titleColor": "#26313b"
     }
   }

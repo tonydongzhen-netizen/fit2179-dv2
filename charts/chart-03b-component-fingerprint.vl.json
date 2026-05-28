@@ -1,7 +1,7 @@
 {
   "description": "Component score fingerprint for the balanced everyday comfort scenario.",
   "width": "container",
-  "height": 500,
+  "height": 440,
   "background": "transparent",
   "data": {
     "url": "data/city_components_long.csv"
@@ -15,23 +15,139 @@
       "as": "component_axis_label"
     }
   ],
-  "params": [
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "config": {
+    "axis": {
+      "labelFont": "Inter, Arial, sans-serif",
+      "titleFont": "Inter, Arial, sans-serif",
+      "labelColor": "#4c5965",
+      "titleColor": "#26313b",
+      "gridColor": "#e8eeed",
+      "domainColor": "#d2dad7",
+      "tickColor": "#d2dad7",
+      "labelFontSize": 14,
+      "titleFontSize": 15,
+      "gridOpacity": 0.72,
+      "titleFontWeight": 800
+    },
+    "legend": {
+      "labelFont": "Inter, Arial, sans-serif",
+      "titleFont": "Inter, Arial, sans-serif",
+      "labelColor": "#4c5965",
+      "titleColor": "#26313b",
+      "labelFontSize": 14,
+      "titleFontSize": 15,
+      "titleFontWeight": 800
+    },
+    "view": {
+      "stroke": null
+    },
+    "font": "Inter, Arial, sans-serif",
+    "background": "transparent",
+    "header": {
+      "labelFont": "Inter, Arial, sans-serif",
+      "labelFontSize": 15,
+      "labelFontWeight": 800,
+      "labelColor": "#26313b",
+      "titleFont": "Inter, Arial, sans-serif",
+      "titleFontSize": 15,
+      "titleColor": "#26313b"
+    }
+  },
+  "layer": [
     {
-      "name": "hoverCity",
-      "select": {
-        "type": "point",
-        "on": "pointerover",
-        "clear": "pointerout",
-        "fields": [
-          "city"
+      "mark": {
+        "type": "rect",
+        "cornerRadius": 4,
+        "stroke": "#fffdf8",
+        "strokeWidth": 2
+      },
+      "encoding": {
+        "color": {
+          "field": "component_score",
+          "type": "quantitative",
+          "title": "Component score",
+          "scale": {
+            "scheme": "yellowgreenblue",
+            "domain": [
+              45,
+              100
+            ]
+          },
+          "legend": {
+            "orient": "bottom",
+            "direction": "horizontal",
+            "gradientLength": 240,
+            "gradientThickness": 12,
+            "titleLimit": 220
+          }
+        },
+        "opacity": {
+          "condition": {
+            "param": "hoverCity",
+            "value": 1
+          },
+          "value": 0.35
+        },
+        "tooltip": [
+          {
+            "field": "city"
+          },
+          {
+            "field": "component_label",
+            "title": "Component"
+          },
+          {
+            "field": "component_score",
+            "title": "Component score (0-100)",
+            "format": ".1f"
+          }
         ]
+      },
+      "params": [
+        {
+          "name": "hoverCity",
+          "select": {
+            "type": "point",
+            "on": "pointerover",
+            "clear": "pointerout",
+            "fields": [
+              "city"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "mark": {
+        "type": "text",
+        "fontSize": 13,
+        "fontWeight": 800,
+        "baseline": "middle"
+      },
+      "encoding": {
+        "text": {
+          "field": "component_score",
+          "type": "quantitative",
+          "format": ".0f"
+        },
+        "color": {
+          "condition": {
+            "test": "datum.component_score >= 78",
+            "value": "#ffffff"
+          },
+          "value": "#243139"
+        },
+        "opacity": {
+          "condition": {
+            "param": "hoverCity",
+            "value": 1
+          },
+          "value": 0.5
+        }
       }
     }
   ],
-  "mark": {
-    "type": "rect",
-    "cornerRadius": 2
-  },
   "encoding": {
     "y": {
       "field": "city",
@@ -42,7 +158,7 @@
       },
       "title": null,
       "axis": {
-        "labelFontSize": 16
+        "labelFontSize": 14
       }
     },
     "x": {
@@ -57,83 +173,9 @@
       "axis": {
         "labelAngle": -35,
         "labelLimit": 90,
-        "labelFontSize": 16,
+        "labelFontSize": 14,
         "labelPadding": 8
       }
-    },
-    "color": {
-      "field": "component_score",
-      "type": "quantitative",
-      "title": "Component score",
-      "scale": {
-        "scheme": "yellowgreenblue",
-        "domain": [
-          45,
-          100
-        ]
-      },
-      "legend": {
-        "orient": "bottom",
-        "direction": "horizontal",
-        "gradientLength": 190
-      }
-    },
-    "opacity": {
-      "condition": {
-        "param": "hoverCity",
-        "value": 1
-      },
-      "value": 0.35
-    },
-    "tooltip": [
-      {
-        "field": "city"
-      },
-      {
-        "field": "component_label",
-        "title": "Component"
-      },
-      {
-        "field": "component_score",
-        "title": "Component score (0-100)",
-        "format": ".1f"
-      }
-    ]
-  },
-  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "config": {
-    "axis": {
-      "labelFont": "Inter, Arial, sans-serif",
-      "titleFont": "Inter, Arial, sans-serif",
-      "labelColor": "#4c5965",
-      "titleColor": "#26313b",
-      "gridColor": "#edf0f2",
-      "domainColor": "#c9d0d6",
-      "tickColor": "#c9d0d6",
-      "labelFontSize": 15,
-      "titleFontSize": 16
-    },
-    "legend": {
-      "labelFont": "Inter, Arial, sans-serif",
-      "titleFont": "Inter, Arial, sans-serif",
-      "labelColor": "#4c5965",
-      "titleColor": "#26313b",
-      "labelFontSize": 15,
-      "titleFontSize": 16
-    },
-    "view": {
-      "stroke": null
-    },
-    "font": "Inter, Arial, sans-serif",
-    "background": "transparent",
-    "header": {
-      "labelFont": "Inter, Arial, sans-serif",
-      "labelFontSize": 16,
-      "labelFontWeight": 750,
-      "labelColor": "#26313b",
-      "titleFont": "Inter, Arial, sans-serif",
-      "titleFontSize": 16,
-      "titleColor": "#26313b"
     }
   }
 }

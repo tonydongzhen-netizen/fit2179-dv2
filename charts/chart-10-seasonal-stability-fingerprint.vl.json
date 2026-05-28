@@ -1,7 +1,7 @@
 {
   "description": "City-by-month comfort fingerprint showing seasonal stability.",
   "width": "container",
-  "height": 500,
+  "height": 440,
   "background": "transparent",
   "data": {
     "url": "data/city_scores_monthly.csv"
@@ -20,9 +20,10 @@
     }
   ],
   "mark": {
-    "type": "tick",
-    "thickness": 12,
-    "bandSize": 18
+    "type": "rect",
+    "cornerRadius": 4,
+    "stroke": "#fffdf8",
+    "strokeWidth": 2
   },
   "encoding": {
     "y": {
@@ -40,7 +41,7 @@
       ],
       "title": null,
       "axis": {
-        "labelFontSize": 16
+        "labelFontSize": 15
       }
     },
     "x": {
@@ -62,7 +63,8 @@
       ],
       "title": "Month",
       "axis": {
-        "labelFontSize": 15
+        "labelFontSize": 14,
+        "labelPadding": 8
       }
     },
     "color": {
@@ -75,6 +77,13 @@
           45,
           96
         ]
+      },
+      "legend": {
+        "orient": "bottom",
+        "direction": "horizontal",
+        "gradientLength": 280,
+        "gradientThickness": 13,
+        "titleLimit": 220
       }
     },
     "opacity": {
@@ -82,7 +91,7 @@
         "param": "hoverCity",
         "value": 1
       },
-      "value": 0.25
+      "value": 0.32
     },
     "tooltip": [
       {
@@ -115,19 +124,22 @@
       "titleFont": "Inter, Arial, sans-serif",
       "labelColor": "#4c5965",
       "titleColor": "#26313b",
-      "gridColor": "#edf0f2",
-      "domainColor": "#c9d0d6",
-      "tickColor": "#c9d0d6",
-      "labelFontSize": 15,
-      "titleFontSize": 16
+      "gridColor": "#e8eeed",
+      "domainColor": "#d2dad7",
+      "tickColor": "#d2dad7",
+      "labelFontSize": 14,
+      "titleFontSize": 15,
+      "gridOpacity": 0.72,
+      "titleFontWeight": 800
     },
     "legend": {
       "labelFont": "Inter, Arial, sans-serif",
       "titleFont": "Inter, Arial, sans-serif",
       "labelColor": "#4c5965",
       "titleColor": "#26313b",
-      "labelFontSize": 15,
-      "titleFontSize": 16
+      "labelFontSize": 14,
+      "titleFontSize": 15,
+      "titleFontWeight": 800
     },
     "view": {
       "stroke": null
@@ -136,11 +148,11 @@
     "background": "transparent",
     "header": {
       "labelFont": "Inter, Arial, sans-serif",
-      "labelFontSize": 16,
-      "labelFontWeight": 750,
+      "labelFontSize": 15,
+      "labelFontWeight": 800,
       "labelColor": "#26313b",
       "titleFont": "Inter, Arial, sans-serif",
-      "titleFontSize": 16,
+      "titleFontSize": 15,
       "titleColor": "#26313b"
     }
   }

@@ -1,7 +1,7 @@
 {
   "description": "Rain rhythm barcode showing monthly rain days and rainfall intensity.",
   "title": {
-    "text": "Rain days per month",
+    "text": "Monthly rain rhythm",
     "anchor": "start",
     "font": "Inter, Arial, sans-serif",
     "fontSize": 19,
@@ -43,10 +43,11 @@
   "columns": 1,
   "spec": {
     "width": "container",
-    "height": 128,
+    "height": 96,
     "mark": {
       "type": "bar",
-      "cornerRadiusEnd": 2
+      "cornerRadiusEnd": 4,
+      "opacity": 0.96
     },
     "encoding": {
       "x": {
@@ -56,14 +57,23 @@
         "axis": {
           "values": [
             1,
+            2,
             3,
+            4,
             5,
+            6,
             7,
+            8,
             9,
-            11
+            10,
+            11,
+            12
           ],
-          "labelExpr": "['Jan','Mar','May','Jul','Sep','Nov'][indexof([1,3,5,7,9,11], datum.value)]",
-          "labelFontSize": 15
+          "labelExpr": "['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'][datum.value - 1]",
+          "labelFontSize": 15,
+          "labelAngle": 0,
+          "labelPadding": 5,
+          "tickSize": 3
         }
       },
       "y": {
@@ -82,9 +92,11 @@
             10,
             20
           ],
-          "labelFontSize": 16,
+          "labelFontSize": 15,
           "labelPadding": 6,
-          "tickSize": 5
+          "tickSize": 5,
+          "grid": true,
+          "gridOpacity": 0.65
         }
       },
       "color": {
@@ -92,13 +104,21 @@
         "type": "quantitative",
         "title": "Monthly rainfall (mm)",
         "scale": {
-          "scheme": "blues"
+          "domain": [
+            0,
+            440
+          ],
+          "range": [
+            "#d8eaf6",
+            "#7dbbdd",
+            "#236a9b"
+          ]
         },
         "legend": {
           "orient": "bottom",
           "direction": "horizontal",
-          "gradientLength": 220,
-          "gradientThickness": 12,
+          "gradientLength": 260,
+          "gradientThickness": 13,
           "titleLimit": 260
         }
       },
@@ -138,19 +158,22 @@
       "titleFont": "Inter, Arial, sans-serif",
       "labelColor": "#4c5965",
       "titleColor": "#26313b",
-      "gridColor": "#edf0f2",
-      "domainColor": "#c9d0d6",
-      "tickColor": "#c9d0d6",
-      "labelFontSize": 15,
-      "titleFontSize": 16
+      "gridColor": "#e8eeed",
+      "domainColor": "#d2dad7",
+      "tickColor": "#d2dad7",
+      "labelFontSize": 14,
+      "titleFontSize": 15,
+      "gridOpacity": 0.72,
+      "titleFontWeight": 800
     },
     "legend": {
       "labelFont": "Inter, Arial, sans-serif",
       "titleFont": "Inter, Arial, sans-serif",
       "labelColor": "#4c5965",
       "titleColor": "#26313b",
-      "labelFontSize": 15,
-      "titleFontSize": 16
+      "labelFontSize": 14,
+      "titleFontSize": 15,
+      "titleFontWeight": 800
     },
     "view": {
       "stroke": null
@@ -159,11 +182,11 @@
     "background": "transparent",
     "header": {
       "labelFont": "Inter, Arial, sans-serif",
-      "labelFontSize": 16,
-      "labelFontWeight": 750,
+      "labelFontSize": 15,
+      "labelFontWeight": 800,
       "labelColor": "#26313b",
       "titleFont": "Inter, Arial, sans-serif",
-      "titleFontSize": 16,
+      "titleFontSize": 15,
       "titleColor": "#26313b"
     }
   },
